@@ -1,0 +1,42 @@
+[
+ {
+  "file": "All_Things\\105X105X120 CM BAFFLE BAG.xlsx",
+  "sheet": "U-PANNEL BAG BOM ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\105X105X120 CM BAFFLE BAG.xlsx",
+  "sheet": "85X85X90 CM ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\AFPL-180.xlsx",
+  "sheet": "Sheet1",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\BOM.xlsx",
+  "sheet": "U PANNEL BAG ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\BOM.xlsx",
+  "sheet": "CIRCULAR BAG ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\BOM.xlsx",
+  "sheet": "BAFFLE BAG ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\BOM.xlsx",
+  "sheet": "DG KIM COVER BAG ",
+  "reason": "bom-like but no component rows"
+ },
+ {
+  "file": "All_Things\\BOM.xlsx",
+  "sheet": "NUDITEX ",
+  "reason": "bom-like but no component rows"
+ }
+]

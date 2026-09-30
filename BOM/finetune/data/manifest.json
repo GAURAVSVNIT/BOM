@@ -1,0 +1,27 @@
+{
+  "raw_records": 559,
+  "usable_records": 470,
+  "train": 422,
+  "val": 48,
+  "rejections": {
+    "duplicate": 89
+  },
+  "bag_type_counts": {
+    "u_panel": 229,
+    "four_panel_baffle": 81,
+    "circular": 95,
+    "four_panel": 9,
+    "two_panel": 30,
+    "two_loop": 10,
+    "single_loop": 16
+  },
+  "kept_but_missing_mandatory_component_by_bag_type": {
+    "u_panel": 8,
+    "four_panel_baffle": 4,
+    "two_panel": 24,
+    "two_loop": 6,
+    "circular": 14,
+    "four_panel": 2,
+    "single_loop": 2
+  }
+}

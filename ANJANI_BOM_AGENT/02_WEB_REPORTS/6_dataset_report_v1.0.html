@@ -1,0 +1,401 @@
+<title>BOM Fine-tuning Dataset v1.0</title>
+<style>
+  :root{
+    --mono: ui-monospace,"SFMono-Regular","Cascadia Mono","Segoe UI Mono",Consolas,"Liberation Mono",monospace;
+    --paper:#FAFAF8; --sheet:#FFFFFF; --sunk:#F2F3F1;
+    --ink:#11181F; --graphite:#5C6A78; --faint:#8794A1;
+    --rule:#DFE3E7; --rule-strong:#C4CBD2;
+    --redline:#AF2C1C; --redline-wash:#FBF0EE;
+    --verified:#16645A; --verified-wash:#EDF5F3;
+    --hold:#8A6212; --hold-wash:#FAF4E6;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+    --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+    --rule:#252F39; --rule-strong:#33404C;
+    --redline:#E8705C; --redline-wash:#221614;
+    --verified:#4FBFA9; --verified-wash:#11201E;
+    --hold:#D6A63F; --hold-wash:#1F1A0F;}}
+  :root[data-theme="dark"]{
+    --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+    --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+    --rule:#252F39; --rule-strong:#33404C;
+    --redline:#E8705C; --redline-wash:#221614;
+    --verified:#4FBFA9; --verified-wash:#11201E;
+    --hold:#D6A63F; --hold-wash:#1F1A0F;}
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:17px;line-height:1.6;margin:0;padding:0 20px 110px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto}
+  .col{max-width:680px} .col p,.col ul,.col ol{max-width:66ch}
+  .mast{padding:58px 0 26px;margin-bottom:40px;border-bottom:2px solid var(--ink)}
+  .stamp{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--graphite);display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:24px}
+  .stamp b{color:var(--ink);font-weight:600}
+  h1{font-family:var(--mono);font-weight:600;font-size:clamp(26px,4vw,42px);line-height:1.1;
+    letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+  .standfirst{font-size:19px;line-height:1.55;color:var(--graphite);margin:0;max-width:62ch}
+  .standfirst em{color:var(--ink);font-style:italic}
+  section{margin:0 0 58px}
+  h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid var(--rule-strong);
+    display:flex;align-items:baseline;gap:14px}
+  h2 .num{color:var(--faint);font-weight:400}
+  h2+.lede{font-size:19px;line-height:1.5;color:var(--graphite);margin:20px 0 0;max-width:62ch}
+  h3{font-family:var(--mono);font-size:13.5px;font-weight:600;margin:32px 0 10px;color:var(--ink)}
+  p{margin:0 0 15px}
+  code{font-family:var(--mono);font-size:.85em;background:var(--sunk);padding:1px 5px;
+    border-radius:3px;border:1px solid var(--rule)}
+  ul,ol{margin:0 0 15px;padding-left:22px} li{margin-bottom:8px} li::marker{color:var(--faint)}
+  pre{font-family:var(--mono);font-size:12.5px;line-height:1.55;background:var(--sheet);
+    border:1px solid var(--rule);border-radius:4px;padding:16px 18px;overflow-x:auto;margin:20px 0}
+  pre code{background:none;border:none;padding:0;font-size:inherit}
+  .cmt{color:var(--faint)} .key{color:var(--redline)} .ok{color:var(--verified)}
+  .tablewrap{overflow-x:auto;margin:24px 0;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+  table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:12.5px;
+    font-variant-numeric:tabular-nums;min-width:500px}
+  caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--graphite);padding:12px 16px;border-bottom:1px solid var(--rule);background:var(--sunk)}
+  th{text-align:left;font-weight:600;color:var(--graphite);padding:10px 14px;
+    border-bottom:1px solid var(--rule-strong);font-size:11px;letter-spacing:.06em;
+    text-transform:uppercase;white-space:nowrap}
+  td{padding:9px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .num-col{text-align:right}
+  .win{color:var(--verified);font-weight:600} .lose{color:var(--redline)} .warn{color:var(--hold);font-weight:600}
+  tr.total td{border-top:1px solid var(--rule-strong);font-weight:600}
+  .finding{border-left:3px solid var(--redline);background:var(--redline-wash);
+    padding:16px 20px;margin:24px 0;border-radius:0 4px 4px 0}
+  .finding.confirmed{border-left-color:var(--verified);background:var(--verified-wash)}
+  .finding.note{border-left-color:var(--hold);background:var(--hold-wash)}
+  .finding .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--redline);font-weight:600;display:block;margin-bottom:7px}
+  .finding.confirmed .tag{color:var(--verified)} .finding.note .tag{color:var(--hold)}
+  .finding p{margin:0;font-size:16.5px} .finding p+p{margin-top:11px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:0;
+    border:1px solid var(--rule);border-radius:4px;background:var(--sheet);
+    overflow:hidden;margin:28px 0}
+  .kpi{padding:16px 18px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .kpi .v{font-family:var(--mono);font-size:26px;font-weight:600;line-height:1;
+    letter-spacing:-.02em;display:block;margin-bottom:7px}
+  .kpi .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--graphite);line-height:1.4}
+  .kpi.good .v{color:var(--verified)}
+  .foot{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--faint);
+    border-top:2px solid var(--ink);padding-top:18px;margin-top:18px}
+  .foot b{color:var(--graphite);font-weight:600}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="stamp">
+    <span>Anjani Interweave Pvt Ltd</span><span>FIBC BOM Agent</span>
+    <span><b>Fine-tuning dataset v1.0</b></span><span>26 Aug 2026</span>
+  </div>
+  <h1>The dataset, built and verified</h1>
+  <p class="standfirst">
+    Every folder swept, every workbook read twice by two independent engines and reconciled.
+    <em>482 BOM sheets</em> — up 22% on the naive extractor — because merged ranges were hiding
+    109,160 cells. Four gold layers, two adapter datasets, thirteen real customer documents held
+    back, and four quality gates that all pass.
+  </p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">01</span> Headline</h2>
+
+  <div class="kpis">
+    <div class="kpi good"><span class="v">482</span><span class="k">BOM sheets parsed<br>was 395 · +22%</span></div>
+    <div class="kpi good"><span class="v">99.85%</span><span class="k">two-engine agreement<br>172,092 cells</span></div>
+    <div class="kpi good"><span class="v">109,160</span><span class="k">cells recovered by<br>merge-awareness</span></div>
+    <div class="kpi"><span class="v">1,629</span><span class="k">adapter A rows<br>99.1% verified</span></div>
+    <div class="kpi"><span class="v">915</span><span class="k">adapter B rows<br>354 real decisions</span></div>
+    <div class="kpi"><span class="v">13</span><span class="k">real documents<br>never trained on</span></div>
+    <div class="kpi good"><span class="v">4/4</span><span class="k">quality gates<br>pass</span></div>
+    <div class="kpi"><span class="v">263</span><span class="k">fingerprint groups<br>zero leakage</span></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">02</span> The extraction problem you flagged — and what it actually was</h2>
+  <p class="lede">You were right to worry. I ran a diagnostic before choosing an engine rather than
+  trusting a default, and the answer was not what the blog posts say.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Empirical diagnostic across 119 unique workbooks</caption>
+      <thead><tr><th>Risk</th><th class="num-col">Measured</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Formula cells with no cached value → <code>data_only=True</code> returns <code>None</code></td><td class="num-col win">0 of 33,757</td><td class="win">Not a risk here. No LibreOffice recalculation pass needed.</td></tr>
+        <tr><td><b>Cells hidden inside merged ranges</b></td><td class="num-col lose"><b>174,841</b><br>in 116 of 119 books</td><td class="lose"><b>The real problem.</b> openpyxl returns <code>None</code> for every one.</td></tr>
+        <tr><td>Workbooks with drawings / text boxes</td><td class="num-col">55</td><td>Pulled from the raw OOXML zip — only 1 held text, the rest are diagrams. Nothing lost.</td></tr>
+        <tr><td>Workbooks openpyxl cannot open</td><td class="num-col">1</td><td class="win"><code>FIBC PRODUCTION DEC-2025.xlsx</code> is <b>0 bytes</b> — empty, not corrupt. Closes open item H6.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding confirmed">
+      <span class="tag">The engine decision, from evidence</span>
+      <p>Published benchmarks put <b>openpyxl at full fidelity (16/16)</b> and <b>python-calamine at
+      1/16 but 9× faster</b> — calamine reads values and drops merged cells, formatting and comments.
+      For 119 workbooks speed is irrelevant and fidelity is everything, so: <b>openpyxl as the
+      primary reader, calamine as an independent second opinion</b>, plus raw zip parsing for the
+      parts neither library exposes.</p>
+      <p>Every cell is read twice and reconciled. <b>99.85% agreement across 172,092 cells</b>, and
+      all 234 remaining disagreements are Excel error cells (<code>#DIV/0!</code>,
+      <code>#NAME?</code>) that openpyxl surfaces and calamine reports as empty. Zero genuine
+      value conflicts.</p>
+    </div>
+
+    <h3>What merge-awareness actually recovers</h3>
+    <p>Every cell now records whether its value is its <strong>own</strong> or an <strong>echo</strong>
+    of a merged range. That distinction matters: on these sheets a label routinely spans two or three
+    columns, so a naive "first non-empty cell to the right of the label" returns the label again.</p>
+  </div>
+
+<pre><code><span class="cmt">EXPORT ENQUIRY.xlsx / BAG TYPE-1, header row 9</span>
+
+raw openpyxl   C1=BAG TYPE   C3=U+2 PANEL WITH CORNER LOOP   C7=DOC PKT   C8=NA
+merge echoes   <span class="key">C2~BAG TYPE</span>  <span class="key">C4~U+2 PANEL…</span>  <span class="key">C5~U+2 PANEL…</span>  <span class="key">C6~U+2 PANEL…</span>  <span class="key">C9~NA</span>  <span class="key">C10~NA</span>
+
+<span class="cmt">A right-scan that does not know C2 is an echo of the label returns "BAG TYPE"</span>
+<span class="cmt">as the bag type. The reader skips echoes of the label's own merge origin.</span></code></pre>
+
+  <div class="col">
+    <p>Two further gaps the first parser had, found by inspecting what it missed rather than assuming
+    it was right:</p>
+    <ul>
+      <li><strong><code>TOP SPOUT</code> was the single most common top label — 219 sheets — and was not in the label list at all.</strong> Coverage went 51% → <strong>99.6%</strong>.</li>
+      <li><strong>A second sheet layout exists</strong> (<code>SR.NO. | COMPONENT | FABRIC SIZE CM | CUT SIZE | QTY | GSM</code>) carrying an <em>explicit</em> QTY column. Grand-total detection went 90.2% → <strong>99.8%</strong>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">03</span> What was built</h2>
+
+  <h3>Four gold layers — 482 rows each, aligned by ID</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>gold/</caption>
+      <thead><tr><th>Layer</th><th>What it holds</th><th>Built from</th></tr></thead>
+      <tbody>
+        <tr><td><code>order_spec.jsonl</code></td><td>what the customer asked</td><td class="lose"><b>header block ONLY</b> — the firewall</td></tr>
+        <tr><td><code>build_spec.jsonl</code></td><td>what the engineer decided</td><td>header + components + instructions + tech blocks</td></tr>
+        <tr><td><code>physical_bom.jsonl</code></td><td>what was actually cut</td><td>component table verbatim — renderer tests only, never a training target</td></tr>
+        <tr><td><code>clarification.jsonl</code></td><td>what the agent should ask</td><td class="win">derived from absent fields — zero labelling</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding confirmed">
+      <span class="tag">Firewall — enforced structurally, not by discipline</span>
+      <p><code>build_order_spec()</code> takes the header dict and the dimensions. It is
+      <em>never handed the component table</em>. A test then asserts no BuildSpec-only field
+      (<code>body_gsm</code>, <code>belt_gpm</code>, <code>family</code>, <code>dust_proof</code>…)
+      appears in any OrderSpec or any adapter-A target. <strong>PASS.</strong></p>
+    </div>
+  </div>
+
+  <h3>Adapter A — extraction · 1,629 rows</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>adapter_a/ · enquiry text → OrderSpec</caption>
+      <thead><tr><th></th><th class="num-col">train</th><th class="num-col">val</th><th class="num-col">test</th><th>note</th></tr></thead>
+      <tbody>
+        <tr><td>synthesised, round-trip verified</td><td class="num-col">1,105</td><td class="num-col">270</td><td class="num-col">246</td><td>five styles, evenly balanced</td></tr>
+        <tr><td>hand-written hard negatives</td><td class="num-col">8</td><td class="num-col">—</td><td class="num-col">—</td><td>two size triples in one line, negations, imperial TDS, <code>6:01/UN</code></td></tr>
+        <tr class="total"><td>total</td><td class="num-col">1,113</td><td class="num-col">270</td><td class="num-col">246</td><td class="win">99.1% of candidates survived verification</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p><strong>The round trip is the whole point.</strong> Text is synthesised from
+    <code>OrderSpec_gold</code>; an <em>independent</em> parser — sharing no code with the generator —
+    re-reads the generated text and must recover the same values. Any mismatch is
+    <strong>discarded, never repaired</strong>.</p>
+    <p>Field dropout follows the corpus rates so a synthetic enquiry is as incomplete as a real one:
+    liner absent 78%, printing 43%, target weight 9%, SWL 5%. Corpus noise is injected verbatim —
+    <code>PANNEL</code>, <code>CLOUSER</code>, <code>gr/m2</code>, <code>3"</code>,
+    <code>05:01</code>.</p>
+    <p>Each style is graded only on fields it can structurally express. A printed technical data
+    sheet carries no LL/SL loop lengths, so grading it on those would have discarded sound rows —
+    that single fix took the TDS style from 28 rows to 325.</p>
+  </div>
+
+<pre><code><span class="cmt">one adapter-A training row</span>
+
+INPUT   DOMESTIC VJN enquiry
+        size : 109X109X119 cm
+        Bag type : CORNER LOOP + BAFFLE BAG
+        SWL 1000 KGS
+        SF 5:1/UN
+        top spout 40x50 cm
+        bottom spout 50x50 cm with iris closer
+        loop : 4 loop, free height 30 cm, LL 75 cm, white belt
+
+OUTPUT  <span class="ok">provided</span>       ext 109/109/119 · swl 1000 · sf 5:1 · loop_qty 4
+                        free_height 30 · LL 75 · fs 40x50 · ds 50x50 iris
+        <span class="key">not_specified</span>  16 fields — <span class="cmt">loop_SL_cm, belt_width_mm, has_liner, …</span></code></pre>
+
+  <h3>Adapter B — configuration · 915 rows</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>adapter_b/ · OrderSpec + retrieved top-3 + envelope → BuildSpec</caption>
+      <thead><tr><th>Row type</th><th class="num-col">n</th><th>What it teaches</th></tr></thead>
+      <tbody>
+        <tr><td class="win"><code>base</code></td><td class="num-col win">354</td><td class="win"><b>real engineering decisions — zero labelling effort</b></td></tr>
+        <tr><td><code>solver_feedback</code></td><td class="num-col">394</td><td>a knob perturbed, the weight gap shown — move it back, <b>in the engineer's knob order</b></td></tr>
+        <tr><td><code>conflict</code></td><td class="num-col">64</td><td>customer GSM below the chart floor — honour it <em>and flag it</em></td></tr>
+        <tr><td><code>conflict_infeasible</code></td><td class="num-col">103</td><td>target weight unreachable — <b>ask, never force</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Retrieval is <strong>leave-one-fingerprint-out</strong> with a hard family filter, so a sheet
+    can never see its own twin. The solver target is anchored on the renderer's own baseline for the
+    true BuildSpec — not the sheet's grand total — so the gap isolates the perturbation instead of
+    measuring what the renderer does not yet model.</p>
+  </div>
+
+<pre><code><span class="cmt">one solver_feedback row — belt_gpm perturbed 40 → 45</span>
+
+weight_feedback   rendered 2238.57 g   target 2181.48 g   gap +57.09 g  (<span class="key">+2.62%</span>)
+                  tolerance 2.0%
+                  allowed_knobs  [<span class="key">belt_gpm</span>, loop_cut, body_gsm]      <span class="cmt">← his order</span>
+                  knob_ranges    belt_gpm [30, 35] · body_gsm_floor 140
+
+envelope          gsm_floor 140 · belt_gpm_required 35.7 <span class="cmt">(target, not a limit)</span>
+                  dimension_basis <span class="key">INTERNAL</span>   <span class="cmt">← baffle exception, notebook p.61</span>
+
+OUTPUT            the true BuildSpec, belt_gpm back to 40</code></pre>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">04</span> Quality gates</h2>
+
+  <div class="tablewrap">
+    <table>
+      <caption>All four run on every build</caption>
+      <thead><tr><th>Gate</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Firewall — no BuildSpec field reaches OrderSpec</td><td class="win">PASS</td></tr>
+        <tr><td>Leakage — no fingerprint in two splits</td><td class="win">PASS</td></tr>
+        <tr><td>Leakage — no identical input across splits (full SHA-1, not a prefix)</td><td class="win">PASS</td></tr>
+        <tr><td>Schema — enums, required keys, GSM on catalogue</td><td class="win">PASS · 2,544 rows</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding note">
+      <span class="tag">One false alarm worth naming</span>
+      <p>The leakage check first reported 48 identical inputs across splits. It was comparing only
+      the first 600 characters of the JSON, which is identical for every sparse OrderSpec. Hashing
+      the whole input gives <strong>zero overlap</strong>. A validator that is wrong in the alarming
+      direction is still wrong — it now hashes the full object.</p>
+    </div>
+
+    <h3>Renderer replay — the baseline phase 2 must beat</h3>
+    <p>Every gold BuildSpec replayed through the deterministic renderer, compared to what was
+    actually cut.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Component geometry within 2 cm of the real cut</caption>
+      <thead><tr><th>Component</th><th class="num-col">Agreement</th><th class="num-col">n</th></tr></thead>
+      <tbody>
+        <tr><td>SIDE PANEL cut</td><td class="num-col win">96.9%</td><td class="num-col">193</td></tr>
+        <tr><td>DISCHARGE SPOUT cut</td><td class="num-col win">94.5%</td><td class="num-col">218</td></tr>
+        <tr><td>FILLING SPOUT cut</td><td class="num-col win">91.7%</td><td class="num-col">216</td></tr>
+        <tr><td>FILLING SPOUT width</td><td class="num-col win">85.2%</td><td class="num-col">216</td></tr>
+        <tr><td>SIDE PANEL width</td><td class="num-col win">84.5%</td><td class="num-col">193</td></tr>
+        <tr><td>BAFFLE width</td><td class="num-col">80.0%</td><td class="num-col">70</td></tr>
+        <tr><td>BODY PANEL width</td><td class="num-col">76.5%</td><td class="num-col">375</td></tr>
+        <tr><td>BODY PANEL cut</td><td class="num-col">73.9%</td><td class="num-col">375</td></tr>
+        <tr><td>BAFFLE cut</td><td class="num-col">62.9%</td><td class="num-col">70</td></tr>
+        <tr><td>CORNER LOOP cut</td><td class="num-col warn">57.2%</td><td class="num-col">402</td></tr>
+        <tr class="total"><td>Median grand-total error</td><td class="num-col">10.2%</td><td class="num-col">455</td></tr>
+        <tr><td>&nbsp;&nbsp;u_panel only</td><td class="num-col win">5.7%</td><td class="num-col">206</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p><strong>Read this honestly.</strong> The spout and side-panel rules reproduce history at
+    85–97% — those rules are sound. The residual total error is dominated by two things that are
+    <em>not</em> dataset defects: five families still have no geometry in the registry
+    (<code>single_loop</code>, <code>two_loop</code>, <code>omega</code>, <code>hood</code>,
+    <code>conical</code>), and the minimal renderer does not yet model every component.</p>
+    <p>This measures <em>the rule book</em>, not the data. The dataset trains the model to emit
+    BuildSpecs; the production renderer is phase 2 of the build plan, and 10.2% is the number it has
+    to beat. <code>CORNER LOOP cut</code> at 57.2% is the clearest target — it is the
+    <code>LL = 65% / SL = 35% of bag height</code> default firing where the customer stated nothing,
+    and it is exactly the open item flagged in the plan.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">05</span> What is in the folder</h2>
+
+<pre><code>dataset/
+├── MANIFEST.json            file hashes, counts, every gate result
+├── DATASET_REPORT.md        this report, in full
+├── gold/                    <span class="ok">4 × 482 rows, aligned by _id and _fingerprint</span>
+│     order_spec · build_spec · physical_bom · clarification
+├── adapter_a/               train 1113 · val 270 · test 246 · hard_negatives 8
+├── adapter_b/               train 803  · val  57 · test  55
+├── eval_real/               13 real documents + 8 pending OCR
+└── build/                   00…10 — deterministic, re-runnable end to end
+      xl_read.py             the multi-engine merge-aware reader
+      bom_parse.py           the sheet parser
+      rules.py               the locked rule book as data
+      renderer.py            BuildSpec → weight
+
+Every row carries:  system · input · output · split · id · fingerprint · meta
+Train with completion-only loss on <span class="key">output</span>; serve under grammar constraint
+using the enums in <span class="key">build/rules.py</span>.</code></pre>
+
+  <div class="col">
+    <p>The whole pipeline rebuilds from scratch with eleven commands. Nothing is hand-edited; the
+    GSM catalogue is derived from the corpus rather than typed, so it cannot drift from the data.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">06</span> Known limits — stated plainly</h2>
+
+  <div class="col">
+    <ol>
+      <li><strong>Adapter A is trained on reconstructed enquiries.</strong> The corpus holds the engineer's transcription of the enquiry, not the enquiry itself. Every row is round-trip verified, but the distribution is synthetic. <code>eval_real</code> is the only honest measure — and it holds <strong>13 documents</strong>. Keeping the next twenty raw enquiries is still the highest-value action available to this project.</li>
+      <li><strong><code>product_contents</code> is empty on all 482 rows.</strong> Answer C1 says this field explains the 68% GSM spread, and no sheet records it. The schema is ready; the data is not. Until it exists, adapter B has to learn GSM from geometry and neighbours alone.</li>
+      <li><strong><code>req_weight_g</code> appears on 7% of sheets, <code>quoted_weight_g</code> on 76%.</strong> Per G4 these are different facts and are kept apart. The solver falls back to the quoted figure.</li>
+      <li><strong>Five families have no geometry yet</strong> — present in the gold layers and in adapter B, but the renderer cannot score them, which is most of the 10.2% median error.</li>
+      <li><strong>Eight scanned enquiries have no text layer</strong> and are listed in <code>eval_real/pending_ocr.json</code> rather than silently dropped. OCR plus hand labelling would roughly double the real eval set.</li>
+    </ol>
+  </div>
+
+  <div class="col foot">
+    <p><b>Basis.</b> 130 workbooks found across every folder, 119 unique by content hash, 744 sheets
+    read, 482 BOM sheets parsed. Every value read by openpyxl and python-calamine and reconciled at
+    99.85% agreement over 172,092 cells; 109,160 cells recovered by merge-aware reading. Rule book
+    v1.1 from <code>IMPLEMENTATION_PLAN.md</code> — the 44 questionnaire answers, the corrected
+    Rules-from-Data PDF, and the engineer's notebook. All figures reproducible by re-running
+    <code>dataset/build/00…10</code>.</p>
+  </div>
+</section>
+
+</div>

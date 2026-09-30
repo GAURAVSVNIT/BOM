@@ -1,0 +1,33 @@
+{
+  "version": "2026-05-26",
+  "purpose": "Fallback choices and warnings. These must never override hard constraints.",
+  "body_gsm_selection": {
+    "strategy": "minimum_structural_then_dataset_nearest_mode",
+    "note": "Minimum structural GSM is a hard floor, not the final engineered GSM rule."
+  },
+  "u_panel_body_gsm_modes": {
+    "5000": [125, 140, 150, 165],
+    "6250": [140, 150, 160],
+    "7500": [160, 180, 210],
+    "9000": [180, 200, 210]
+  },
+  "width_rounding_policy": {
+    "generated_bom": "nearest approved loom width greater than or equal to formula minimum",
+    "historical_bom": "preserve source width; warn if not approved"
+  },
+  "historical_width_overrides_allowed": true,
+  "stitching_weight_heuristic": {
+    "formula": "max(50, round(0.45 * ext_H))",
+    "fallback_weight_g": 55
+  },
+  "ddp_path_heuristic": {
+    "u_panel": "2*body_cut + 4*ext_L + fs_cut + ds_cut + 50 when spouts exist; otherwise 2*body_cut + 4*ext_L + 50",
+    "gsm_per_m": 4.5
+  },
+  "target_actual_weight_warning_pct": 10,
+  "retrieval_weights": {
+    "geometric": 0.5,
+    "categorical": 0.35,
+    "semantic": 0.15
+  }
+}

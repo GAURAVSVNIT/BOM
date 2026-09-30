@@ -1,0 +1,9 @@
+torch>=2.4
+transformers>=4.57
+accelerate>=0.34
+peft>=0.13
+trl>=1.9  # confirmed working with train_qwen_bom.py's completion_only_loss approach at 1.9.2; older trl (<1.x, e.g. the 0.12 this was originally pinned to) predates that API and lacks it entirely — the training script needs the newer API, not an older one
+bitsandbytes>=0.44
+datasets>=2.20
+sentencepiece
+protobuf

@@ -1,0 +1,771 @@
+{
+  "run_id": "run-40d23abc-d622-4528-a1ed-fe35a4526426",
+  "raw_query": {
+    "query_id": "query-63519fe0-21a0-40a4-86e2-1448054e45b1",
+    "language_hint": "mixed",
+    "raw_text": "85x85x110 U+2 panel SWL 1250 kg SF 5 top panel doc pocket no printing",
+    "attachments": [],
+    "received_at": "2026-05-26T17:19:22.667643"
+  },
+  "structured_spec": {
+    "spec_id": "spec-49f0e9c1-deb3-4116-b4f2-978893107042",
+    "source_query_id": "query-63519fe0-21a0-40a4-86e2-1448054e45b1",
+    "customer": {
+      "value": null,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "ref_no": {
+      "value": null,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "bag_type": {
+      "value": "u_panel",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.95,
+      "source_text": "u_panel alias",
+      "source": "customer_text"
+    },
+    "dimensions": {
+      "int_L": {
+        "value": 85.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.96,
+        "source_text": "85x85x110 ",
+        "source": "customer_text"
+      },
+      "int_W": {
+        "value": 85.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.96,
+        "source_text": "85x85x110 ",
+        "source": "customer_text"
+      },
+      "int_H": {
+        "value": 110.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.96,
+        "source_text": "85x85x110 ",
+        "source": "customer_text"
+      },
+      "ext_L": {
+        "value": 89.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "internal_plus_4cm_default"
+      },
+      "ext_W": {
+        "value": 89.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "internal_plus_4cm_default"
+      },
+      "ext_H": {
+        "value": 114.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "internal_plus_4cm_default"
+      }
+    },
+    "swl_kg": {
+      "value": 1250.0,
+      "unit": "kg",
+      "status": "provided",
+      "confidence": 0.96,
+      "source_text": "SWL 1250 kg",
+      "source": "customer_text"
+    },
+    "sf": {
+      "value": 5.0,
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.96,
+      "source_text": "SF 5",
+      "source": "customer_text"
+    },
+    "bag_weight_target_g": {
+      "value": null,
+      "unit": "g",
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "fabric_color": {
+      "value": "WHITE",
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "body_laminated": {
+      "value": false,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "double_layer": {
+      "value": false,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "top_type": {
+      "value": "TOP_PANEL",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.92,
+      "source_text": "top panel",
+      "source": "customer_text"
+    },
+    "bottom_type": {
+      "value": "FLAT_BOTTOM",
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "loop": {
+      "loop_family": {
+        "value": "corner_loop",
+        "unit": null,
+        "status": "inferred",
+        "confidence": 0.8,
+        "source_text": null,
+        "source": "u_panel_default"
+      },
+      "loop_qty": {
+        "value": 4,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "loop_width_mm": {
+        "value": null,
+        "unit": "mm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "loop_LL_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "loop_SL_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "loop_color": {
+        "value": "WHITE",
+        "unit": null,
+        "status": "inferred",
+        "confidence": 0.65,
+        "source_text": null,
+        "source": "same_as_body_color"
+      },
+      "free_height_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "accessories": {
+      "has_fs_spout": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "fs_spout_dia_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "fs_spout_h_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_ds_spout": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "ds_spout_dia_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "ds_spout_h_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "ds_closure": {
+        "value": null,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_baffle": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_liner": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "liner_micron": {
+        "value": null,
+        "unit": "micron",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_doc_pocket": {
+        "value": true,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "doc pocket",
+        "source": "customer_text"
+      },
+      "doc_pocket_size": {
+        "value": "10x12 inch",
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.8,
+        "source_text": "10x12",
+        "source": "customer_text"
+      },
+      "has_ddp": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_stevedore": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "printing": {
+      "printing_sides": {
+        "value": 0,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "no printing",
+        "source": "customer_text"
+      },
+      "printing_colors": {
+        "value": 0,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "no printing",
+        "source": "customer_text"
+      },
+      "printing_color_names": {
+        "value": [],
+        "unit": null,
+        "status": "inapplicable",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "notes": []
+  },
+  "normalization_changes": [
+    {
+      "field": "bag_type",
+      "value": "u_panel",
+      "basis": "alias"
+    }
+  ],
+  "rule_engine_bom": {
+    "bom_id": "bom-7a0efc39-189c-4803-aad7-9f89dc2f103e",
+    "source": "rule_engine",
+    "source_spec_id": "spec-49f0e9c1-deb3-4116-b4f2-978893107042",
+    "source_file": null,
+    "source_sheet": null,
+    "customer": null,
+    "ref_no": null,
+    "bag_type": "u_panel",
+    "swl_kg": 1250.0,
+    "sf": 5.0,
+    "ext_L": 89.0,
+    "ext_W": 89.0,
+    "ext_H": 114.0,
+    "int_L": 85.0,
+    "int_W": 85.0,
+    "int_H": 110.0,
+    "bag_weight_target_g": null,
+    "bag_weight_actual_g": 1409.766,
+    "computed_total_g": 1409.766,
+    "components": [
+      {
+        "sr": 1,
+        "canonical_name": "BODY PANEL",
+        "original_name": null,
+        "gsm_area": 185.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 327.0,
+        "qty": 1.0,
+        "weight_g": 586.802,
+        "remark": "width=ext_W+8; cut=2*ext_H+ext_L+10",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 2,
+        "canonical_name": "SIDE PANEL",
+        "original_name": null,
+        "gsm_area": 185.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 122.0,
+        "qty": 2.0,
+        "weight_g": 437.858,
+        "remark": "qty=2; width=ext_W+8; cut=ext_H+8",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 3,
+        "canonical_name": "TOP PANEL",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 97.0,
+        "qty": 1.0,
+        "weight_g": 84.681,
+        "remark": "default top panel",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 4,
+        "canonical_name": "CORNER LOOP",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 35.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 5.0,
+        "cut_cm": 170.0,
+        "qty": 4.0,
+        "weight_g": 238.0,
+        "remark": "LL+SL+50",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 5,
+        "canonical_name": "DOC POCKET",
+        "original_name": null,
+        "gsm_area": 70.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "NATURAL",
+        "width_cm": 25.0,
+        "cut_cm": 31.0,
+        "qty": 1.0,
+        "weight_g": 5.425,
+        "remark": "10x12 inch",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 6,
+        "canonical_name": "STITCHING",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": "WHITE",
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 55.0,
+        "remark": "fixed heuristic",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 7,
+        "canonical_name": "LABEL",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": null,
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 2.0,
+        "remark": "mandatory",
+        "source": "rule_engine"
+      }
+    ],
+    "candidate_optional_components": [],
+    "assumptions": [
+      {
+        "id": "A001",
+        "field": "body_gsm",
+        "assumption": "Selected 185 GSM with structural minimum floor and U-panel data model advisory.",
+        "basis": "minimum_structural_plus_ml_advisory"
+      },
+      {
+        "id": "A002",
+        "field": "approved_widths",
+        "assumption": "Widths snapped upward to approved loom table.",
+        "basis": "width_rounding_policy"
+      }
+    ],
+    "rule_hits": [
+      {
+        "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "MINIMUM_STRUCTURAL_GSM",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GEOMETRY",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "LOOP_STANDARD_TABLE",
+        "rule_level": "default_preference",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GSM_MODEL_ADVISORY",
+        "rule_level": "fallback_heuristic",
+        "component": null
+      }
+    ],
+    "constraint_inputs": {
+      "design_load_kg": 6250.0,
+      "static_rule_table_version": "2026-05-26",
+      "body_gsm_min": 140,
+      "body_gsm_selected": 185
+    }
+  },
+  "rule_hits": [
+    {
+      "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "MINIMUM_STRUCTURAL_GSM",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "U_PANEL_GEOMETRY",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "LOOP_STANDARD_TABLE",
+      "rule_level": "default_preference",
+      "component": null
+    },
+    {
+      "rule_id": "U_PANEL_GSM_MODEL_ADVISORY",
+      "rule_level": "fallback_heuristic",
+      "component": null
+    }
+  ],
+  "retrieved_boms": [],
+  "llm_prompt_version": "synthesis_v1",
+  "llm_raw_output": {
+    "outputs": [],
+    "used_fallback": true
+  },
+  "validation_reports": [
+    {
+      "schema_pass": true,
+      "hard_failures": [],
+      "soft_warnings": [],
+      "retriable": false,
+      "error_context_for_llm": {},
+      "final_decision": "pass"
+    }
+  ],
+  "retry_count": 0,
+  "final_bom": {
+    "bom_id": "bom-7a0efc39-189c-4803-aad7-9f89dc2f103e",
+    "source": "rule_engine",
+    "source_spec_id": "spec-49f0e9c1-deb3-4116-b4f2-978893107042",
+    "source_file": null,
+    "source_sheet": null,
+    "customer": null,
+    "ref_no": null,
+    "bag_type": "u_panel",
+    "swl_kg": 1250.0,
+    "sf": 5.0,
+    "ext_L": 89.0,
+    "ext_W": 89.0,
+    "ext_H": 114.0,
+    "int_L": 85.0,
+    "int_W": 85.0,
+    "int_H": 110.0,
+    "bag_weight_target_g": null,
+    "bag_weight_actual_g": 1409.766,
+    "computed_total_g": 1409.766,
+    "components": [
+      {
+        "sr": 1,
+        "canonical_name": "BODY PANEL",
+        "original_name": null,
+        "gsm_area": 185.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 327.0,
+        "qty": 1.0,
+        "weight_g": 586.802,
+        "remark": "width=ext_W+8; cut=2*ext_H+ext_L+10",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 2,
+        "canonical_name": "SIDE PANEL",
+        "original_name": null,
+        "gsm_area": 185.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 122.0,
+        "qty": 2.0,
+        "weight_g": 437.858,
+        "remark": "qty=2; width=ext_W+8; cut=ext_H+8",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 3,
+        "canonical_name": "TOP PANEL",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 97.0,
+        "cut_cm": 97.0,
+        "qty": 1.0,
+        "weight_g": 84.681,
+        "remark": "default top panel",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 4,
+        "canonical_name": "CORNER LOOP",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 35.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 5.0,
+        "cut_cm": 170.0,
+        "qty": 4.0,
+        "weight_g": 238.0,
+        "remark": "LL+SL+50",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 5,
+        "canonical_name": "DOC POCKET",
+        "original_name": null,
+        "gsm_area": 70.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "NATURAL",
+        "width_cm": 25.0,
+        "cut_cm": 31.0,
+        "qty": 1.0,
+        "weight_g": 5.425,
+        "remark": "10x12 inch",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 6,
+        "canonical_name": "STITCHING",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": "WHITE",
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 55.0,
+        "remark": "fixed heuristic",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 7,
+        "canonical_name": "LABEL",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": null,
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 2.0,
+        "remark": "mandatory",
+        "source": "rule_engine"
+      }
+    ],
+    "candidate_optional_components": [],
+    "assumptions": [
+      {
+        "id": "A001",
+        "field": "body_gsm",
+        "assumption": "Selected 185 GSM with structural minimum floor and U-panel data model advisory.",
+        "basis": "minimum_structural_plus_ml_advisory"
+      },
+      {
+        "id": "A002",
+        "field": "approved_widths",
+        "assumption": "Widths snapped upward to approved loom table.",
+        "basis": "width_rounding_policy"
+      }
+    ],
+    "rule_hits": [
+      {
+        "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "MINIMUM_STRUCTURAL_GSM",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GEOMETRY",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "LOOP_STANDARD_TABLE",
+        "rule_level": "default_preference",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GSM_MODEL_ADVISORY",
+        "rule_level": "fallback_heuristic",
+        "component": null
+      }
+    ],
+    "constraint_inputs": {
+      "design_load_kg": 6250.0,
+      "static_rule_table_version": "2026-05-26",
+      "body_gsm_min": 140,
+      "body_gsm_selected": 185
+    }
+  },
+  "final_pass_fail": "pass",
+  "created_at": "2026-05-26T17:19:22.773484"
+}

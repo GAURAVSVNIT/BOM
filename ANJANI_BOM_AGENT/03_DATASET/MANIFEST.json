@@ -1,0 +1,187 @@
+{
+ "name": "anjani-fibc-bom-finetune",
+ "version": "1.0.0",
+ "built": "2026-08-29",
+ "rule_version": "1.1",
+ "provenance": {
+  "workbooks_scanned": 130,
+  "workbooks_unique_by_content": 119,
+  "sheets_read": 744,
+  "bom_sheets_parsed": 482,
+  "extraction_engines": [
+   "openpyxl(data_only)",
+   "openpyxl(formulas)",
+   "python-calamine",
+   "raw OOXML zip"
+  ],
+  "engine_agreement_pct": 99.8454,
+  "cells_recovered_by_merge_awareness": 109160
+ },
+ "gold_layers": {
+  "order_spec": 482,
+  "build_spec": 482,
+  "physical_bom": 482,
+  "clarification": 482
+ },
+ "family_distribution": {
+  "u_panel": 211,
+  "circular": 114,
+  "four_panel_baffle": 71,
+  "two_panel": 35,
+  "single_loop": 14,
+  "two_loop": 11,
+  "four_panel": 11,
+  "omega": 6,
+  "tunnel": 3,
+  "hood": 3,
+  "container_liner": 2,
+  "platten": 1
+ },
+ "adapter_a": {
+  "train": 1129,
+  "val": 265,
+  "test": 235,
+  "synthetic": 1121,
+  "hard_negatives": 8,
+  "round_trip_verified": true
+ },
+ "adapter_b": {
+  "train": 787,
+  "val": 56,
+  "test": 51,
+  "row_types": {
+   "base": 354,
+   "solver_feedback": 382,
+   "conflict": 61,
+   "conflict_infeasible": 97
+  }
+ },
+ "eval_real": {
+  "documents": 0,
+  "trained_on": false,
+  "pending_ocr": 0
+ },
+ "quality_gates": {
+  "renderer_replay": {
+   "n": 455,
+   "median_pct": 10.162,
+   "within_2pct": 19.6,
+   "within_5pct": 29.2,
+   "within_10pct": 49.7,
+   "component_geometry": {
+    "BODY PANEL.width": 76.5,
+    "BODY PANEL.cut": 73.9,
+    "BOTTOM PANEL.width": 57.6,
+    "BOTTOM PANEL.cut": 57.6,
+    "BAFFLE.width": 80.0,
+    "BAFFLE.cut": 62.9,
+    "FILLING SPOUT.width": 85.2,
+    "FILLING SPOUT.cut": 91.7,
+    "DISCHARGE SPOUT.width": 56.0,
+    "DISCHARGE SPOUT.cut": 94.5,
+    "IRIS TIE.cut": 29.4,
+    "CORNER LOOP.cut": 57.2,
+    "SIDE PANEL.width": 84.5,
+    "SIDE PANEL.cut": 96.9,
+    "LINER.width": 44.9,
+    "LINER.cut": 7.7,
+    "SKIRT.width": 27.0,
+    "SKIRT.cut": 33.3,
+    "DDP.cut": 0.0
+   }
+  },
+  "leakage_clean": true,
+  "schema_issues": {},
+  "firewall_clean": true
+ },
+ "files": {
+  "dedupe.json": {
+   "bytes": 2748,
+   "sha256_16": "52446b77f41b7e67"
+  },
+  "diagnostic.json": {
+   "bytes": 54570,
+   "sha256_16": "8e8e7005d629be65"
+  },
+  "extract_skipped.json": {
+   "bytes": 997,
+   "sha256_16": "da13b8349c6884e9"
+  },
+  "MANIFEST.json": {
+   "bytes": 4100,
+   "sha256_16": "a8dbf52e755328b7"
+  },
+  "raw_records.json": {
+   "bytes": 6219535,
+   "sha256_16": "082597fbf87cb164"
+  },
+  "reconciliation.json": {
+   "bytes": 66994,
+   "sha256_16": "f2232007aecb761f"
+  },
+  "split.json": {
+   "bytes": 6777,
+   "sha256_16": "7f748e777f646a05"
+  },
+  "sweep.json": {
+   "bytes": 21467,
+   "sha256_16": "8799e634b282760c"
+  },
+  "validation.json": {
+   "bytes": 777,
+   "sha256_16": "c1bc767d2f2f32a4"
+  },
+  "adapter_a/hard_negatives.jsonl": {
+   "bytes": 22313,
+   "sha256_16": "c03bc51de5ee7546"
+  },
+  "adapter_a/test.jsonl": {
+   "bytes": 725441,
+   "sha256_16": "5c500a0bf55eb09d"
+  },
+  "adapter_a/train.jsonl": {
+   "bytes": 3474866,
+   "sha256_16": "c0d4463eba6b4b82"
+  },
+  "adapter_a/val.jsonl": {
+   "bytes": 818084,
+   "sha256_16": "078c6549f3267af0"
+  },
+  "adapter_b/test.jsonl": {
+   "bytes": 465970,
+   "sha256_16": "1109acb2166adbc2"
+  },
+  "adapter_b/train.jsonl": {
+   "bytes": 6406220,
+   "sha256_16": "7bf9aa308b47fac5"
+  },
+  "adapter_b/val.jsonl": {
+   "bytes": 520389,
+   "sha256_16": "e878173c9476b847"
+  },
+  "eval_real/eval_real.jsonl": {
+   "bytes": 0,
+   "sha256_16": "e3b0c44298fc1c14"
+  },
+  "eval_real/pending_ocr.json": {
+   "bytes": 2,
+   "sha256_16": "4f53cda18c2baa0c"
+  },
+  "gold/build_spec.jsonl": {
+   "bytes": 668158,
+   "sha256_16": "3108c2d6af7093ee"
+  },
+  "gold/clarification.jsonl": {
+   "bytes": 487707,
+   "sha256_16": "4aa6b0232b586e51"
+  },
+  "gold/order_spec.jsonl": {
+   "bytes": 2665131,
+   "sha256_16": "ead666bb1f26a6ca"
+  },
+  "gold/physical_bom.jsonl": {
+   "bytes": 1700039,
+   "sha256_16": "d2394b0809104ef8"
+  }
+ }
+}

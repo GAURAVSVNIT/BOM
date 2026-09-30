@@ -1,0 +1,933 @@
+<title>Where Qwen Belongs — Anjani BOM Engine Architecture Review</title>
+<style>
+  /* ─── tokens: complete light palette on bare :root ─────────────────── */
+  :root{
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+    --paper:#FAFAF8;
+    --sheet:#FFFFFF;
+    --sunk:#F2F3F1;
+    --ink:#11181F;
+    --graphite:#5C6A78;
+    --faint:#8794A1;
+    --rule:#DFE3E7;
+    --rule-strong:#C4CBD2;
+    --redline:#AF2C1C;
+    --redline-wash:#FBF0EE;
+    --verified:#16645A;
+    --verified-wash:#EDF5F3;
+    --hold:#8A6212;
+    --hold-wash:#FAF4E6;
+    --shadow:0 1px 2px rgba(17,24,31,.05), 0 8px 24px -16px rgba(17,24,31,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1318;
+      --sheet:#141B22;
+      --sunk:#181F27;
+      --ink:#E6EAEE;
+      --graphite:#9AA7B4;
+      --faint:#6F7D8B;
+      --rule:#252F39;
+      --rule-strong:#33404C;
+      --redline:#E8705C;
+      --redline-wash:#221614;
+      --verified:#4FBFA9;
+      --verified-wash:#11201E;
+      --hold:#D6A63F;
+      --hold-wash:#1F1A0F;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1318;
+    --sheet:#141B22;
+    --sunk:#181F27;
+    --ink:#E6EAEE;
+    --graphite:#9AA7B4;
+    --faint:#6F7D8B;
+    --rule:#252F39;
+    --rule-strong:#33404C;
+    --redline:#E8705C;
+    --redline-wash:#221614;
+    --verified:#4FBFA9;
+    --verified-wash:#11201E;
+    --hold:#D6A63F;
+    --hold-wash:#1F1A0F;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:17px; line-height:1.62;
+    margin:0; padding:0 20px 120px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:1180px;margin:0 auto}
+  .col{max-width:660px}
+  .col p, .col ul, .col ol{max-width:66ch}
+
+  /* ─── masthead ─────────────────────────────────────────────────────── */
+  .mast{
+    padding:64px 0 28px; margin-bottom:44px;
+    border-bottom:2px solid var(--ink);
+  }
+  .stamp{
+    font-family:var(--mono); font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--graphite);
+    display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:26px;
+  }
+  .stamp b{color:var(--ink);font-weight:600}
+  h1{
+    font-family:var(--mono); font-weight:600;
+    font-size:clamp(28px,4.4vw,46px); line-height:1.08;
+    letter-spacing:-.02em; margin:0 0 18px; text-wrap:balance;
+  }
+  .standfirst{
+    font-size:19px; line-height:1.55; color:var(--graphite);
+    margin:0; max-width:62ch;
+  }
+  .standfirst em{color:var(--ink);font-style:italic}
+
+  /* ─── sections ─────────────────────────────────────────────────────── */
+  section{margin:0 0 68px}
+  h2{
+    font-family:var(--mono); font-size:13px; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--ink);
+    margin:0 0 6px; padding-bottom:10px;
+    border-bottom:1px solid var(--rule-strong);
+    display:flex; align-items:baseline; gap:14px;
+  }
+  h2 .num{color:var(--faint); font-weight:400}
+  h2 + .lede{
+    font-size:19px; line-height:1.5; color:var(--graphite);
+    margin:20px 0 0; max-width:62ch;
+  }
+  h3{
+    font-family:var(--mono); font-size:14px; font-weight:600;
+    letter-spacing:.01em; margin:34px 0 10px; color:var(--ink);
+  }
+  p{margin:0 0 16px}
+  section > .col > p:first-child, section > .col > ul:first-child{margin-top:20px}
+  a{color:var(--redline)}
+  strong{font-weight:600}
+  em{font-style:italic}
+
+  code{
+    font-family:var(--mono); font-size:.86em;
+    background:var(--sunk); padding:1px 5px; border-radius:3px;
+    border:1px solid var(--rule);
+  }
+
+  ul,ol{margin:0 0 16px; padding-left:22px}
+  li{margin-bottom:9px}
+  li::marker{color:var(--faint)}
+
+  /* ─── verdict chips ────────────────────────────────────────────────── */
+  .chip{
+    font-family:var(--mono); font-size:10.5px; font-weight:600;
+    letter-spacing:.1em; text-transform:uppercase;
+    padding:3px 8px; border-radius:3px; white-space:nowrap;
+    border:1px solid currentColor;
+  }
+  .chip.keep{color:var(--verified); background:var(--verified-wash)}
+  .chip.change{color:var(--hold); background:var(--hold-wash)}
+  .chip.replace{color:var(--redline); background:var(--redline-wash)}
+
+  /* ─── verdict list ─────────────────────────────────────────────────── */
+  .verdicts{display:grid;gap:0;margin:28px 0 0;border-top:1px solid var(--rule)}
+  .verdict{
+    display:grid; grid-template-columns:130px 1fr; gap:20px;
+    padding:18px 0; border-bottom:1px solid var(--rule); align-items:start;
+  }
+  .verdict > div:first-child{display:flex;flex-direction:column;gap:8px}
+  .verdict .what{
+    font-family:var(--mono); font-size:12px; font-weight:600;
+    line-height:1.35; color:var(--ink);
+  }
+  .verdict p{margin:0; font-size:16px; line-height:1.55}
+  @media(max-width:640px){
+    .verdict{grid-template-columns:1fr;gap:10px}
+    .verdict > div:first-child{flex-direction:row;align-items:center;gap:12px}
+  }
+
+  /* ─── data tables ──────────────────────────────────────────────────── */
+  .tablewrap{overflow-x:auto; margin:26px 0; border:1px solid var(--rule); border-radius:4px; background:var(--sheet)}
+  table{border-collapse:collapse; width:100%; font-family:var(--mono); font-size:13px;
+        font-variant-numeric:tabular-nums; min-width:520px}
+  caption{
+    text-align:left; font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--graphite);
+    padding:12px 16px; border-bottom:1px solid var(--rule); background:var(--sunk);
+  }
+  th{
+    text-align:left; font-weight:600; color:var(--graphite);
+    padding:10px 16px; border-bottom:1px solid var(--rule-strong);
+    font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    white-space:nowrap;
+  }
+  td{padding:9px 16px; border-bottom:1px solid var(--rule); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .num-col{text-align:right}
+  .win{color:var(--verified); font-weight:600}
+  .lose{color:var(--redline)}
+  tr.highlight td{background:var(--verified-wash)}
+  tr.total td{border-top:1px solid var(--rule-strong); font-weight:600}
+
+  /* ─── callouts ─────────────────────────────────────────────────────── */
+  .finding{
+    border-left:3px solid var(--redline); background:var(--redline-wash);
+    padding:18px 22px; margin:28px 0; border-radius:0 4px 4px 0;
+  }
+  .finding .tag{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--redline); font-weight:600;
+    display:block; margin-bottom:8px;
+  }
+  .finding p{margin:0; font-size:16.5px}
+  .finding p + p{margin-top:12px}
+
+  .confirmed{border-left-color:var(--verified); background:var(--verified-wash)}
+  .confirmed .tag{color:var(--verified)}
+
+  /* ─── the block diagram ────────────────────────────────────────────── */
+  figure{margin:32px 0; padding:0}
+  .diagram{
+    border:1px solid var(--rule); border-radius:4px; background:var(--sheet);
+    padding:26px 20px; overflow-x:auto;
+  }
+  .diagram svg{display:block; margin:0 auto; min-width:640px}
+  figcaption{
+    font-family:var(--mono); font-size:11.5px; line-height:1.6; color:var(--graphite);
+    margin-top:12px; max-width:70ch;
+  }
+
+  /* ─── spec sheet block (the BuildSpec fields) ──────────────────────── */
+  .spec{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:0; margin:26px 0; border:1px solid var(--rule); border-radius:4px;
+    background:var(--sheet); overflow:hidden;
+  }
+  .spec > div{padding:16px 18px; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule)}
+  .spec h4{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    margin:0 0 10px; color:var(--redline); font-weight:600;
+  }
+  .spec ul{margin:0; padding-left:0; list-style:none}
+  .spec li{
+    font-family:var(--mono); font-size:12px; line-height:1.5;
+    margin-bottom:5px; color:var(--graphite);
+  }
+  .spec li b{color:var(--ink); font-weight:500}
+
+  /* ─── build order ──────────────────────────────────────────────────── */
+  .steps{counter-reset:s; list-style:none; padding:0; margin:28px 0 0}
+  .steps li{
+    counter-increment:s; position:relative; padding:0 0 22px 52px;
+    margin:0; border-left:1px solid var(--rule);
+  }
+  .steps li:last-child{border-left-color:transparent; padding-bottom:0}
+  .steps li::before{
+    content:counter(s,decimal-leading-zero);
+    position:absolute; left:-15px; top:-2px; width:30px; height:30px;
+    display:grid; place-items:center; border-radius:50%;
+    background:var(--paper); border:1px solid var(--rule-strong);
+    font-family:var(--mono); font-size:11px; font-weight:600; color:var(--graphite);
+  }
+  .steps .title{
+    font-family:var(--mono); font-size:13.5px; font-weight:600;
+    display:block; margin-bottom:5px; color:var(--ink);
+  }
+  .steps .meta{
+    font-family:var(--mono); font-size:11px; color:var(--faint);
+    letter-spacing:.06em; text-transform:uppercase; margin-left:10px; font-weight:400;
+  }
+  .steps p{margin:0; font-size:16px; line-height:1.55; max-width:62ch}
+
+  .rule-off{border:none; border-top:1px solid var(--rule); margin:52px 0}
+
+  .foot{
+    font-family:var(--mono); font-size:12px; line-height:1.7; color:var(--faint);
+    border-top:2px solid var(--ink); padding-top:20px; margin-top:20px;
+  }
+  .foot b{color:var(--graphite); font-weight:600}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="stamp">
+    <span>Anjani Interweave Pvt Ltd</span>
+    <span>FIBC BOM Generation System</span>
+    <span><b>Architecture review</b></span>
+    <span>9 Aug 2026</span>
+  </div>
+  <h1>Where Qwen belongs</h1>
+  <p class="standfirst">
+    Your architecture is sound and should be kept. But it is pointed at the wrong target,
+    and that is why Qwen looks underused. The BOM is not a forward calculation from size and
+    load — it is an <em>inverse problem</em> solved against a target weight. Once you model it that
+    way, the model's proper job turns out to be far larger than predicting bag weight, and still
+    stops short of generating the sheet.
+  </p>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">01</span> What is actually on disk</h2>
+  <div class="col">
+    <p>Four separate attempts at this system are in the folder. They do not agree with each other,
+    and only one of them runs.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Codebases found in the project directory</caption>
+      <thead><tr><th>Location</th><th>What it is</th><th>State</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>bom_system/</code></td>
+          <td>The architecture you describe — rule engine, retrieval, validation gate, synthesis</td>
+          <td class="lose">Documentation only. <code>pipeline.py</code> imports <code>contracts</code>, <code>rules</code>, <code>retrieval</code>, <code>validation</code>, <code>synthesis</code>, <code>output</code> — none of those directories exist. Neither does <code>data/</code>. Nothing in the README can currently be reproduced.</td>
+        </tr>
+        <tr>
+          <td><code>ANTIGRAVITY/</code></td>
+          <td>Working calculator + the variance analysis</td>
+          <td class="win">Runs. Contains the single most valuable document in the project — see §3.</td>
+        </tr>
+        <tr>
+          <td><code>model/BOM/</code></td>
+          <td>Sarvam prototype: physics + XGBoost + RAG, LLM arbitrates</td>
+          <td>Runs. The LLM's entire job here is choosing one number: <code>final_body_gsm</code>.</td>
+        </tr>
+        <tr>
+          <td><code>BOM/</code>, <code>BOM_2/</code></td>
+          <td>Extraction pipeline and 559-record corpus</td>
+          <td>Data present and usable. This is the asset.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding">
+      <span class="tag">Before anything else</span>
+      <p><code>bom_system/README.md</code> publishes accuracy figures — 8.9% median weight error,
+      component F1 0.949, 441 records — that cannot be regenerated, because the code and data that
+      produced them are not in the folder. <code>docs/FINETUNING_PLAN.md</code> then builds its entire
+      recommendation on those figures.</p>
+      <p>Treat every number in those two documents as unverified until <code>tools/evaluate.py</code>
+      runs again. I could not run it. That is not a criticism of the analysis — it is a warning
+      against planning a GPU spend on numbers nobody can currently reproduce.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">02</span> The deliverable you are actually building</h2>
+  <p class="lede">You are right that bag weight is the small part. I dissected
+  <code>90X90X90 CM.xlsx</code> cell by cell. It is not a component list — it is six documents on
+  one sheet.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>90X90X90 CM.xlsx · six blocks · one sheet (contents are 85×85×85, filename is wrong)</caption>
+      <thead><tr><th>Block</th><th>Cells</th><th>What it contains</th><th>Nature of the work</th></tr></thead>
+      <tbody>
+        <tr><td>A–H · Specification</td><td>A1:J65</td><td>~50 fields: identity, type, dimensions, fabric, top, bottom, loops, extras, optionals</td><td class="win">Decision — the engineer chooses these</td></tr>
+        <tr><td>Cut size &amp; weight</td><td>C19:J66</td><td>Component table: GSM, width, cut, pcs weight, lami, colour, pcs/bag → <b>878.355 g</b></td><td class="lose">Arithmetic</td></tr>
+        <tr><td>Costing &amp; breakup</td><td>L1:O56</td><td>RM blend, conversion, finishing, profit → <b>₹145.20/bag</b>, ₹165.00/kg</td><td class="lose">Arithmetic + rate lookup</td></tr>
+        <tr><td>Loom requirement</td><td>Q4:Y18</td><td>Per-component width / GSM / metres / kg for the weaving and needle-loom floor</td><td class="lose">Regrouping of the block above</td></tr>
+        <tr><td>Procurement</td><td>Q21:Z25</td><td>Bought-out items: liner, B-lock, doc pocket, filler cord</td><td class="lose">Regrouping</td></tr>
+        <tr><td>Rate card</td><td>A157:F200</td><td>36 construction and attachment rates — the source the costing block reads from</td><td>Reference table</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Your current fine-tuning data (<code>bom_finetuning_dataset_corrected.jsonl</code>, 559 rows)
+    has an <code>output</code> field that covers <strong>block 2 only</strong>. No costing, no loom
+    requirement, no procurement, no specification echo. Your instinct that Qwen is being underused
+    is correct and it is measurable: it is being trained on roughly one sixth of the deliverable.</p>
+
+    <p>But look at the right-hand column. Five of the six blocks are <em>arithmetic and regrouping</em>.
+    Only block 1 — the specification — is decision-making. And block 1 is the one nothing in your
+    system currently generates.</p>
+
+    <h3>What the engineer actually decided on this sheet</h3>
+    <p>Your example query gives six facts. The sheet contains around fifty. Everything below was
+    supplied by the engineer, not the customer:</p>
+    <ul>
+      <li><strong>Bag type: U-Panel (Corner Loop).</strong> The query says only "open top flat bottom". Construction was inferred — and per the variance analysis, this single choice drives every downstream figure.</li>
+      <li><strong>Loop geometry:</strong> 50&nbsp;mm belt, 35&nbsp;GPM, free height 25, long 65, short 35, quantity 4. The GSM chart offers "30–35 GRAM" for this load band; the engineer took the top of the band.</li>
+      <li><strong>Raw-material blend:</strong> PP 88.5% + CC 10% + UV 1.5%. Nobody asked for UV.</li>
+      <li><strong>Yarn:</strong> 3000 DNR, Heracle+Safety, blue &amp; white. <strong>Static protection:</strong> Type A. <strong>Packing:</strong> 500 pcs/pallet, 48 pallets.</li>
+      <li><strong>Everything switched off:</strong> no baffle, no liner, no printing, no doc pocket, no stevedore, no filler cord, no B-lock, uncoated. Twelve "NO" decisions, each of which had to be made.</li>
+    </ul>
+
+    <div class="finding confirmed">
+      <span class="tag">The reframe</span>
+      <p>The intellectual work in a BOM is <strong>filling in the forty-four things the customer
+      did not say.</strong> The arithmetic that follows is worth almost nothing — it is six formulas
+      applied consistently. Your architecture treats the arithmetic as the product and the
+      decisions as an input-parsing detail. That is inverted.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">03</span> Read your own variance analysis again</h2>
+  <p class="lede">
+    <code>FIBC_BOM_Variance_Analysis_85x85x85.xlsx</code> is the best artifact in this project.
+    It is a post-mortem of an agent that produced a BOM 1.5% off the correct total — with not one
+    correct line.
+  </p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Sheet 1_Variance · agent BOM vs the production BOM for the same bag</caption>
+      <thead><tr><th>Component</th><th class="num-col">Agent</th><th class="num-col">Actual</th><th class="num-col">Δ</th><th>What happened</th></tr></thead>
+      <tbody>
+        <tr><td>Body fabric</td><td class="num-col">464.10</td><td class="num-col">366.89</td><td class="num-col lose">−21%</td><td>Different geometry entirely</td></tr>
+        <tr><td>Side fabric ×2</td><td class="num-col">0</td><td class="num-col">259.47</td><td class="num-col lose">missing</td><td>Circular has no side panels</td></tr>
+        <tr><td>Bottom panel</td><td class="num-col">118.81</td><td class="num-col">0</td><td class="num-col lose">phantom</td><td>U-piece forms the bottom</td></tr>
+        <tr><td>Reinforcement</td><td class="num-col">66.50</td><td class="num-col">0</td><td class="num-col lose">phantom</td><td>RF is cross-corner only</td></tr>
+        <tr><td>Loops</td><td class="num-col">144.17</td><td class="num-col">210.00</td><td class="num-col lose">+46%</td><td>Wrong belt table</td></tr>
+        <tr><td>Thread</td><td class="num-col">62.00</td><td class="num-col">40.00</td><td class="num-col lose">−35%</td><td>Circular rule, not U-panel</td></tr>
+        <tr><td>Label</td><td class="num-col">10.00</td><td class="num-col">2.00</td><td class="num-col lose">−80%</td><td>Fabricated</td></tr>
+        <tr class="total"><td>TOTAL</td><td class="num-col">865.58</td><td class="num-col">878.36</td><td class="num-col win">+1.5%</td><td>Correct by accident — the errors cancelled</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding">
+      <span class="tag">The lesson, in the document's own words</span>
+      <p>"Two invented components (185&nbsp;g) offset a 259&nbsp;g missing component and a 66&nbsp;g belt
+      shortfall. A plausible total concealed a structurally wrong BOM. <strong>Totals must never be
+      used to validate a BOM; every line must be checked independently.</strong>"</p>
+    </div>
+
+    <p>Note what the root cause was: not arithmetic, not a missing formula. The agent
+    <em>misclassified the construction at step one and never re-tested that assumption.</em> Its own
+    memory file already held three of the four correct formulas. This was a retrieval failure
+    caused by a classification failure.</p>
+
+    <p>That tells you exactly where model capability is worth spending: on the decisions at the
+    top of the sheet, and on making those decisions auditable and challengeable. Not on the
+    multiplications at the bottom.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">04</span> The measurement that changes the design</h2>
+  <p class="lede">Everything above is reasoning about the shape of the problem. This section is a
+  number, measured on your 559-record corpus this afternoon, and it contradicts an assumption
+  baked into all four codebases.</p>
+
+  <div class="col">
+    <p>Every version of the engine derives body GSM from <code>(family, SWL, safety factor)</code>
+    via a load chart. So I asked the corpus: <em>is that actually how the GSM was chosen?</em></p>
+
+    <p>For <code>u_panel · SWL 1000 · SF 5:1</code> there are <strong>102 bags</strong> in the corpus.
+    The body GSM they were built at:</p>
+
+    <p style="font-family:var(--mono);font-size:13px;background:var(--sunk);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;line-height:1.9">
+      120 · 125 · 130 · 135 · 140 · 145 · 150 · 160 · 170 · 180 · 185 · 190 · 195 · 210
+    </p>
+
+    <p>Fourteen distinct values across a 75% range, for one cell of the chart. Across all cells with
+    five or more samples, the median within-cell spread is <strong>45.8%</strong>. The load chart is
+    not the decision rule. It is a floor that the decision has to clear.</p>
+
+    <h3>So what <em>is</em> the decision rule?</h3>
+    <p>The target weight. I tested three predictors of body GSM on the 283 U-panel bags, all
+    leave-one-out, snapping the prediction to the 40 GSM values the plant actually weaves:</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Predicting body GSM · u_panel · n≈279 · leave-one-out</caption>
+      <thead><tr><th>Predictor</th><th class="num-col">Median err</th><th class="num-col">Exact</th><th class="num-col">Within 5%</th><th class="num-col">Within 10%</th></tr></thead>
+      <tbody>
+        <tr><td>Load chart cell (family, SWL, SF)</td><td class="num-col">3.33%</td><td class="num-col">44.7%</td><td class="num-col">64.7%</td><td class="num-col">71.3%</td></tr>
+        <tr><td>Same customer, same family</td><td class="num-col">3.08%</td><td class="num-col">45.5%</td><td class="num-col">57.9%</td><td class="num-col">—</td></tr>
+        <tr class="highlight"><td><b>(target weight − non-panel mass) ÷ panel area</b></td><td class="num-col win">0.00%</td><td class="num-col win">55.6%</td><td class="num-col win">81.0%</td><td class="num-col win">89.2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>The third row uses no historical lookup and no chart. It inverts your own weight formula
+    against the customer's stated target weight, using the rule engine's own geometry — which is
+    itself accurate to a <strong>median 0.39%</strong> against what was really cut (94.7% within 5%).</p>
+
+    <p>Three supporting facts from the same corpus:</p>
+    <ul>
+      <li>A usable target weight is present in <strong>92.7%</strong> of orders. SWL is <strong>missing in 8.6%</strong>. The target weight is both the more available input and the more predictive one.</li>
+      <li>The finished BOM lands within 1% of the stated target in <strong>51%</strong> of orders, within 2% in <strong>68%</strong>, within 5% in <strong>85%</strong>. That is not coincidence. That is somebody solving for it.</li>
+      <li>Your variance analysis reached the same conclusion by hand: <em>"Anjani engineers backward from a target weight. I treated bag weight as an OUTPUT. Anjani treats it as a CONSTRAINT."</em></li>
+    </ul>
+
+    <div class="finding confirmed">
+      <span class="tag">Consequence for the architecture</span>
+      <p>The BOM is an <strong>inverse problem</strong>: find the build configuration whose computed
+      weight lands on the target, subject to the load chart as a hard floor. Your current
+      architecture — normalise, apply rules forward, validate — has no place to express that. It
+      computes a weight and reports it. It never <em>solves for</em> one.</p>
+      <p>This single change is worth more than any fine-tune, and it needs no GPU.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">05</span> Verdict on the architecture</h2>
+  <p class="lede">Keep the shape. It is right, and it is more disciplined than most first attempts.
+  Five things need to change.</p>
+
+  <div class="verdicts">
+    <div class="verdict">
+      <div><span class="chip keep">Keep</span><span class="what">Dual path</span></div>
+      <p>Deterministic left path, retrieval right path, both feeding a constrained synthesis step. This is correct and you should not redesign it. The left path working with no corpus and no model is a real property worth protecting.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip keep">Keep</span><span class="what">Validation gate</span></div>
+      <p>Non-negotiable, and your instinct to recompute every weight from its own geometry rather than trusting a stated number is exactly right. Add one check it is missing: <em>line-level</em> comparison against retrieved neighbours, because §3 proves a correct total can hide a wholly wrong BOM.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip keep">Keep</span><span class="what">Audit trail</span></div>
+      <p>Rule IDs, retrieved IDs, model changes, assumptions. Keep it, and extend it to cover the costing block — a wrong quote is the expensive failure, not a wrong gram.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip change">Change</span><span class="what">Add a solver loop</span></div>
+      <p>The pipeline is single-pass. It needs to iterate: propose a configuration → compute → compare to target weight → adjust. Two or three passes, deterministic evaluation, model-proposed adjustments. This is §4's finding turned into control flow.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip change">Change</span><span class="what">Scope of the output</span></div>
+      <p>The pipeline ends at a component table. The deliverable is six blocks. Costing, loom requirement and procurement are all deterministic once the component table exists — a renderer, not an engine. Cheap to add, and it is what makes the system usable by the plant rather than by an engineer.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip replace">Replace</span><span class="what">Qwen's job</span></div>
+      <p>Currently: predict bag weight, or arbitrate a GSM. That is one number out of ninety, and it is the number that is best derived arithmetically anyway. §6 replaces it.</p>
+    </div>
+    <div class="verdict">
+      <div><span class="chip replace">Replace</span><span class="what">XGBoost / RF path</span></div>
+      <p>In <code>model/BOM</code> the ML path exists to predict GSM, and the LLM exists to arbitrate between it, physics and history. Once GSM is derived by inverting the target weight, all three collapse into one deterministic step and a much smaller model decision. Delete the arbitration layer rather than maintaining it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">06</span> The job Qwen should have</h2>
+  <p class="lede">One fine-tuned adapter, one output object. Not the BOM — the <em>BuildSpec</em>:
+  every decision an engineer makes, before any arithmetic happens.</p>
+
+  <figure>
+    <div class="diagram">
+      <svg viewBox="0 0 880 470" role="img" aria-label="Revised architecture: customer query to Qwen BuildSpec generator, through a deterministic renderer, into a validation gate with a target-weight solver loop, producing the six-block BOM">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.4" color="var(--rule-strong)">
+          <path d="M440,52 V78" marker-end="url(#ar)"/>
+          <path d="M440,150 V176" marker-end="url(#ar)"/>
+          <path d="M440,248 V274" marker-end="url(#ar)"/>
+          <path d="M440,346 V372" marker-end="url(#ar)"/>
+          <path d="M170,112 H262" marker-end="url(#ar)"/>
+          <path d="M618,112 H710" marker-end="url(#ar)"/>
+        </g>
+
+        <!-- solver feedback loop -->
+        <g fill="none" stroke="var(--redline)" stroke-width="1.6" stroke-dasharray="5 4">
+          <path d="M262,310 H150 V112" marker-end="url(#ar)" marker-start="url(#ar)"/>
+        </g>
+        <text x="70" y="215" fill="var(--redline)" font-family="ui-monospace,monospace" font-size="10.5" font-weight="600">
+          <tspan x="70" dy="0">SOLVER</tspan>
+          <tspan x="70" dy="14">LOOP</tspan>
+          <tspan x="70" dy="14" font-weight="400" fill="var(--graphite)">weight gap</tspan>
+          <tspan x="70" dy="13" font-weight="400" fill="var(--graphite)">→ adjust</tspan>
+          <tspan x="70" dy="13" font-weight="400" fill="var(--graphite)">≤3 passes</tspan>
+        </text>
+
+        <!-- query -->
+        <rect x="300" y="14" width="280" height="38" rx="4" fill="var(--sunk)" stroke="var(--rule-strong)"/>
+        <text x="440" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12" fill="var(--ink)">customer enquiry · Hindi / English / OCR</text>
+
+        <!-- qwen -->
+        <rect x="262" y="78" width="356" height="72" rx="4" fill="var(--redline-wash)" stroke="var(--redline)" stroke-width="1.6"/>
+        <text x="440" y="102" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="600" fill="var(--redline)">QWEN 3-4B · LoRA · grammar-constrained</text>
+        <text x="440" y="122" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">emits BuildSpec — ~70 decision fields</text>
+        <text x="440" y="139" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">no widths · no cut lengths · no weights · no prices</text>
+
+        <!-- side inputs -->
+        <rect x="14" y="86" width="156" height="52" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="92" y="106" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--ink)">retrieval · top-3</text>
+        <text x="92" y="123" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--graphite)">nearest built bags</text>
+
+        <rect x="710" y="86" width="156" height="52" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="788" y="106" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--ink)">rule tables</text>
+        <text x="788" y="123" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--graphite)">GSM floor · looms · rates</text>
+
+        <!-- renderer -->
+        <rect x="262" y="176" width="356" height="72" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)" stroke-width="1.6"/>
+        <text x="440" y="200" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="600" fill="var(--ink)">DETERMINISTIC RENDERER</text>
+        <text x="440" y="220" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">geometry → weights → costing → loom → procurement</text>
+        <text x="440" y="237" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">every number on the sheet originates here</text>
+
+        <!-- gate -->
+        <rect x="262" y="274" width="356" height="72" rx="4" fill="var(--verified-wash)" stroke="var(--verified)" stroke-width="1.6"/>
+        <text x="440" y="298" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13" font-weight="600" fill="var(--verified)">VALIDATION GATE</text>
+        <text x="440" y="318" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">recompute every line · GSM ≥ floor · loom width exists</text>
+        <text x="440" y="335" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" fill="var(--graphite)">line-level diff vs retrieved neighbours</text>
+
+        <!-- output -->
+        <rect x="262" y="372" width="356" height="76" rx="4" fill="var(--sunk)" stroke="var(--rule-strong)"/>
+        <text x="440" y="396" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12.5" font-weight="600" fill="var(--ink)">SIX-BLOCK BOM · XLSX</text>
+        <text x="440" y="416" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--graphite)">spec · cut sizes · costing · loom · procurement · audit</text>
+        <text x="440" y="434" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" fill="var(--graphite)">every field traced to a rule ID, a neighbour, or the model</text>
+      </svg>
+    </div>
+    <figcaption>The model moves from the end of the pipeline to the front, and its output changes
+    from numbers to decisions. The dashed path is the addition §4 requires: the renderer's computed
+    weight is fed back so the model can adjust the knobs it owns until the bag lands on target.</figcaption>
+  </figure>
+
+  <div class="col">
+    <h3>What the BuildSpec contains</h3>
+    <p>Roughly seventy fields, all categorical, boolean, or drawn from a closed catalogue of
+    values. Not one of them is a computed quantity.</p>
+  </div>
+
+  <div class="spec">
+    <div>
+      <h4>Read from the enquiry</h4>
+      <ul>
+        <li><b>ext_L / ext_W / ext_H</b> cm</li>
+        <li><b>swl_kg</b> · <b>sf</b> · <code>not_specified</code> allowed</li>
+        <li><b>target_weight_g</b></li>
+        <li><b>customer</b> · <b>order_qty</b></li>
+        <li><b>stated_gsm</b> if given</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Classification</h4>
+      <ul>
+        <li><b>bag_family</b> — 12 values</li>
+        <li><b>loop_type</b> corner / cross / single / full</li>
+        <li><b>top_type</b> · <b>bottom_type</b></li>
+        <li><b>fs_closure</b> · <b>ds_closure</b></li>
+        <li><b>static_type</b> A / B / C / D</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Material selection</h4>
+      <ul>
+        <li><b>body_gsm</b> from the 40-value catalogue</li>
+        <li><b>bottom_gsm</b> · <b>panel_gsm</b></li>
+        <li><b>laminated</b> · <b>lami_gsm</b></li>
+        <li><b>rm_blend</b> PP / CC / UV / RP %</li>
+        <li><b>yarn_denier</b> · <b>yarn_type</b></li>
+        <li><b>fabric_colour</b> · <b>loop_colour</b></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Loop geometry <span style="color:var(--redline)">← hardest</span></h4>
+      <ul>
+        <li><b>loop_qty</b> · <b>belt_width_mm</b></li>
+        <li><b>belt_gpm</b> within the chart band</li>
+        <li><b>free_height_cm</b></li>
+        <li><b>attach_long_cm</b> · <b>attach_short_cm</b></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Component switches</h4>
+      <ul>
+        <li>baffle · liner + micron · doc pocket</li>
+        <li>filler cord · B-lock · DDP · tabbing</li>
+        <li>stevedore · belly band · top band</li>
+        <li>printing sides + colours</li>
+        <li>spout dims where a spout exists</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Commercial</h4>
+      <ul>
+        <li><b>construction_rate_key</b> → rate card row</li>
+        <li><b>attachment_rate_keys</b> [ ]</li>
+        <li><b>packing</b> pcs/pallet · pallets</li>
+        <li><b>profit_pct</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col">
+    <h3>The hard line</h3>
+    <p>Qwen may emit a <em>choice from a catalogue</em>. It may never emit a <em>computed
+    quantity</em>. Concretely:</p>
+    <ul>
+      <li>It may say <code>body_gsm: 150</code>. It may not say <code>width_cm: 93</code>, <code>cut_cm: 263</code>, or <code>weight_g: 366.885</code>.</li>
+      <li>It may say <code>belt_gpm: 35</code>, <code>free_height_cm: 25</code>. It may not say the loop weighs 210&nbsp;g.</li>
+      <li>It may say <code>rm_blend: {PP: 88.5, CC: 10, UV: 1.5}</code>. It may not say ₹108.125/kg.</li>
+      <li>It may say <code>construction_rate_key: "U-PANEL BAG OT/FB WITH FOLDING"</code>. It may not say 11.</li>
+    </ul>
+    <p>Served under grammar-constrained decoding against the BuildSpec JSON schema, a
+    structurally invalid or out-of-catalogue answer becomes impossible to emit rather than merely
+    unlikely. The model's only remaining job is picking correct values — and every value it picks is
+    then checked by the gate against the load chart, the loom table and the retrieved neighbours.</p>
+
+    <div class="finding confirmed">
+      <span class="tag">Why this is the answer to your question</span>
+      <p>This gives Qwen roughly <strong>90% of the judgement</strong> in a BOM and <strong>0% of the
+      arithmetic</strong>. It is a far bigger job than predicting bag weight — it is the whole of what
+      the engineer knows and none of what a calculator does. That is what "using the full power of
+      the model" should mean here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">07</span> Why not let Qwen generate the sheet directly</h2>
+  <p class="lede">You asked directly. The answer is no, and it is not a matter of taste — it is
+  arithmetic about arithmetic.</p>
+
+  <div class="col">
+    <p>A finished sheet carries about 45 numeric cells in the component table alone, and close to
+    90 once costing, loom requirement and procurement are included. <strong>58.3%</strong> of the
+    component weights in your corpus are not whole numbers — they are values like 366.885 and
+    259.47, produced by three-factor multiplication and division by 10,000.</p>
+
+    <p>A BOM is only correct if <em>every</em> number is correct. One wrong gram becomes a wrong
+    kilogram price becomes a wrong quotation. So the document-level accuracy is the per-number
+    accuracy raised to the power of the number count:</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Probability the whole sheet is correct, given per-number accuracy</caption>
+      <thead><tr><th>Per-number accuracy</th><th class="num-col">45 numbers (component table)</th><th class="num-col">90 numbers (full sheet)</th></tr></thead>
+      <tbody>
+        <tr><td>99%</td><td class="num-col lose">63.8%</td><td class="num-col lose">40.5%</td></tr>
+        <tr><td>99.5%</td><td class="num-col lose">79.7%</td><td class="num-col lose">63.7%</td></tr>
+        <tr><td>99.9%</td><td class="num-col">95.6%</td><td class="num-col">91.4%</td></tr>
+        <tr><td>99.99%</td><td class="num-col win">99.6%</td><td class="num-col win">99.1%</td></tr>
+        <tr class="total"><td>Deterministic renderer</td><td class="num-col win">100%</td><td class="num-col win">100%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>To ship a 4B model as the generator you would need it to do multi-digit decimal arithmetic at
+    better than 99.9% per operation. No 4B model does that, and no amount of your data will make one
+    do it — the arithmetic is not the part that varies between your bags.</p>
+
+    <p>Three further reasons, each independently sufficient:</p>
+    <ul>
+      <li><strong>Silent failure.</strong> §3 already happened to you. A generated sheet that totals plausibly is not evidence of a correct sheet, and a language model's errors are specifically the plausible kind.</li>
+      <li><strong>No audit trail.</strong> When the plant rejects a BOM you need to know whether the rule, the retrieval or the judgement was wrong. A single generated blob cannot tell you.</li>
+      <li><strong>Rule drift.</strong> Your rate card changes; PP price changes weekly. A model with costing baked into its weights needs retraining for a price change. A renderer needs a JSON edit.</li>
+    </ul>
+
+    <p>There is one legitimate use of a full-BOM generator, and it is worth keeping: as a
+    <strong>fallback for the families the rule engine does not model</strong> — omega, tunnel, box,
+    container, platen — where a rough BOM flagged as unvalidated beats refusing to answer. Train it,
+    label its output clearly, and never let it reach a customer quote without an engineer's sign-off.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">08</span> Your example query, run through this design</h2>
+  <p class="lede">And a problem in it that the system must be built to catch.</p>
+
+  <div class="col">
+    <p>The query gives: 85×85×85, open top flat bottom, GSM 150, SWL 1000 kg, SF 5:1, weight 720 g.
+    Using the plant's own formulas — body <code>(W+8) × (2H+L+8)</code>, sides <code>2 × (L+8) × (H+8)</code>,
+    4 corner loops at 35 GPM × 150 cm, yarn 40 g, label 2 g:</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Achievable bag weight at 85×85×85, U-panel corner loop, by body GSM</caption>
+      <thead><tr><th>Body GSM</th><th class="num-col">Body</th><th class="num-col">Sides ×2</th><th class="num-col">Loops</th><th class="num-col">Yarn + label</th><th class="num-col">Total</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>110</td><td class="num-col">269.05</td><td class="num-col">190.28</td><td class="num-col">210.00</td><td class="num-col">42.00</td><td class="num-col">711.33</td><td class="lose">below load-chart floor</td></tr>
+        <tr><td>120</td><td class="num-col">293.51</td><td class="num-col">207.58</td><td class="num-col">210.00</td><td class="num-col">42.00</td><td class="num-col">753.08</td><td class="lose">below load-chart floor</td></tr>
+        <tr><td>140 <span style="color:var(--graphite)">← chart minimum</span></td><td class="num-col">342.43</td><td class="num-col">242.17</td><td class="num-col">210.00</td><td class="num-col">42.00</td><td class="num-col">836.60</td><td>lightest legal build</td></tr>
+        <tr class="highlight"><td>150 <span style="color:var(--graphite)">← as built</span></td><td class="num-col">366.89</td><td class="num-col">259.47</td><td class="num-col">210.00</td><td class="num-col">42.00</td><td class="num-col win">878.36</td><td class="win">matches the sheet exactly</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding">
+      <span class="tag">The query is self-contradictory</span>
+      <p>720 g and 150 GSM cannot both be true for this bag. 150 GSM gives 878 g. 720 g would need
+      about 112 GSM — which is <em>below the safety floor</em> for a corner-loop bag at SWL 1000 / SF 5:1
+      (140 GSM, from your own <code>GSM- GPM VS SWL-SF.xlsx</code>, table A4).</p>
+      <p>The plant resolved this the way experienced people do: it built at 150 GSM and wrote
+      <em>"Bag Weight Required = 0.88 kg"</em> on the order. The customer's 720 g was silently renegotiated.</p>
+    </div>
+
+    <p>This is not an edge case to handle later. It is the <strong>most important thing your system
+    has to do</strong>, and no version of the current architecture can do it, because none of them
+    has a concept of a weight target to be infeasible against.</p>
+
+    <p>What the system should output for this query:</p>
+    <ul>
+      <li>The complete BOM at 150 GSM, total 878.36 g, costed at ₹145.20/bag.</li>
+      <li>An explicit blocking notice: <em>"Target 720 g is not achievable at SWL 1000 kg / SF 5:1. Minimum safe build is 836.6 g at 140 GSM. Customer's stated 150 GSM gives 878.4 g. Confirm which constraint to relax."</em></li>
+      <li>The alternative at 140 GSM shown alongside, since it is the closest legal answer to what was asked.</li>
+    </ul>
+
+    <p>An engineer reading that has everything needed to phone the customer. That is a genuinely
+    useful product. A single generated sheet reading "720 g" would be a fabrication, and a single
+    sheet reading "878 g" with no explanation would look like the system ignored the request.</p>
+
+    <p style="color:var(--graphite);font-size:15.5px"><b>One thing to confirm:</b> the 720 g figure
+    is in your message but nowhere in <code>90X90X90 CM.xlsx</code>, which specifies 0.88 kg
+    throughout. If 720 g came from a different order, tell me — it changes nothing structural, but
+    I would rather not build a worked example on a transcription slip. (Separately: that file's
+    contents are 85×85×85 while its name says 90×90×90. Filename-to-content mismatches like that
+    are worth catching in extraction.)</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">09</span> The training data this needs</h2>
+  <p class="lede">You said not to worry about the data — you will build what is needed. Here is what
+  is needed, and most of it you already have.</p>
+
+  <div class="col">
+    <p>The BuildSpec target is derivable from the corpus with <strong>no labelling effort</strong>,
+    because every historical sheet already records both the messy input notes and the decisions that
+    were made from them. Field coverage in the 559-record corpus:</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>BuildSpec field coverage in the existing corpus</caption>
+      <thead><tr><th>Field group</th><th class="num-col">Coverage</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Dimensions, family, colour, all component switches</td><td class="num-col win">100%</td><td>Directly usable</td></tr>
+        <tr><td>Loop quantity, belt width, loop colour</td><td class="num-col win">94–96%</td><td>Directly usable</td></tr>
+        <tr><td>SWL, safety factor</td><td class="num-col">91%</td><td>The 9% gap is real — keep it as <code>not_specified</code></td></tr>
+        <tr><td>Loop LL / SL</td><td class="num-col lose">44–52%</td><td>The weakest field, and the one the rule engine gets least right (31% within 2 cm)</td></tr>
+        <tr><td>Spout dimensions, closure</td><td class="num-col lose">26–47%</td><td>Only present where a spout exists — coverage is conditional, not missing</td></tr>
+        <tr><td>RM blend, yarn spec, static type, packing, rates</td><td class="num-col lose">0%</td><td><strong>Not extracted at all.</strong> Present in the source sheets, in the costing block your extractor skips</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>So the data work is three things, in order:</p>
+    <ol>
+      <li><strong>Extend the extractor to the costing block.</strong> Columns L–O and Q–Z of every sheet hold RM blend, conversion rates, yarn spec, packing and the rate-card key. This is the single largest gap and it is pure extraction work, no labelling.</li>
+      <li><strong>Emit the BuildSpec as the training target</strong> instead of the CSV component table. Same sheets, different projection. Keep the component table as a second target for the fallback generator described in §7.</li>
+      <li><strong>Fix the split.</strong> The existing plan already found 49% verbatim leakage between train and validation, caused by duplicate workbooks on the shared drive. Group by a hash of the normalised spec, split the <em>groups</em>, stratify by family. Any accuracy figure computed before this fix is inflated.</li>
+    </ol>
+
+    <p>Two properties of the current data are correct and must survive the rewrite: <code>not_specified</code>
+    is never replaced by a guess, and target weight is never conflated with BOM total. Both were
+    hard-won. Keep them.</p>
+
+    <p>On volume: 559 records, or ~696 after merging <code>BOM/BOM/Data</code>, is enough for a
+    closed-schema classification task under constrained decoding. Augment toward 2,000 with
+    machine-verified paraphrases of the enquiry text — never of the BuildSpec — and hold out real
+    sheets only for evaluation.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">10</span> Build order</h2>
+  <p class="lede">Steps 1–4 need no GPU and deliver most of the measured gain. Do not start the
+  fine-tune first.</p>
+
+  <ol class="steps">
+    <li>
+      <span class="title">Make the existing system runnable<span class="meta">2 days</span></span>
+      <p>Either restore the missing <code>bom_system/app</code> modules or delete the README's claims. Right now the project's stated accuracy cannot be checked, and every plan built on it is built on sand.</p>
+    </li>
+    <li>
+      <span class="title">Invert the weight formula<span class="meta">1 day · biggest single win</span></span>
+      <p>Derive body GSM from <code>(target_weight − non_panel_mass) ÷ panel_area</code>, snapped to the 40-value catalogue, floored by the load chart. §4 measures this at median 0.00% error against 3.33% for the chart. Measure it on your own evaluation set before anything else changes.</p>
+    </li>
+    <li>
+      <span class="title">Add the solver loop and the feasibility check<span class="meta">2 days</span></span>
+      <p>Compute → compare to target → adjust → recompute, capped at three passes. When no legal configuration reaches the target, say so explicitly with the nearest legal alternative, as in §8.</p>
+    </li>
+    <li>
+      <span class="title">Build the renderer for all six blocks<span class="meta">4 days</span></span>
+      <p>Costing, loom requirement and procurement are deterministic regroupings of the component table plus the rate card. This is what turns an engineer's tool into the plant's tool, and it needs no model.</p>
+    </li>
+    <li>
+      <span class="title">Extend extraction to the costing block<span class="meta">3 days</span></span>
+      <p>RM blend, yarn spec, static type, packing, rate keys. Without this the BuildSpec has no supervision for a third of its fields.</p>
+    </li>
+    <li>
+      <span class="title">Define the BuildSpec schema and re-project the corpus<span class="meta">2 days</span></span>
+      <p>Pydantic model with <code>extra="forbid"</code>, closed enums everywhere, then generate the JSON Schema for constrained decoding from it. Re-split by spec fingerprint.</p>
+    </li>
+    <li>
+      <span class="title">Run the baselines before training anything<span class="meta">2 days</span></span>
+      <p>Base Qwen3-4B few-shot under the same grammar constraint; the rule engine alone; rule engine plus retrieval. Skipping this is the mistake people regret — sometimes the untrained base model under a grammar is already close enough.</p>
+    </li>
+    <li>
+      <span class="title">Fine-tune the BuildSpec adapter<span class="meta">2 days</span></span>
+      <p>Qwen3-4B-Instruct, LoRA in bf16, r=16, 2 epochs, completion-only loss. Serve under vLLM with XGrammar against the BuildSpec schema. Ship only if it beats all four baselines on held-out <em>real</em> sheets, with hallucination rate — fields asserted that the source does not contain — as the primary metric.</p>
+    </li>
+    <li>
+      <span class="title">Optional: fallback generator for unmodelled families<span class="meta">2 days</span></span>
+      <p>Second adapter, full BOM table, for omega / tunnel / box / container / platen. Output permanently labelled unvalidated. This is the only place §7's answer becomes yes.</p>
+    </li>
+  </ol>
+</section>
+
+<hr class="rule-off">
+
+<section>
+  <div class="col">
+    <h2><span class="num">—</span> Answering your three questions plainly</h2>
+    <p style="margin-top:22px"><strong>Is the architecture correct?</strong> Yes, in shape. The dual
+    path, the validation gate and the audit trail are right and should be preserved. It is missing a
+    solver loop, it stops at one sixth of the deliverable, and the code for it is not on disk.</p>
+
+    <p><strong>What role should Qwen have?</strong> Generate the BuildSpec — every engineering and
+    commercial decision, roughly seventy closed-vocabulary fields — from the raw enquiry, the
+    retrieved neighbours and the rule floors. Then re-propose adjustments when the renderer's weight
+    misses the target. That is most of the thinking in a BOM.</p>
+
+    <p><strong>Can Qwen generate the final BOM directly?</strong> No, not as the production path.
+    Ninety numbers must all be right and 58% of them are non-integers; a deterministic renderer gets
+    them right by construction and a 4B model cannot. Keep a full-BOM adapter only as a labelled
+    fallback for the families the rule engine does not cover.</p>
+
+    <p>The thing worth internalising is the one your own variance analysis found and then almost
+    let go of: <strong>a plausible total is not evidence of a correct BOM.</strong> Every architectural
+    choice above follows from taking that seriously.</p>
+  </div>
+
+  <div class="col foot">
+    <p><b>Measurements in this document</b> were taken from <code>bom_extracted_dataset_corrected.json</code>
+    (559 records), <code>90X90X90 CM.xlsx</code>, <code>GSM- GPM VS SWL-SF.xlsx</code> and
+    <code>FIBC_BOM_Variance_Analysis_85x85x85.xlsx</code>, on 9 August 2026. GSM predictor comparison is
+    leave-one-out over 283 u_panel records. Figures quoted from <code>bom_system/README.md</code> and
+    <code>docs/FINETUNING_PLAN.md</code> are reproduced as claims, not verified — the code that produced
+    them is not present.</p>
+  </div>
+</section>
+
+</div>

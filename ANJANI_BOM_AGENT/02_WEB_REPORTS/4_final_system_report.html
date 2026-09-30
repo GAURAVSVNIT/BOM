@@ -1,0 +1,674 @@
+<title>Anjani BOM Agent — Final System Report</title>
+<style>
+  :root{
+    --mono: ui-monospace,"SFMono-Regular","Cascadia Mono","Segoe UI Mono",Consolas,"Liberation Mono",monospace;
+    --paper:#FAFAF8; --sheet:#FFFFFF; --sunk:#F2F3F1;
+    --ink:#11181F; --graphite:#5C6A78; --faint:#8794A1;
+    --rule:#DFE3E7; --rule-strong:#C4CBD2;
+    --redline:#AF2C1C; --redline-wash:#FBF0EE;
+    --verified:#16645A; --verified-wash:#EDF5F3;
+    --hold:#8A6212; --hold-wash:#FAF4E6;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+    --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+    --rule:#252F39; --rule-strong:#33404C;
+    --redline:#E8705C; --redline-wash:#221614;
+    --verified:#4FBFA9; --verified-wash:#11201E;
+    --hold:#D6A63F; --hold-wash:#1F1A0F;}}
+  :root[data-theme="dark"]{
+    --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+    --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+    --rule:#252F39; --rule-strong:#33404C;
+    --redline:#E8705C; --redline-wash:#221614;
+    --verified:#4FBFA9; --verified-wash:#11201E;
+    --hold:#D6A63F; --hold-wash:#1F1A0F;}
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);
+    font-family:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:17px;line-height:1.6;margin:0;padding:0 20px 110px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto}
+  .col{max-width:680px}
+  .col p,.col ul,.col ol{max-width:66ch}
+  .mast{padding:58px 0 26px;margin-bottom:40px;border-bottom:2px solid var(--ink)}
+  .stamp{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--graphite);display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:24px}
+  .stamp b{color:var(--ink);font-weight:600}
+  h1{font-family:var(--mono);font-weight:600;font-size:clamp(26px,4vw,42px);line-height:1.1;
+    letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+  .standfirst{font-size:19px;line-height:1.55;color:var(--graphite);margin:0;max-width:62ch}
+  .standfirst em{color:var(--ink);font-style:italic}
+  section{margin:0 0 60px}
+  h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    margin:0 0 6px;padding-bottom:10px;border-bottom:1px solid var(--rule-strong);
+    display:flex;align-items:baseline;gap:14px}
+  h2 .num{color:var(--faint);font-weight:400}
+  h2+.lede{font-size:19px;line-height:1.5;color:var(--graphite);margin:20px 0 0;max-width:62ch}
+  h3{font-family:var(--mono);font-size:13.5px;font-weight:600;margin:34px 0 10px;color:var(--ink)}
+  h4{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    margin:26px 0 8px;color:var(--redline)}
+  p{margin:0 0 15px}
+  code{font-family:var(--mono);font-size:.85em;background:var(--sunk);padding:1px 5px;
+    border-radius:3px;border:1px solid var(--rule)}
+  ul,ol{margin:0 0 15px;padding-left:22px} li{margin-bottom:8px} li::marker{color:var(--faint)}
+  pre{font-family:var(--mono);font-size:12.5px;line-height:1.55;background:var(--sheet);
+    border:1px solid var(--rule);border-radius:4px;padding:16px 18px;overflow-x:auto;margin:20px 0}
+  pre code{background:none;border:none;padding:0;font-size:inherit}
+  .cmt{color:var(--faint)} .key{color:var(--redline)} .ok{color:var(--verified)}
+  .tablewrap{overflow-x:auto;margin:24px 0;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+  table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:12.5px;
+    font-variant-numeric:tabular-nums;min-width:520px}
+  caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--graphite);padding:12px 16px;border-bottom:1px solid var(--rule);background:var(--sunk)}
+  th{text-align:left;font-weight:600;color:var(--graphite);padding:10px 14px;
+    border-bottom:1px solid var(--rule-strong);font-size:11px;letter-spacing:.06em;
+    text-transform:uppercase;white-space:nowrap}
+  td{padding:9px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .num-col{text-align:right}
+  .win{color:var(--verified);font-weight:600} .lose{color:var(--redline)} .warn{color:var(--hold);font-weight:600}
+  .finding{border-left:3px solid var(--redline);background:var(--redline-wash);
+    padding:16px 20px;margin:24px 0;border-radius:0 4px 4px 0}
+  .finding.confirmed{border-left-color:var(--verified);background:var(--verified-wash)}
+  .finding.note{border-left-color:var(--hold);background:var(--hold-wash)}
+  .finding .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--redline);font-weight:600;display:block;margin-bottom:7px}
+  .finding.confirmed .tag{color:var(--verified)} .finding.note .tag{color:var(--hold)}
+  .finding p{margin:0;font-size:16.5px} .finding p+p{margin-top:11px}
+  figure{margin:30px 0;padding:0}
+  .diagram{border:1px solid var(--rule);border-radius:4px;background:var(--sheet);padding:24px 18px;overflow-x:auto}
+  .diagram svg{display:block;margin:0 auto;min-width:700px}
+  figcaption{font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--graphite);
+    margin-top:12px;max-width:72ch}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:26px 0 0}
+  .steps li{counter-increment:s;position:relative;padding:0 0 22px 52px;margin:0;border-left:1px solid var(--rule)}
+  .steps li:last-child{border-left-color:transparent;padding-bottom:0}
+  .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:-15px;top:-2px;
+    width:30px;height:30px;display:grid;place-items:center;border-radius:50%;
+    background:var(--paper);border:1px solid var(--rule-strong);
+    font-family:var(--mono);font-size:11px;font-weight:600;color:var(--graphite)}
+  .steps .title{font-family:var(--mono);font-size:13.5px;font-weight:600;display:block;margin-bottom:5px;color:var(--ink)}
+  .steps .meta{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.06em;
+    text-transform:uppercase;margin-left:10px;font-weight:400}
+  .steps p{margin:0;font-size:16px;line-height:1.55;max-width:62ch}
+  .foot{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--faint);
+    border-top:2px solid var(--ink);padding-top:18px;margin-top:18px}
+  .foot b{color:var(--graphite);font-weight:600}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="stamp">
+    <span>Anjani Interweave Pvt Ltd</span><span>FIBC BOM Agent</span>
+    <span><b>Final system report</b></span><span>12 Aug 2026</span>
+  </div>
+  <h1>The BOM agent, end to end</h1>
+  <p class="standfirst">
+    The engineer's answers are in, and they change the design in eleven material ways — including
+    two that <em>simplify</em> it and one that reverses the solver. I tested every stated rule against
+    the 395-sheet corpus: most confirm beautifully, <em>four do not</em>, and those four need one
+    more sentence from him before code is written.
+  </p>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">01</span> What the answers changed</h2>
+  <p class="lede">Eleven decisions that were open are now closed. Two of them delete work.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Design changes forced by the engineer's answers</caption>
+      <thead><tr><th>Q</th><th>What we assumed</th><th>What he said</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td>B6</td><td>Snap fabric width up to an available loom width</td><td>"The loom gets set to whatever the calculation says"</td><td class="win">Delete a whole stage. No loom table needed.</td></tr>
+        <tr><td>C6</td><td>Chart GSM is a hard floor; never go below</td><td>"Nothing, we proceed as per customer's requirement"</td><td class="lose">The floor becomes a <b>warning</b>, not a reject, when the customer states a GSM.</td></tr>
+        <tr><td>G3</td><td>Adjust body GSM first to hit target weight</td><td>"First change is loop gramage and loop cut length. Next in line is body GSM"</td><td class="lose"><b>Solver knob order reverses.</b> Loop before fabric.</td></tr>
+        <tr><td>C1</td><td>Unknown driver behind the 68% GSM spread</td><td>"The product for which the bag will finally be used — clearly mentioned by the customer"</td><td class="warn"><code>product_contents</code> becomes a required OrderSpec field.</td></tr>
+        <tr><td>C2</td><td>Always solve backward from target weight</td><td>"If weight specified → work accordingly. If not → forward from SWL/SF"</td><td class="warn">Two modes, chosen by whether a target exists.</td></tr>
+        <tr><td>E3</td><td>DDP = dust discharge port, a small tube</td><td>"DDP stands for <b>double dust proof</b> — seam metres × 2 × 4.5 g/m"</td><td class="win">Resolves the qty-100 anomaly. It was cm-vs-metres.</td></tr>
+        <tr><td>G2, G5</td><td>System decides, or reports infeasible</td><td>"We clarify with the client… I'd like the agent to identify what's missing and raise queries"</td><td class="warn"><b>A clarification list becomes a first-class output</b>, alongside the BOM.</td></tr>
+        <tr><td>G6</td><td>Guess or refuse when SWL is missing</td><td>"Check if he mentioned material density and volume, then compute SWL"</td><td class="warn">Adds a bulk-density lookup path.</td></tr>
+        <tr><td>A5</td><td>Four families in v1, rest later</td><td>"We need to support all and cannot leave anything out"</td><td class="lose">Twelve families from day one.</td></tr>
+        <tr><td>B7, B8</td><td>Spout formulas unknown</td><td>Complete formulas given</td><td class="win"><b>94.5% / 93.4% verified</b> against the corpus.</td></tr>
+        <tr><td>A1, A2</td><td>Family and loop type inferred from context</td><td>"U+2 default. Circular only if belt ≥70 mm. Cross-corner if 70–100 mm"</td><td class="win">Classification becomes a deterministic rule, not a model judgement.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding confirmed">
+      <span class="tag">The most important single answer</span>
+      <p><strong>C1.</strong> The 68% GSM spread on identical specifications is explained by
+      <em>the product the bag will carry</em>, and the customer states it. That was the one thing
+      nothing in the sheets could explain. It is now a field — and it means the extractor must
+      capture free-text product names, and retrieval must weight them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">02</span> Four rules that fail against the data</h2>
+  <p class="lede">I tested every stated rule on all 395 sheets. These four do not reproduce. His
+  answer is the rule going forward — but the disagreement is large enough that writing code on it
+  without one more sentence would be reckless.</p>
+
+  <div class="col">
+    <h3>① B1 — the +8 / +10 body cut</h3>
+    <p>He says: <em>"2H+L+8 is the standard, but we use 2H+L+10 when the body fabric GSM is less
+    than 120 and the bag height is above 100 cm."</em></p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>U-panel body cut allowance, split exactly as the rule describes · n=174</caption>
+      <thead><tr><th>Body GSM</th><th>Height</th><th class="num-col">n</th><th class="num-col">used +10</th><th class="num-col">used +8</th><th>Rule predicts</th></tr></thead>
+      <tbody>
+        <tr><td>&lt; 120</td><td>&gt; 100 cm</td><td class="num-col">1</td><td class="num-col">100%</td><td class="num-col">0%</td><td class="win">+10 ✓ (but n=1)</td></tr>
+        <tr><td>&lt; 120</td><td>≤ 100 cm</td><td class="num-col">0</td><td class="num-col">—</td><td class="num-col">—</td><td>+8 — no data</td></tr>
+        <tr><td>≥ 120</td><td>&gt; 100 cm</td><td class="num-col">115</td><td class="num-col lose">72.2%</td><td class="num-col">10.4%</td><td class="lose">+8 ✗</td></tr>
+        <tr><td>≥ 120</td><td>≤ 100 cm</td><td class="num-col">58</td><td class="num-col lose">93.1%</td><td class="num-col">0%</td><td class="lose">+8 ✗</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>The conditional cell contains a single sheet. In the two cells where the rule predicts +8,
+    the plant used <strong>+10 on 72% and 93%</strong> of bags. Even the 85×85×85 reference sheet he
+    supplied — GSM 150, height 85, so squarely in the "+8" cell — is one of only <em>four</em> sheets
+    in 58 that actually uses +8.</p>
+    <div class="finding">
+      <span class="tag">Needs one sentence</span>
+      <p>Ask him directly: <em>"Your 395 historical U-panel sheets use +10 on 79% of bags including
+      almost every one at GSM ≥ 120. Is +8 a new standard you have moved to, or should the system use
+      +10 and treat +8 as the exception?"</em> Every U-panel bag's body weight depends on the answer —
+      roughly 3 g at 150 GSM, which is inside the ±2% tolerance but shifts every bag the same way.</p>
+    </div>
+
+    <h3>② F1 — yarn weight per family</h3>
+    <p>He gives four constants. Two hold, two do not.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Sewing yarn weight — stated constant vs corpus</caption>
+      <thead><tr><th>Family</th><th class="num-col">n</th><th class="num-col">He says</th><th class="num-col">Median</th><th>Most common values</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>circular</td><td class="num-col">113</td><td class="num-col">60 g</td><td class="num-col">60 g</td><td>60 (×36), 55 (×27), 65 (×15)</td><td class="win">confirmed exactly</td></tr>
+        <tr><td>u_panel</td><td class="num-col">174</td><td class="num-col">45 g</td><td class="num-col">50 g</td><td>60 (×25), 45 (×25), 55 (×16), 42 (×15)</td><td class="warn">plausible, wide spread</td></tr>
+        <tr><td>baffle</td><td class="num-col">70</td><td class="num-col">72 g</td><td class="num-col lose">100 g</td><td>90 (×20), 110 (×16), 100 (×13)</td><td class="lose">off by ~40%</td></tr>
+        <tr><td>single_loop</td><td class="num-col">14</td><td class="num-col">35 g</td><td class="num-col lose">25 g</td><td>22 (×6), 25 (×5)</td><td class="lose">off by ~40%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Baffle bags carry four extra internal panels and far more stitching, so 100 g is
+    physically more plausible than 72 g. Worth re-asking specifically for baffle and single-loop.</p>
+
+    <h3>③ D5 — belt strength, 1 gram carries 35 kg</h3>
+    <p>Applied as <code>gpm × 35 × 4 loops ≥ SWL × SF</code>, this is satisfied on only
+    <strong>39.3%</strong> of 321 testable sheets. Shortfalls include ordinary production bags —
+    SWL 1000 at 5:1 with a 30 g/m belt gives 4,200 kg against 5,000 needed.</p>
+    <p>The likely resolution: <strong>each corner loop has two load-bearing legs</strong>, so the
+    capacity is <code>gpm × 35 × 4 × 2</code>. That makes the same bag 8,400 kg against 5,000 — and it
+    matches the published guidance that all four loops carry in tandem. One sentence confirms it, and
+    then this becomes an excellent hard validator.</p>
+
+    <h3>④ B8 — iris tie length</h3>
+    <p><code>D × 3.14 + 38</code> is exact on the cases I can verify by hand — a 40 cm spout gives
+    165 cm, a 50 cm spout gives 195 cm, both matching production sheets — and the 38 cm decomposes
+    exactly as he describes (two ties, 10 cm outside each side, two knots of 9 cm). But swept across
+    the corpus it only lands within 2 cm on <strong>33%</strong> of 116 sheets.</p>
+    <p>The most likely cause is my own parsing: the diameter I read from the header is not always the
+    spout the iris tie belongs to, and petal closures are mixed in. This one is probably a
+    measurement artefact rather than a wrong rule — but it should be re-tested after the extractor is
+    rebuilt, before the formula is trusted.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">03</span> The confirmed rule book</h2>
+  <p class="lede">Everything below is now locked. Source column says who it came from and how well it
+  reproduces on the 395 sheets.</p>
+
+  <h3>Classification — now fully deterministic</h3>
+<pre><code><span class="key">FAMILY</span>
+  customer names a construction        → use it
+  belt width >= 70 mm stated           → <span class="ok">circular</span>
+  otherwise                            → <span class="ok">u_panel (U+2)</span>          <span class="cmt">// house default, A1</span>
+  ambiguous / high value               → raise a clarification, do not guess
+
+<span class="key">LOOP TYPE</span>
+  stated explicitly                    → use it
+  belt width 70–100 mm                 → <span class="ok">cross_corner</span>
+  otherwise                            → <span class="ok">corner</span>                  <span class="cmt">// A2</span>
+
+<span class="key">ALIASES</span>  U PANNEL = U-PANNEL = U PANEL BAG = U+2 = U+2 PANEL = U+2 PANNEL   <span class="cmt">// A3</span>
+           Q BAG = 4-panel baffle, always                                     <span class="cmt">// A6</span>
+           DOUBLE LAYER U-PANEL = 2 body fabrics + 2 side fabrics per side     <span class="cmt">// A4</span>
+           STEVEDORE ("steve door") = an attachment, not a family              <span class="cmt">// A4</span>
+
+<span class="key">TOP</span>      nothing stated                      → <span class="ok">OPEN_TOP</span>              <span class="cmt">// E6</span>
+           spout filling / inlet spout / a diameter mentioned → TOP_PANEL + spout
+           skirt · duffle · top flap           → only when explicitly confirmed
+
+<span class="key">FAMILIES TO SUPPORT</span> — all twelve, no v1 subset                        <span class="cmt">// A5</span>
+  u_panel · circular · four_panel · four_panel_baffle · two_panel
+  single_loop · two_loop · omega · tunnel · tubular · h_bottom · container_liner</code></pre>
+
+  <h3>Geometry — all from EXTERNAL dimensions</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Confirmed cut sizes · engineer-confirmed, corpus-tested</caption>
+      <thead><tr><th>Family</th><th>Component</th><th>Rule</th><th>Qty</th><th class="num-col">Corpus</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="4">U-panel</td><td>Body</td><td>width = <b>W + 8</b>, cut = <b>2H + L + 8</b> <span class="lose">(disputed — §2①)</span></td><td>1</td><td class="num-col">94% / <span class="lose">7%</span></td></tr>
+        <tr><td>Side</td><td>(<b>L + 8</b>) × (<b>H + 8</b>)</td><td>2</td><td class="num-col win">94% / 98%</td></tr>
+        <tr><td>Bottom</td><td><b>none</b> — the U-piece forms it</td><td>—</td><td class="num-col win">confirmed</td></tr>
+        <tr><td>Reinforcement</td><td><b>none</b> — corner loop needs no RF</td><td>—</td><td class="num-col win">confirmed</td></tr>
+        <tr><td rowspan="3">Circular</td><td>Body</td><td>flat width = <b>W + L</b> (tube, no allowance), cut = <b>H + 8</b></td><td>2 walls</td><td class="num-col win">confirmed</td></tr>
+        <tr><td>Top / Bottom</td><td>(<b>L + 10</b>) × (<b>W + 10</b>) — +10 because internal = external here</td><td>1</td><td class="num-col win">86% / 81%</td></tr>
+        <tr><td>Side</td><td><b>none</b></td><td>—</td><td class="num-col win">confirmed</td></tr>
+        <tr><td rowspan="3">4-panel baffle</td><td>Body</td><td>width = <b>W + 8</b>, cut = <b>H + 8</b></td><td>4</td><td class="num-col">64% / 57%</td></tr>
+        <tr><td>Top / Bottom</td><td>(<b>L + 8</b>) × (<b>W + 8</b>) — +8 because internal ≠ external</td><td>1</td><td class="num-col">61%</td></tr>
+        <tr><td>Baffle</td><td>GSM <b>15+90+15</b> both-side laminated</td><td>4</td><td class="num-col win">100%</td></tr>
+        <tr><td>Double layer</td><td>Body + Side</td><td>2 body fabrics <b>and</b> 2 side fabrics per side</td><td>×2</td><td class="num-col win">confirmed</td></tr>
+        <tr class="total"><td colspan="5">Fabric width is <b>never</b> snapped to a loom width — the loom is set to the calculated figure (B6)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Spouts and closures — fully specified, and they verify</h3>
+<pre><code><span class="cmt">// Stated size is always DIAMETER × HEIGHT. First number = diameter, always.  B7</span>
+
+cut_length   = <span class="key">diameter × 3.14 + 12</span>          <span class="ok">FS 94.5% · DS 93.4% within 1.5 cm (n=311)</span>
+FS width     = <span class="key">height + 5</span>
+DS width     = <span class="key">height + 8</span>
+
+<span class="cmt">// Closure adds to the WIDTH, and determines the tie.  B8</span>
+open          extra fabric  0                      tie   none
+tied          extra fabric  height + 8             tie   125 cm  (standard)
+iris          extra fabric  diameter / 2 + 6       tie   <span class="key">diameter × 3.14 + 38</span>   ×2 ties
+                                                          <span class="cmt">// 38 = 10+10 outside + 9+9 knots</span>
+petal         extra fabric  same as base           tie   diameter × 3.14 + 38
+                                                          <span class="cmt">// also fits DS FLAP + DS PATCH</span>
+pyjama        extra fabric  diameter + 6           tie   none additional
+                                                          <span class="cmt">// = spout + iris + iris, three layers</span>
+
+<span class="cmt">// A tie is MANDATORY wherever an FS, DS or Skirt exists, top or bottom.  E1</span>
+<span class="cmt">// "rope" is a DIFFERENT component from "tie" — do not merge them.        E1</span></code></pre>
+
+  <h3>Loops and belt</h3>
+<pre><code>loop_cut  = <span class="key">2 × free_height + LL + SL</span>        <span class="ok">197/226 = 87.2% exact</span>
+loop_qty  = 4
+weight    = GPM × cut_cm × qty / 100
+
+<span class="cmt">// Defaults when the customer does not state them.  D1</span>
+free_height  default <span class="key">25 cm</span>
+LL           default <span class="key">65% of bag height</span>
+SL           default <span class="key">35% of bag height</span>
+
+<span class="cmt">// Belt selection.  D2</span>
+belt_width   default <span class="key">50 mm</span> unless the client specifies
+             if computed belt weight &lt; 25 g  →  drop to <span class="key">40 mm</span>
+
+<span class="cmt">// Belt strength.  D5 — needs the ×2-legs confirmation, see §2③</span>
+capacity_kg  = GPM × 35 × loop_qty [× 2 legs?]     must be >= SWL × SF
+
+<span class="cmt">// Optional loop hardware — ONLY when the customer asks.  D4</span>
+loop protector · extra loop · stevedore · full running loop</code></pre>
+
+  <h3>GSM policy</h3>
+<pre><code><span class="cmt">// C9 — component GSM relationships</span>
+bottom_gsm    = body_gsm                       <span class="cmt">// generally, all families</span>
+if bag_weight >= 2.5 kg:
+    top_gsm = bottom_gsm = body_gsm
+baffle_gsm    = 15 + 90 + 15  (= 120, both-side laminated)
+spout_gsm     = 70 + 20       (= 90)
+heavy-duty    → higher GSM per client requirement
+
+<span class="cmt">// C7, C8 — how GSM is written on the sheet</span>
+the GSM column always holds the <span class="key">TOTAL</span>, never the base
+"70+20 LAMINATED"      → GSM column reads 90
+"15+90+15"             → both-side lamination, 120 total
+"175+30 UNLAMINATED"   → <span class="lose">clerical error</span>. It IS laminated. Fix on ingest.
+
+<span class="cmt">// C4 — SWL band boundaries are exclusive</span>
+751–1000 · 1001–1250 · …          <span class="cmt">// SWL exactly 1000 falls in 751–1000</span>
+
+<span class="cmt">// C5 — choosing inside a chart range</span>
+the deciding factor is <span class="key">bag weight</span>. Drop to the lower end of the band
+to bring the bag under a target. e.g. 240 gsm gives 3.1 kg → use 230 to hit 3.0.
+
+<span class="cmt">// C6 — the customer overrides the chart</span>
+if the customer states a GSM below the chart minimum → <span class="key">proceed as they asked</span>
+                                                       and RAISE A WARNING, not a rejection</code></pre>
+
+  <h3>Components, stitching, dust-proofing</h3>
+<pre><code><span class="cmt">// E4 — three dust-proof grades, they do not stack arbitrarily</span>
+1. filler cord / dust-proof     <span class="cmt">// "filler cord" is an alias for dust-proof</span>
+2. double dust proof (DDP)
+3. triple dust proof            <span class="cmt">// = double dust proof + FELT</span>
+
+<span class="cmt">// E3 — DDP is DOUBLE DUST PROOF, not a discharge port</span>
+DDP weight = <span class="key">total_seam_length_m × 2 × 4.5 g/m</span>
+             <span class="cmt">// ×2 because double. The old qty-100 anomaly was cm read as metres.</span>
+
+<span class="cmt">// E2 — what the rare components are, and all are client-specified</span>
+FELT          triple dust-proof bags only
+GLUE          liner glued to the bag
+TABBING       liner tabbed at 4 or 8 points — the alternative to gluing
+BELLY BAND    "stomach belt"
+TOP BAND      an attachment
+DS FLAP · DS PATCH   petal closures only
+
+<span class="cmt">// E5, E7 — no accessory is ever added silently</span>
+liner · doc pocket · printing   →  only when the customer specifies
+liner insertion default          →  <span class="key">loose</span>
+liner micron / method            →  client-specified, never assumed
+
+<span class="cmt">// F1 — sewing yarn, a per-family constant  (baffle + single_loop disputed, §2②)</span>
+u_panel 45 g · circular 60 g · single_loop 35 g · baffle 72 g
+
+<span class="cmt">// F2, F3, F4 — stitching and folding</span>
+overlock + chain  ==  HR + DR                <span class="cmt">// same thing, and the default</span>
+double needle / double chain                  <span class="cmt">// client-specified only</span>
+single fold                                   <span class="cmt">// the standard</span>
+out-fold == butterfly                         <span class="cmt">// the DEFAULT fold. NOT J-fold.</span>
+J-fold                                        <span class="cmt">// an alternative to out-fold/butterfly</span>
+"box J fold" and "top hemming"                <span class="cmt">// do not exist at Anjani — ignore in the corpus</span>
+
+yarn white  3000–3200 DNR   safety stitching   <span class="cmt">// default</span>
+yarn blue   3600 DNR        Hirakal overlock</code></pre>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">04</span> The architecture, final</h2>
+  <p class="lede">Two stages removed, one added, and the solver reversed. Everything the model does
+  is still a choice from a finite set; everything numeric is still code.</p>
+
+  <figure>
+    <div class="diagram">
+      <svg viewBox="0 0 900 640" role="img" aria-label="Final BOM agent architecture: ingest, extraction by Qwen adapter A, SWL derivation, classification, retrieval, rule envelope, configuration by Qwen adapter B, deterministic renderer, weight solver looping back, validation gate, and dual output of BOM plus clarification list">
+        <defs><marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.4" color="var(--rule-strong)">
+          <path d="M450,44 V66" marker-end="url(#m1)"/>
+          <path d="M450,120 V142" marker-end="url(#m1)"/>
+          <path d="M450,196 V218" marker-end="url(#m1)"/>
+          <path d="M450,296 V318" marker-end="url(#m1)"/>
+          <path d="M450,394 V416" marker-end="url(#m1)"/>
+          <path d="M450,470 V492" marker-end="url(#m1)"/>
+          <path d="M450,548 V570" marker-end="url(#m1)"/>
+          <path d="M310,246 H360" marker-end="url(#m1)"/>
+          <path d="M590,246 H540" marker-end="url(#m1)"/>
+        </g>
+        <g fill="none" stroke="var(--redline)" stroke-width="1.7" stroke-dasharray="5 4">
+          <path d="M360,516 H150 V350 H360" marker-end="url(#m1)"/>
+        </g>
+        <text x="24" y="410" fill="var(--redline)" font-family="ui-monospace,monospace" font-size="10.5" font-weight="600">
+          <tspan x="24" dy="0">SOLVER</tspan><tspan x="24" dy="14" font-weight="400" fill="var(--graphite)">1. loop GPM</tspan>
+          <tspan x="24" dy="13" font-weight="400" fill="var(--graphite)">2. loop cut</tspan>
+          <tspan x="24" dy="13" font-weight="400" fill="var(--graphite)">3. body GSM</tspan>
+          <tspan x="24" dy="13" font-weight="400" fill="var(--graphite)">±2% · 3 passes</tspan>
+        </text>
+
+        <rect x="300" y="8" width="300" height="36" rx="4" fill="var(--sunk)" stroke="var(--rule-strong)"/>
+        <text x="450" y="24" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="600" fill="var(--ink)">0 · INGEST</text>
+        <text x="450" y="38" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">WhatsApp · email · PDF TDS · scan → OCR</text>
+
+        <rect x="300" y="66" width="300" height="54" rx="4" fill="var(--redline-wash)" stroke="var(--redline)" stroke-width="1.6"/>
+        <text x="450" y="85" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" font-weight="600" fill="var(--redline)">1 · EXTRACTION — adapter A</text>
+        <text x="450" y="100" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">→ OrderSpec incl. product_contents · belt_width</text>
+        <text x="450" y="114" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">missing stays missing · never invents</text>
+
+        <rect x="300" y="142" width="300" height="54" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="450" y="161" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="600" fill="var(--ink)">2 · DERIVE + CLASSIFY</text>
+        <text x="450" y="176" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">SWL from density × volume if absent · family from belt width</text>
+        <text x="450" y="190" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">loop type · top type · all by fixed rule</text>
+
+        <rect x="130" y="220" width="180" height="52" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="220" y="239" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10.5" font-weight="600" fill="var(--ink)">3 · RETRIEVAL</text>
+        <text x="220" y="253" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--graphite)">top-3 · weighted by</text>
+        <text x="220" y="265" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--graphite)">product + geometry</text>
+
+        <rect x="590" y="220" width="180" height="52" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="680" y="239" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10.5" font-weight="600" fill="var(--ink)">4 · RULE ENVELOPE</text>
+        <text x="680" y="253" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--graphite)">GSM band · belt band</text>
+        <text x="680" y="265" text-anchor="middle" font-family="ui-monospace,monospace" font-size="9.5" fill="var(--graphite)">mandatory components</text>
+
+        <rect x="300" y="318" width="300" height="76" rx="4" fill="var(--redline-wash)" stroke="var(--redline)" stroke-width="1.6"/>
+        <text x="450" y="338" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" font-weight="600" fill="var(--redline)">5 · CONFIGURATION — adapter B</text>
+        <text x="450" y="353" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">→ BuildSpec · ~70 closed-vocabulary decisions</text>
+        <text x="450" y="367" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">GSM · belt GPM · LL/SL · components · stitch · fold</text>
+        <text x="450" y="383" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">no widths · no cuts · no weights</text>
+
+        <rect x="300" y="416" width="300" height="54" rx="4" fill="var(--verified-wash)" stroke="var(--verified)" stroke-width="1.6"/>
+        <text x="450" y="435" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" font-weight="600" fill="var(--verified)">6 · RENDERER — deterministic</text>
+        <text x="450" y="450" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">geometry → quantities → weights → grand total</text>
+        <text x="450" y="464" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">no loom snapping — loom set to the calculated width</text>
+
+        <rect x="300" y="492" width="300" height="56" rx="4" fill="var(--sheet)" stroke="var(--rule-strong)"/>
+        <text x="450" y="511" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11" font-weight="600" fill="var(--ink)">7 · WEIGHT SOLVER</text>
+        <text x="450" y="526" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">target given → solve backward. absent → forward from SWL/SF</text>
+        <text x="450" y="540" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">knobs in order: loop GPM → loop cut → body GSM</text>
+
+        <rect x="300" y="570" width="300" height="62" rx="4" fill="var(--verified-wash)" stroke="var(--verified)" stroke-width="1.6"/>
+        <text x="450" y="589" text-anchor="middle" font-family="ui-monospace,monospace" font-size="11.5" font-weight="600" fill="var(--verified)">8 · GATE → 9 · DUAL OUTPUT</text>
+        <text x="450" y="604" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">recompute every line · construction shown first (H5)</text>
+        <text x="450" y="620" text-anchor="middle" font-family="ui-monospace,monospace" font-size="10" fill="var(--graphite)">BOM sheet &nbsp;+&nbsp; CLARIFICATION LIST for the client</text>
+      </svg>
+    </div>
+    <figcaption>Changes from the previous draft: loom-width snapping deleted (B6); SWL derivation
+    from bulk density added (G6); the solver's knob order reversed to loop-first (G3); and the
+    clarification list promoted to a co-equal output, because the engineer's answer to G2 and G5 is
+    that the real job is asking the client the right question, not deciding alone.</figcaption>
+  </figure>
+
+  <h3>The decision algorithm, exactly</h3>
+<pre><code><span class="key">STEP 1 — establish the load</span>
+  if SWL stated                        → use it
+  elif product_contents AND volume     → SWL = volume_m³ × bulk_density(product)   <span class="cmt">// G6</span>
+                                          bulk density from the National Bulk Bag table
+  else                                 → CLARIFY: "SWL or product + fill volume required"
+  if SF absent                         → CLARIFY: "single-trip (5:1) or multi-trip (6:1)?"
+
+<span class="key">STEP 2 — classify</span>   family, loop type, top, bottom          <span class="cmt">// deterministic, §3</span>
+
+<span class="key">STEP 3 — choose the mode</span>                                     <span class="cmt">// C2</span>
+  target_weight stated  →  <span class="key">BACKWARD</span>   solve for a build that lands within ±2%
+  target_weight absent  →  <span class="key">FORWARD</span>    GSM from chart, belt from chart, report the weight
+
+<span class="key">STEP 4 — BACKWARD mode, knobs in the engineer's order</span>        <span class="cmt">// G3</span>
+  pass 1   adjust <span class="key">loop GPM</span>       within the belt band, honouring capacity >= SWL×SF
+  pass 2   adjust <span class="key">loop cut</span>       via free height / LL / SL, within observed ranges
+  pass 3   adjust <span class="key">body GSM</span>       only within market-standard values for the load
+  still outside ±2%  →  do NOT force it. Emit both options and CLARIFY.  <span class="cmt">// G2</span>
+
+<span class="key">STEP 5 — the customer-override rule</span>                          <span class="cmt">// C6</span>
+  customer stated a GSM below the chart minimum
+      → build at the stated GSM
+      → emit a WARNING, not a rejection
+      → add to the clarification list: "GSM {x} is below our {y} standard for
+         SWL {swl} at {sf}. Confirm you want us to proceed."
+
+<span class="key">STEP 6 — the conflict case (the 85×85×85 enquiry)</span>            <span class="cmt">// G2</span>
+  target weight and stated GSM cannot both hold
+      → compute BOTH builds
+      → present both, with the weight and the GSM each implies
+      → CLARIFY: "proceed against bag weight, or against the specified GSM?"</code></pre>
+
+  <div class="col">
+    <div class="finding note">
+      <span class="tag">What this means for the 720 g example</span>
+      <p>My earlier report called that enquiry "infeasible". With C6 and G2 answered, that was too
+      strong. The correct behaviour is: build both — 878 g at the customer's 150 GSM, and ~112 GSM
+      if 720 g is the binding constraint — state that 112 GSM is below the 140 GSM standard for
+      SWL 1000 at 5:1, and <em>ask which one they want</em>. The system does not refuse and does not
+      silently pick. It presents the trade and requests a decision.</p>
+    </div>
+  </div>
+
+  <h3>The validation gate, now much richer</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Checks, with severity — note that several are warnings, not rejections</caption>
+      <thead><tr><th>Check</th><th>Rule</th><th>Severity</th></tr></thead>
+      <tbody>
+        <tr><td>Arithmetic</td><td>every component weight recomputed from its own geometry</td><td class="lose">reject + repair</td></tr>
+        <tr><td>Grand total</td><td>equals the sum of component weights</td><td class="lose">reject</td></tr>
+        <tr><td>Mandatory set</td><td>family's required components all present, no phantom parts</td><td class="lose">reject</td></tr>
+        <tr><td>Phantom bottom</td><td>U-panel must have <b>no</b> bottom panel and <b>no</b> RF</td><td class="lose">reject</td></tr>
+        <tr><td>Tie presence</td><td>FS, DS or Skirt present ⇒ a tie must exist (E1)</td><td class="lose">reject</td></tr>
+        <tr><td>Belt capacity</td><td><code>GPM × 35 × qty [× 2] ≥ SWL × SF</code> (D5)</td><td class="lose">reject</td></tr>
+        <tr><td>Spout geometry</td><td>cut = D×3.14+12; width per closure rule</td><td class="lose">reject + repair</td></tr>
+        <tr><td>GSM vs chart</td><td>below the band <b>and</b> customer did not state it</td><td class="lose">reject</td></tr>
+        <tr><td>GSM vs chart</td><td>below the band <b>and</b> the customer stated it (C6)</td><td class="warn">warn + clarify</td></tr>
+        <tr><td>Weight vs target</td><td>outside ±2% (G1)</td><td class="warn">warn + clarify</td></tr>
+        <tr><td>Safety factor</td><td>5:1 is single-trip only; 6:1 required for multi-trip / UN</td><td class="warn">warn if reuse implied</td></tr>
+        <tr><td>Static type</td><td>Type A only for non-flammable; Type C must be groundable</td><td class="warn">warn if contents suggest otherwise</td></tr>
+        <tr><td>Line-level diff</td><td>every line compared against the nearest retrieved bag</td><td>advisory</td></tr>
+        <tr><td>Construction shown first</td><td>the output leads with family + loop type (H5)</td><td>presentation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>The last row is not decoration. Asked what he would check to trust a generated BOM in ten
+    seconds, the engineer said: <em>"first and foremost the bag construction type… if the bag type is
+    chosen correctly then the weight of the bag along with the GSM taken."</em> So the output leads
+    with construction, then weight and GSM, then everything else. That ordering is a requirement.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">05</span> Data and fine-tuning — what changed</h2>
+
+  <div class="col">
+    <p>The data plan from the previous report stands. Three amendments follow from the answers.</p>
+
+    <h4>1 · OrderSpec gains the field that explains everything</h4>
+    <p><code>product_contents</code> — free text, plus a derived <code>bulk_density_kg_m3</code> when
+    the product matches the National Bulk Bag table. This is the answer to C1, and without it the
+    model cannot learn why one 90×90×110 bag was 125 GSM and another 210.</p>
+    <p>It also feeds retrieval: two bags for the same product should rank closer than two bags of the
+    same size for different products.</p>
+
+    <h4>2 · Deduplicate by content, per H1</h4>
+    <p>He was explicit: <em>"Do not learn from duplicates. If the inquiry is the same and the content
+    is the same, the agent should proceed accordingly."</em> Content-hash the workbooks first —
+    <code>DOMESTIC ENQUIRY.xlsx</code> appears in two locations, <code>EXPORT ENQUIRY.xlsx</code> in
+    three — then collapse identical (input, output) pairs, then fingerprint-group the split.</p>
+
+    <h4>3 · A third training target: the clarification list</h4>
+    <p>G5 asks for the agent to identify what is missing and raise it. That is a generated output, so
+    it needs supervision. It is derivable for free: for every historical sheet, compute which
+    OrderSpec fields were <code>not_specified</code>, and emit the questions the rule book says are
+    needed for those gaps. ~395 rows, zero labelling, and it makes the "ask, don't guess" behaviour
+    trainable rather than hoped-for.</p>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Final training data plan</caption>
+      <thead><tr><th>Adapter</th><th>Rows</th><th>Source</th><th>Effort</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="3">A — extraction</td><td>~1,300 verified synthetic</td><td>enquiry prose rendered from OrderSpec_gold, round-trip verified</td><td>3 days</td></tr>
+        <tr><td>~200 hard negatives</td><td>hand-constructed: two size triples, negations, imperial units, TDS style</td><td>1 day</td></tr>
+        <tr><td class="win">~30 real, eval only</td><td>SPEC JIEXP PDFs, COMPONENT sheets, scans — <b>never trained on</b></td><td>1 day</td></tr>
+        <tr><td rowspan="3">B — configuration</td><td class="win">395 real</td><td>OrderSpec_gold + retrieved + envelope → BuildSpec_gold</td><td class="win">zero</td></tr>
+        <tr><td>~1,200 solver-feedback</td><td>perturb loop GPM then GSM, render, train it back — <b>in the engineer's knob order</b></td><td>1 day</td></tr>
+        <tr><td>~200 conflict cases</td><td>target vs stated GSM contradictions → the correct output is a clarification, not a build</td><td>1 day</td></tr>
+        <tr><td>C — clarification</td><td>~395</td><td>derived from which OrderSpec fields were absent</td><td class="win">zero</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <p>Adapter C is small enough to fold into adapter B as a second output field rather than a third
+    LoRA — decide after measuring. The training configuration is unchanged from the previous report:
+    <code>Qwen3-4B-Instruct</code>, LoRA bf16, r=16 (A) and r=32 (B), 2–3 epochs, completion-only
+    loss, served under vLLM with XGrammar against the schema.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">06</span> What is still needed</h2>
+
+  <div class="col">
+    <h4>From the engineer — five short questions</h4>
+    <ol>
+      <li><strong>The +8 / +10 conflict (§2①).</strong> His rule predicts +8 in cells where the corpus uses +10 on 72% and 93% of bags. Which governs going forward?</li>
+      <li><strong>Baffle and single-loop yarn (§2②).</strong> Stated 72 g and 35 g; corpus medians are 100 g and 25 g.</li>
+      <li><strong>Belt capacity (§2③).</strong> Does each corner loop count as two load-bearing legs? At ×4 the rule fails on 61% of bags; at ×8 it works.</li>
+      <li><strong>The U+2 GSM table (C3).</strong> He said a fresh one will be prepared. Until it exists, U-panel — 44% of all bags — has no chart, and the forward mode cannot run for it.</li>
+      <li><strong>The belt strength sheet (D5)</strong> and the <strong>liner cut-size formula (E7)</strong>, both referred to as "already shared" but not present in this folder.</li>
+    </ol>
+
+    <h4>Two operational asks, unchanged and still the highest-value items</h4>
+    <ul>
+      <li><strong>Keep the next twenty raw enquiries.</strong> He agreed to try. This is the only training data that cannot be reconstructed, and every week without it is a week lost.</li>
+      <li><strong>Have him narrate one enquiry end to end.</strong> Including the decisions he makes without noticing. Several of the four conflicts above would likely dissolve in five minutes of listening.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">07</span> Build order</h2>
+  <p class="lede">Nothing before step 4 needs a GPU, and steps 1–4 alone should take median weight
+  error under 3%.</p>
+  <ol class="steps">
+    <li><span class="title">Rule registry from the answers<span class="meta">2 days</span></span>
+      <p>Every confirmed rule in §3 becomes JSON with its source, rule level and corpus agreement attached. The four disputed rules go in flagged <code>needs_confirmation</code> and fail loudly rather than silently picking a side.</p></li>
+    <li><span class="title">Renderer, tested against all 395 sheets<span class="meta">4 days</span></span>
+      <p>Feed each sheet's own BuildSpec in; the output must equal its component table. Spout formulas should reproduce at ~94% immediately. This isolates the arithmetic completely.</p></li>
+    <li><span class="title">Classifier, SWL derivation, envelope<span class="meta">3 days</span></span>
+      <p>Deterministic family/loop/top rules, the bulk-density lookup, and the GSM and belt bands. Digitise the National Bulk Bag density table — 28 pages, product name plus lbs/ft³ plus g/cm³.</p></li>
+    <li><span class="title">Solver in the engineer's knob order, plus the clarification engine<span class="meta">4 days</span></span>
+      <p>Loop GPM, then loop cut, then body GSM. Both modes. The conflict path that emits two builds and a question. Measure against the 350 sheets that state a target weight.</p></li>
+    <li><span class="title">Gold layers, firewall, dedup, fingerprint split<span class="meta">4 days</span></span>
+      <p>OrderSpec built from the header block alone, enforced structurally. Content-hash dedup per H1. Zero-leakage assertion in the test suite.</p></li>
+    <li><span class="title">Adapter B, then adapter A<span class="meta">6 days</span></span>
+      <p>B first — its data is already real and complete. A second, gated hard on hallucination rate against the ~30 real documents.</p></li>
+    <li><span class="title">Output writer and audit<span class="meta">3 days</span></span>
+      <p>Four-block sheet, construction type first, then weight and GSM, then the rest. Per-field provenance. The clarification list as a co-equal deliverable.</p></li>
+    <li><span class="title">Shadow run<span class="meta">one month</span></span>
+      <p>Generate a BOM for every real enquiry alongside the engineer, without showing him until he has finished his own. Every disagreement is either a bug or a rule nobody has written down — and both are worth more than further training.</p></li>
+  </ol>
+</section>
+
+<section>
+  <div class="col">
+    <h2><span class="num">—</span> In one paragraph</h2>
+    <p style="margin-top:20px">The BOM agent reads an enquiry in any format and extracts only what the
+    customer actually said. It derives the load from bulk density if the customer gave a product and a
+    volume instead of an SWL. It classifies the construction by fixed rule — U+2 unless a belt of
+    70 mm or more says circular. A fine-tuned Qwen adapter then makes roughly seventy engineering
+    decisions from a closed vocabulary, informed by the three nearest bags Anjani has actually built
+    and the chart bands for this load. Deterministic code turns those decisions into every number on
+    the sheet. If the customer named a target weight, a solver adjusts loop gramage, then loop cut
+    length, then body GSM until the bag lands within ±2%. A gate recomputes every line and refuses
+    anything structurally wrong. And where the enquiry contradicts itself, or the chart, or physics,
+    the agent does not decide alone — it builds both options and hands the engineer the exact question
+    to put to the customer. That last behaviour is the one the engineer asked for by name, and it is
+    what separates a calculator from something worth trusting.</p>
+  </div>
+
+  <div class="col foot">
+    <p><b>Basis.</b> The engineer's answers to all 44 questions, received 12 August 2026, tested
+    against 395 BOM sheets parsed from <code>All_Things</code>. Corpus agreement figures are
+    exact-match counts. Domain material cross-read from <code>fibc/01</code>–<code>09</code>,
+    the National Bulk Bag <i>Bulk Density List</i> (28 pp), <i>Buyer's Guide to UN Certified Bulk
+    Bags</i> and <i>A Buyer's Guide to Purchasing Bulk Bags</i>. Costing excluded throughout, per
+    instruction. Four rules are marked disputed and must not be coded until confirmed.</p>
+  </div>
+</section>
+
+</div>

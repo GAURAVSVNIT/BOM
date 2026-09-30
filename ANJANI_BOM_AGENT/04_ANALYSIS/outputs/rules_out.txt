@@ -1,0 +1,334 @@
+﻿sheets: 395
+
+══════════════════════════════════════════════════════════════════════════════
+1. BAG TYPE — raw strings the engineer actually writes
+══════════════════════════════════════════════════════════════════════════════
+    54  U PANNEL WITH CORNER LOOP
+    46  U PANNEL BAG WITH CORNER LOOP
+    36  CIRCULAR WITH CROSS CORNER LOOP
+    25  4 PANNEL BAFFLE WITH CORNER LOOP
+    25  CIRCULAR BAG WITH CROSS CORNER LOOP
+    13  4 PANNEL BAFFLE BAG WITH CORNER LOOP
+    13  SINGLE LOOP BAG
+    12  U+2 PANEL WITH CORNER LOOP
+    11  U PANEL BAG
+    10  CIRCULAR CROSS CORNER
+    10  U+2
+    10  CIRCULAR NAG WITH CROSS CORNER LOOP
+     9  U-PANNEL BAG
+     7  4 PANNEL BAFFLE BAG WITH CROSS CORNER LOOP
+     7  4 PANNEL BAFFLE BAG ( Q BAG )
+     6  4 PANNEL WITH BAFFLE BAG ( Q BAG )
+     5  CIRCULAR
+     4  CORNER LOOP + BAFFLE BAG
+     4  4-CORNER LOOPBAFFLE BAG
+     4  DOUBLE LOOP TUBELAR BAG
+     4  U PANNEL BAG
+     4  TUBELAR BAG WITH TOP HEMMING
+     4  U+2 PANNEL BAG WITH CORNER LOOP
+     4  CIRCULAR ROUND BAG WITH FULL RUNNING LOOP
+     4  DOUBLE LAYER U-PANNEL BAG
+     4  4 PANNEL BAG WITH CROSS CORNER LOOP
+     4  U+2 WITH DOUBLE LAYER ( STEVE' DOOR)
+     4  U+2 (140+25)GSM
+     3  H BOTTOM BAG
+     3  2 LOOP BAG
+     3  CIRCULAR BAG WITH CROSS LOOP
+     3  4 PANNEL BAG WITH FLANGE LINER
+     3  2 LOOP BAG WITH 4 CORNER LOOP
+     3  U PANNEL BAG CORNER LOOP
+     2  U+2 CORNER LOOP CONDUCTIV
+     2  4-PANNEL WITH CORNER LOOP
+     2  CONTAINER LINER BAG TOP FULL OPEN WITH VELCRO AND BOTTOM SPOUT
+     2  CIRCULAR BAG
+     2  4 PANNEL BAFFLE BAG
+     2  CIRCULAR BAG WITH OMEGA DESIGN
+     2  4 PANNEL WITH LINER BAG
+     2  U+2 PANNEL BAG
+     1  4 PANNEL WITH BAFFLE BAG
+     1  U+2 APNNEL BAG WITH DOUBLE LAYER
+     1  4 PANNEL BAFFLE WITH CROSS CORNER LOOP
+  ... 60 distinct raw strings total
+
+══════════════════════════════════════════════════════════════════════════════
+2. COMPONENT NAMES — raw row labels
+══════════════════════════════════════════════════════════════════════════════
+   394  BODY PANEL
+   394  STITCHING
+   390  LABEL
+   368  LOOP
+   359  PRINTING
+   351  DOC
+   189  TOP PANNEL
+   188  DDP
+   187  D/S
+   184  FILLING SPOUT
+   176  LINER
+   152  SIDE PANNEL
+   147  DS TIE
+   141  TIE/IRIS ROPE
+   110  BOTTOM PANNEL
+   109  FS TIE
+    98  BOTTOM PANEL
+    79  IRISH TIE
+    72  BAFFLE
+    71  TIE
+    68  TOP PANEL
+    59  D SPOUT
+    52  FS SPOUT
+    51  BAFFLE FABRIC
+    51  SKIRT
+    48  TOP SPOUT
+    42  BOTTOM SPOUT
+    37  FS / DS TIE
+    37  SKIRT TIE
+    37  DISCHARGE SPOUT
+    31  F/S
+    31  LOOP PROTECTOR
+    30  TIE/IRIS
+    30  SIDE PANEL
+    25  TOP
+    25  DUFFLE
+    25  FELT
+    24  F/S & D/S TIE
+    22  BRAIDED ROPE
+    22  TABBING TAPE
+    22  FILLERCORD
+    21  BELLY BEND
+    20  DS FLAP
+    19  TOP / FS
+    17  STEEVE DORE
+    17  TUCKING TIE
+    17  STEEVEDORE
+    16  EXTRA LOOP
+    16  TOP BEND
+    15  FS & DS TIE
+    14  GLUE
+    14  F/S , D/S TIE
+    13  FS/ DS TIE
+    12  DS/FS TIE
+    10  SUPPORTING TIE
+    10  D/ SPOUT
+     9  DS SPOUT
+     8  TIE/DS
+     8  BELLY BELT
+     8  TOP/SKT
+  ... 127 distinct component labels
+
+══════════════════════════════════════════════════════════════════════════════
+3. LOOP CUT RULE   candidate:  cut = 2*free_height + LL + SL
+══════════════════════════════════════════════════════════════════════════════
+  testable sheets: 226   (no loop data on 169)
+  EXACT MATCH  2*FH+LL+SL : 197/226 = 87.2%
+  residual (cut - LL - SL) when it misses, most common:
+          65.0 cm   x6
+          51.0 cm   x3
+          55.0 cm   x3
+         135.0 cm   x2
+         170.0 cm   x2
+          80.0 cm   x1
+        -616.0 cm   x1
+          54.0 cm   x1
+         138.0 cm   x1
+          70.0 cm   x1
+          85.0 cm   x1
+          60.0 cm   x1
+  misses:
+      105X105X120 CM BAFFLE BAG.xlsx     105X105X120 CM B q4 FH30.0 LL95.0 SL65.0 -> actual 240.0, pred 220.0
+      ASHAPURA CHAINA CLAY.xlsx          100X100X200 CM B q4 FH22.0 LL140.0 SL730.0 -> actual 254.0, pred 914.0
+      ASHAPURA CHAINA CLAY.xlsx          100X100X200 CM U q4 FH22.0 LL140.0 SL80.0 -> actual 274.0, pred 264.0
+      ASHAPURA CHAINA CLAY.xlsx          106X106X115 CM   q4 FH25.0 LL80.0 SL40.0 -> actual 255.0, pred 170.0
+      DOMESTIC ENQUIRY.xlsx              SAHYADRI STARCH  q4 FH30.0 LL90.0 SL55.0 -> actual 210.0, pred 205.0
+      DOMESTIC ENQUIRY.xlsx              HONDA BAG WITH L q2 FH122.0 LL96.0 SL96.0 -> actual 330.0, pred 436.0
+      DOMESTIC ENQUIRY.xlsx              HONDA BAG  WITHO q2 FH122.0 LL96.0 SL96.0 -> actual 362.0, pred 436.0
+      DOMESTIC ENQUIRY.xlsx              MADHU SILICA     q4 FH25.0 LL85.0 SL40.0 -> actual 176.0, pred 175.0
+
+══════════════════════════════════════════════════════════════════════════════
+4. IMPLIED QUANTITY (no qty column exists — it is hidden in the weight)
+══════════════════════════════════════════════════════════════════════════════
+  BODY PANEL         n= 394   qty1:171(43%)  qty2:153(39%)  qty4:70(18%)
+  SIDE PANEL         n=  30   qty2:30(100%)
+  BOTTOM PANNEL      n= 106   qty1:103(97%)  qty2:3(3%)
+  BOTTOM PANEL       n=  97   qty1:80(82%)  qty2:16(16%)  qty4:1(1%)
+  TOP PANNEL         n= 131   qty1:130(99%)  qty2:1(1%)
+  TOP PANEL          n=  65   qty1:65(100%)
+  LOOP               n= 363   qty2:5(1%)  qty4:358(99%)
+  BAFFLE             n=  53   qty4:53(100%)
+  BAFFLE FABRIC      n=   8   qty4:8(100%)
+  FS TIE             n=  77   qty1:72(94%)  qty2:5(6%)
+  DS TIE             n=  70   qty1:70(100%)
+  TIE/IRIS ROPE      n=  57   qty1:57(100%)
+  TIE                n=  68   qty1:59(87%)  qty2:7(10%)  qty28:2(3%)
+  DDP                n=  52   qty1:1(2%)  qty10:2(4%)  qty96:1(2%)  qty100:48(92%)
+  FILLING SPOUT      n=  95   qty1:95(100%)
+  D/S                n=  98   qty1:98(100%)
+  DOC                n=   2   qty1:2(100%)
+
+══════════════════════════════════════════════════════════════════════════════
+5. PANEL GEOMETRY — actual widths/cuts vs external dims
+══════════════════════════════════════════════════════════════════════════════
+family counts: {'other': 133, 'circular': 104, 'baffle': 70, 'u_panel': 53, 'single_loop': 14, 'four_panel': 11, 'two_loop': 10}
+
+  --- u_panel ---
+    BODY.width - W             n=  53  mode=    8.0 (  92%)  next=[9.0, 4.0]  median=8.0
+    BODY.cut - (2H+L)          n=  53  mode=   10.0 (  64%)  next=[8.0, 3.0, 5.0]  median=10.0
+    BODY.cut - H               n=  53  mode=  215.0 (  11%)  next=[246.0, 241.0, 185.0]  median=240.0
+    BODY.width - 2(W+L)        n=  53  mode= -277.0 (  26%)  next=[-274.0, -304.0, -247.0]  median=-277.0
+    SIDE.width - L             n=  47  mode=    8.0 (  94%)  next=[9.0]  median=8.0
+    SIDE.cut - H               n=  47  mode=    8.0 (  98%)  next=[33.5]  median=8.0
+    TOPPANEL.width - L         n=  23  mode=   10.0 (  48%)  next=[8.0, 12.0]  median=10.0
+    TOPPANEL.cut - W           n=  23  mode=   10.0 (  48%)  next=[8.0, 12.0]  median=10.0
+
+  --- circular ---
+    BODY.width - W             n= 104  mode=   90.0 (  38%)  next=[95.0, 85.0, 55.0]  median=90.0
+    BODY.cut - (2H+L)          n= 104  mode= -206.0 (  11%)  next=[-221.0, -230.0, -194.0]  median=-206.0
+    BODY.cut - H               n= 104  mode=    8.0 (  52%)  next=[10.0, 7.0, 6.0]  median=8.0
+    BODY.width - 2(W+L)        n= 104  mode= -180.0 (  38%)  next=[-190.0, -170.0, -110.0]  median=-180.0
+    BOTPANEL.width - L         n=  94  mode=   10.0 (  86%)  next=[12.0, 30.0, 13.0]  median=10.0
+    BOTPANEL.cut - W           n=  94  mode=   10.0 (  86%)  next=[12.0, 30.0, 13.0]  median=10.0
+    TOPPANEL.width - L         n=  68  mode=   10.0 (  81%)  next=[12.0, 30.0, 13.0]  median=10.0
+    TOPPANEL.cut - W           n=  68  mode=   10.0 (  82%)  next=[12.0, 30.0, 13.0]  median=10.0
+
+  --- baffle ---
+    BODY.width - W             n=  70  mode=    8.0 (  64%)  next=[7.0, 12.0, -12.0]  median=8.0
+    BODY.cut - (2H+L)          n=  70  mode= -223.0 (   9%)  next=[-220.0, -230.0, -306.0]  median=-229.0
+    BODY.cut - H               n=  70  mode=    8.0 (  57%)  next=[7.0, 10.0, 238.0]  median=8.0
+    BODY.width - 2(W+L)        n=  70  mode= -322.0 (  29%)  next=[-323.0, -319.0, -304.0]  median=-322.0
+    BOTPANEL.width - L         n=  70  mode=    8.0 (  61%)  next=[7.0, 12.0, 6.0]  median=8.0
+    BOTPANEL.cut - W           n=  70  mode=    8.0 (  59%)  next=[7.0, 12.0, 6.0]  median=8.0
+    TOPPANEL.width - L         n=  58  mode=    8.0 (  64%)  next=[7.0, 13.0, 12.0]  median=8.0
+    TOPPANEL.cut - W           n=  58  mode=    8.0 (  64%)  next=[7.0, 13.0, 10.0]  median=8.0
+    SIDE.width - L             n=  10  mode=    7.0 (  50%)  next=[28.0, 12.0]  median=9.5
+    SIDE.cut - H               n=  10  mode=    8.0 (  60%)  next=[7.0, 10.0]  median=8.0
+
+  --- four_panel ---
+    BODY.width - W             n=  11  mode=    8.0 (  55%)  next=[8.5, 7.5]  median=8.0
+    BODY.cut - (2H+L)          n=  11  mode= -206.5 (  45%)  next=[-202.0, 10.0, -235.0]  median=-206.5
+    BODY.cut - H               n=  11  mode=    7.0 (  55%)  next=[8.0, 251.0]  median=7.0
+    BODY.width - 2(W+L)        n=  11  mode= -292.0 (  27%)  next=[-298.0, -287.0, -288.0]  median=-292.0
+    BOTPANEL.width - L         n=   8  mode=    8.0 (  50%)  next=[10.0, 7.5]  median=8.0
+    BOTPANEL.cut - W           n=   8  mode=    8.0 (  38%)  next=[10.0, 7.5, 45.0]  median=8.0
+    TOPPANEL.width - L         n=  10  mode=    8.5 (  30%)  next=[10.0, 7.5, 8.0]  median=8.2
+    TOPPANEL.cut - W           n=  10  mode=    8.5 (  30%)  next=[8.0, 10.0, 7.5]  median=8.2
+
+══════════════════════════════════════════════════════════════════════════════
+6. LAMINATION / REMARK NOTATION  (e.g. '170+30 LAMINATED')
+══════════════════════════════════════════════════════════════════════════════
+   184  70+20 LAMINATED
+    25  LAMI 65+25
+    25  60+20 GSM
+    22  145+30 LAMINATED
+    20  180+30 LAMINATED
+    16  65+20 LAMINATED
+    14  170+30 LAMINATED
+    14  80+20 LAMINATED
+    14  70+20 GSM
+    14  60+20 LAMINATED
+    12  175+30 UNLAMINATED
+    11  100+20 LAMINATED
+    10  120+30 LAMINATED
+    10  90+20 LAMINATED
+    10  150+30 LAMINATED
+     9  65+20
+     9  15+90+15
+     9  140+25GSM
+     8  LAMI 65+20
+     8  140+30 BLACK LAMINATION
+     8  70+25 LAMINATED
+     8  55+15 LAMINATED
+     8  65+25
+     7  70+20
+     6  60+20
+
+══════════════════════════════════════════════════════════════════════════════
+7. PRODUCTION INSTRUCTION LINES — the free text under the table
+══════════════════════════════════════════════════════════════════════════════
+    16  TOP AND BOTTOM ROUND DOUBLE CHAIN STITCHING WITH WHITE YARN
+    14  ALL SEAM DOUBLE DUST PROOF
+    12  U+2 PANEL BAG WITH J FOLD BOX STITCHING AND TOP OUT FOLD
+    12  LOOP TO BE PLACED OUTSIDE BLUE COLOR WITH POLYSTER YARN 10000 DNR
+    12  STITCHING DOUBLE CHAIN WITH WHITE YARN 3% UV TREATED MINIMUM YARN DNR 3200
+    12  PACKING SHOULD BE 50 PCS PER BALE WITH PALLET FUMIGATED PALLET TO USED
+     9  TOP SPOUT TIE TAPE OUTER FIXED AT 25 CM FROM TOP
+     9  U PANNEL BAG WITH CORNER LOOP
+     8  TOP AND BOTTOM ROUND SINGLE DOUBLE FOLD STITCHING WHITE YARN
+     8  COMPANY LABEL AND DOCUMENT POUCH WITH FRONT SIDE OPEN FABRIC DOC SAME COLORE AS BODY FABRIC
+     8  4 PANNEL BAG BAFFLE WITH CORNER LOOP
+     8  STITCHING OVER LOCK AND CHAIN STITCHING BLUE AND WHITE YARN
+     7  BOTTOM J FOLD AND TOP OUT FOLD STITCHING 3200 DNR WHITE YARN OVERLOCK + CHAIN
+     7  BELT 50 CM ATTECHED BY 6 PASS JUKKI MINIMUM 2000 KGF STRENGTH
+     7  TOP PERIMETER DOUBLE DUST PRROF AND REST ALL SEAM SINGLE DUST PROOF
+     7  BAG WT +/-2 %
+     6  ALL FOLD J- FOLD IN BODY
+     6  TOP FOLD OUT SIDE
+     6  SAFTY IN WHITE 2200 DNR AND OVER LOCK WITH 3600 DNR BLUE
+     6  STITCHING HR+DR WITH BLUE AND WHITE YARN
+     6  CIRCULAR BAG WITH TOP OUT FOLD AND BOTTOM J-FOLD STITCHING PP BLUE YARN HR+DR
+     6  4 BAFFLE WITH 80+20 GSM ONE SIDE LAMINATED 10 HOLES AND STITCHING FROM BOTOOM AND TOP 10 CM
+     6  CIRCULAR BAG WITH TOP AND BOTTOM J-FOLD STITCHING TOP AND TOP ROUND WITHOUT DDP AND BOTTOM AND ROUND DDP
+     6  BOTTOM OUT OLD AND TOP OUT FOLD
+     6  U PANNEL BAG WITH CORNOR LOOP BLUE AND WHITE STRIPES
+     6  STITCHING OVERLOCK+CHAIN STITCHING BLUE YARN
+     6  TOP SPOUT DOUBLE CHAIN STITCHING
+     6  PACKING 200 PCS PER PALLET 48 PALLET 48X200 = 9600 PCS IN CONTAINER
+     5  LOOP OUT SIDE STITCHING WHITE COLOR
+     5  QUANTITY OF BUNDLE 60 BAG'S OF EACH.
+     5  ALL SEAM OUT SIDE FOLD BUTTERFLY
+     5  MAKE SURE THE BAG IN SIDE AND OUT SIDE CONTAMINATION FREE
+     4  CIRCULAR BAG WITH TOP AND BOTTOM J-FOLD STITCHING
+     4  JUKKI 6 PASS STITCHING WITH WHITE BLUE
+     4  COMPANY LABEL AND DOCUMENT POUCH WITH BACK SIDE FLAP RHS OPEN
+     4  LINER 200X360 CM 55 MICRON BOTH SIDE OPEN LOOSELY LINER FULL GUESTED
+     4  4 PANNEL BAFFLE BAG WITH TOP AND BOTTOM OT-FOLD STITCHING PP BLUE YARN HR+DR
+     4  COMPANY LABEL AND DOCUMENT POUCH WITH RHS OPEN
+     4  4 BAFFLE WITH 80+20 GSM ONE SIDE LAMINATED 10 HOLES AND STITCHING FROM BOTOOM AND TOIP 10 CM
+     4  U+2 PANNEL BAG WITH DOUBLE LAYER BAG
+     4  BOX J-FOLD TOP OUT FOLD STITCHING BLUE AND WHITE YARN
+     4  BOTTOM J-FOLD AND TOP OUT FOLD
+     4  BOX J FOLD AND TOP OUT FOLD STITCHING
+     4  OPEN TOP AND FLAT BOTTOM WIUTH TOP HEMMING
+     4  HR AND DR STITCHING WITH BLUE AND WHITE YARN
+  ... 127 distinct instruction lines
+
+══════════════════════════════════════════════════════════════════════════════
+8. RM MIXING RECIPES
+══════════════════════════════════════════════════════════════════════════════
+     2  PP - 80 % , CC - 8% , UV - 1.5 % , RP - 12.5 % FARIC DRAWING - BAFFLE FABRIC
+     2  PP - 80.5 % , CC - 8% , UV - 1.5 % , RP - 10 % FARIC DRAWING - BAFFLE FABRIC
+
+══════════════════════════════════════════════════════════════════════════════
+9. STATED BAG WEIGHT vs GRAND TOTAL OF COMPONENTS
+══════════════════════════════════════════════════════════════════════════════
+  n=350   median 0.67%   within1% 61%   within2% 78%   within5% 91%   within10% 94%
+
+══════════════════════════════════════════════════════════════════════════════
+10. ROW PRESENCE — non-zero weight, i.e. actually fitted
+══════════════════════════════════════════════════════════════════════════════
+  BODY PANEL             listed  394   fitted  394   (100.0% of sheets that list it)
+  STITCHING              listed  394   fitted  394   (100.0% of sheets that list it)
+  LABEL                  listed  390   fitted  377   ( 96.7% of sheets that list it)
+  LOOP                   listed  368   fitted  363   ( 98.6% of sheets that list it)
+  PRINTING               listed  359   fitted  186   ( 51.8% of sheets that list it)
+  DOC                    listed  351   fitted  195   ( 55.6% of sheets that list it)
+  TOP PANNEL             listed  189   fitted  131   ( 69.3% of sheets that list it)
+  DDP                    listed  188   fitted   54   ( 28.7% of sheets that list it)
+  D/S                    listed  187   fitted   98   ( 52.4% of sheets that list it)
+  FILLING SPOUT          listed  184   fitted   95   ( 51.6% of sheets that list it)
+  LINER                  listed  176   fitted   72   ( 40.9% of sheets that list it)
+  SIDE PANNEL            listed  152   fitted  148   ( 97.4% of sheets that list it)
+  DS TIE                 listed  147   fitted   70   ( 47.6% of sheets that list it)
+  TIE/IRIS ROPE          listed  141   fitted   57   ( 40.4% of sheets that list it)
+  BOTTOM PANNEL          listed  110   fitted  106   ( 96.4% of sheets that list it)
+  FS TIE                 listed  109   fitted   77   ( 70.6% of sheets that list it)
+  BOTTOM PANEL           listed   98   fitted   97   ( 99.0% of sheets that list it)
+  IRISH TIE              listed   79   fitted   63   ( 79.7% of sheets that list it)
+  BAFFLE                 listed   72   fitted   53   ( 73.6% of sheets that list it)
+  TIE                    listed   71   fitted   68   ( 95.8% of sheets that list it)
+  TOP PANEL              listed   68   fitted   65   ( 95.6% of sheets that list it)
+  D SPOUT                listed   59   fitted   54   ( 91.5% of sheets that list it)
+  FS SPOUT               listed   52   fitted   47   ( 90.4% of sheets that list it)
+  BAFFLE FABRIC          listed   51   fitted   17   ( 33.3% of sheets that list it)
+  SKIRT                  listed   51   fitted   48   ( 94.1% of sheets that list it)
+  TOP SPOUT              listed   48   fitted   18   ( 37.5% of sheets that list it)
+  BOTTOM SPOUT           listed   42   fitted   13   ( 31.0% of sheets that list it)
+  FS / DS TIE            listed   37   fitted    9   ( 24.3% of sheets that list it)

@@ -1,0 +1,98 @@
+[
+  {
+    "combo": "four_panel|TOP_PANEL|fs|ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "circular|OPEN_TOP|no_fs|ds|liner|no_ddp",
+    "count": 2
+  },
+  {
+    "combo": "four_panel|TOP_PANEL|fs|ds|no_liner|ddp",
+    "count": 2
+  },
+  {
+    "combo": "four_panel_baffle|OPEN_TOP|no_fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "circular|OPEN_TOP|no_fs|ds|no_liner|no_ddp",
+    "count": 2
+  },
+  {
+    "combo": "u_panel|TOP_PANEL|fs|ds|liner|no_ddp",
+    "count": 2
+  },
+  {
+    "combo": "circular|TOP_PANEL|fs|no_ds|no_liner|ddp",
+    "count": 2
+  },
+  {
+    "combo": "circular|TOP_PANEL|no_fs|ds|liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "circular|TOP_PANEL|no_fs|ds|no_liner|ddp",
+    "count": 1
+  },
+  {
+    "combo": "circular|OPEN_TOP|no_fs|no_ds|liner|no_ddp",
+    "count": 2
+  },
+  {
+    "combo": "four_panel|TOP_PANEL|no_fs|no_ds|liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "four_panel|SKIRT|no_fs|no_ds|liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "u_panel|TOP_PANEL|no_fs|no_ds|no_liner|ddp",
+    "count": 2
+  },
+  {
+    "combo": "four_panel|TOP_PANEL|no_fs|ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "single_loop|OPEN_TOP|no_fs|ds|liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "two_loop|OPEN_TOP|no_fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "two_panel|TOP_PANEL|fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "two_panel|OPEN_TOP|no_fs|no_ds|no_liner|no_ddp",
+    "count": 2
+  },
+  {
+    "combo": "u_panel|TOP_PANEL|fs|ds|liner|ddp",
+    "count": 1
+  },
+  {
+    "combo": "two_panel|SKIRT|no_fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "four_panel_baffle|TOP_PANEL|fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "four_panel|OPEN_TOP|no_fs|no_ds|no_liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "circular|SKIRT|no_fs|ds|liner|no_ddp",
+    "count": 1
+  },
+  {
+    "combo": "two_loop|SKIRT|no_fs|no_ds|no_liner|no_ddp",
+    "count": 2
+  }
+]

@@ -1,0 +1,1 @@
+"""BOM generator application package."""

@@ -1,0 +1,1589 @@
+{
+  "run_id": "run-118d651d-fafc-46f8-ab35-c839c2a3da1f",
+  "raw_query": {
+    "query_id": "query-39e77491-8fd9-4023-91f7-ddec7ccb7cce",
+    "language_hint": "mixed",
+    "raw_text": "85 x 85 x 110 cm internal U+2 panel bag. SWL 1250 kg, SF 5:1. White unlaminated body. Top panel with 40 dia x 50 cm filling spout. Bottom discharge spout 35 dia x 50 cm with iris. 4 corner loops, 50 mm, LL 70, SL 50. Doc pocket 10 x 12 inch. Target weight 1.5 kg. No printing.",
+    "attachments": [],
+    "received_at": "2026-05-26T17:12:15.584457"
+  },
+  "structured_spec": {
+    "spec_id": "spec-5593714f-80d9-498c-8e62-9b272d100696",
+    "source_query_id": "query-39e77491-8fd9-4023-91f7-ddec7ccb7cce",
+    "customer": {
+      "value": null,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "ref_no": {
+      "value": null,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "bag_type": {
+      "value": "u_panel",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.95,
+      "source_text": "u_panel alias",
+      "source": "customer_text"
+    },
+    "dimensions": {
+      "int_L": {
+        "value": 81.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "external_minus_4cm_default"
+      },
+      "int_W": {
+        "value": 81.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "external_minus_4cm_default"
+      },
+      "int_H": {
+        "value": 106.0,
+        "unit": "cm",
+        "status": "inferred",
+        "confidence": 0.7,
+        "source_text": null,
+        "source": "external_minus_4cm_default"
+      },
+      "ext_L": {
+        "value": 85.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.94,
+        "source_text": "85 x 85 x 110 cm",
+        "source": "customer_text"
+      },
+      "ext_W": {
+        "value": 85.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.94,
+        "source_text": "85 x 85 x 110 cm",
+        "source": "customer_text"
+      },
+      "ext_H": {
+        "value": 110.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.94,
+        "source_text": "85 x 85 x 110 cm",
+        "source": "customer_text"
+      }
+    },
+    "swl_kg": {
+      "value": 1250.0,
+      "unit": "kg",
+      "status": "provided",
+      "confidence": 0.96,
+      "source_text": "SWL 1250 kg",
+      "source": "customer_text"
+    },
+    "sf": {
+      "value": 5.0,
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.96,
+      "source_text": "SF 5:1",
+      "source": "customer_text"
+    },
+    "bag_weight_target_g": {
+      "value": 1500.0,
+      "unit": "g",
+      "status": "provided",
+      "confidence": 0.85,
+      "source_text": "Target weight 1.5 kg",
+      "source": "customer_text"
+    },
+    "fabric_color": {
+      "value": "WHITE",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.9,
+      "source_text": "white",
+      "source": "customer_text"
+    },
+    "body_laminated": {
+      "value": false,
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.92,
+      "source_text": "unlaminated",
+      "source": "customer_text"
+    },
+    "double_layer": {
+      "value": false,
+      "unit": null,
+      "status": "not_specified",
+      "confidence": 1.0,
+      "source_text": null,
+      "source": null
+    },
+    "top_type": {
+      "value": "TOP_PANEL",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.92,
+      "source_text": "top panel",
+      "source": "customer_text"
+    },
+    "bottom_type": {
+      "value": "IRIS",
+      "unit": null,
+      "status": "provided",
+      "confidence": 0.9,
+      "source_text": "iris",
+      "source": "customer_text"
+    },
+    "loop": {
+      "loop_family": {
+        "value": "corner_loop",
+        "unit": null,
+        "status": "inferred",
+        "confidence": 0.8,
+        "source_text": null,
+        "source": "u_panel_default"
+      },
+      "loop_qty": {
+        "value": 4.0,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "4 corner loops",
+        "source": "customer_text"
+      },
+      "loop_width_mm": {
+        "value": 50.0,
+        "unit": "mm",
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "loops, 50 mm",
+        "source": "customer_text"
+      },
+      "loop_LL_cm": {
+        "value": 70.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "LL 70",
+        "source": "customer_text"
+      },
+      "loop_SL_cm": {
+        "value": 50.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "SL 50",
+        "source": "customer_text"
+      },
+      "loop_color": {
+        "value": "WHITE",
+        "unit": null,
+        "status": "inferred",
+        "confidence": 0.65,
+        "source_text": null,
+        "source": "same_as_body_color"
+      },
+      "free_height_cm": {
+        "value": null,
+        "unit": "cm",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "accessories": {
+      "has_fs_spout": {
+        "value": true,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "filling spout",
+        "source": "customer_text"
+      },
+      "fs_spout_dia_cm": {
+        "value": 35.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.85,
+        "source_text": "filling spout. Bottom discharge spout 35 dia",
+        "source": "customer_text"
+      },
+      "fs_spout_h_cm": {
+        "value": 50.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.85,
+        "source_text": "filling spout. Bottom discharge spout 35 dia x 50 cm",
+        "source": "customer_text"
+      },
+      "has_ds_spout": {
+        "value": true,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "discharge spout",
+        "source": "customer_text"
+      },
+      "ds_spout_dia_cm": {
+        "value": 35.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.85,
+        "source_text": "discharge spout 35 dia",
+        "source": "customer_text"
+      },
+      "ds_spout_h_cm": {
+        "value": 50.0,
+        "unit": "cm",
+        "status": "provided",
+        "confidence": 0.85,
+        "source_text": "discharge spout 35 dia x 50 cm",
+        "source": "customer_text"
+      },
+      "ds_closure": {
+        "value": "IRIS",
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "iris",
+        "source": "customer_text"
+      },
+      "has_baffle": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_liner": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "liner_micron": {
+        "value": null,
+        "unit": "micron",
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_doc_pocket": {
+        "value": true,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "doc pocket",
+        "source": "customer_text"
+      },
+      "doc_pocket_size": {
+        "value": "10x12 inch",
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.8,
+        "source_text": "10x12",
+        "source": "customer_text"
+      },
+      "has_ddp": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      },
+      "has_stevedore": {
+        "value": false,
+        "unit": null,
+        "status": "not_specified",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "printing": {
+      "printing_sides": {
+        "value": 0,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "no printing",
+        "source": "customer_text"
+      },
+      "printing_colors": {
+        "value": 0,
+        "unit": null,
+        "status": "provided",
+        "confidence": 0.9,
+        "source_text": "no printing",
+        "source": "customer_text"
+      },
+      "printing_color_names": {
+        "value": [],
+        "unit": null,
+        "status": "inapplicable",
+        "confidence": 1.0,
+        "source_text": null,
+        "source": null
+      }
+    },
+    "notes": []
+  },
+  "normalization_changes": [
+    {
+      "field": "bag_type",
+      "value": "u_panel",
+      "basis": "alias"
+    },
+    {
+      "field": "retrieval_advisory",
+      "value": {
+        "suggested_optional_components": [],
+        "candidate_alternative_gsms": {
+          "BODY PANEL": [
+            160.0,
+            195.0,
+            230.0
+          ],
+          "SIDE PANEL": [
+            160.0,
+            195.0,
+            230.0
+          ],
+          "TOP PANEL": [
+            90.0,
+            195.0
+          ],
+          "FILLING SPOUT": [
+            90.0,
+            170.0
+          ],
+          "DISCHARGE SPOUT": [
+            90.0,
+            100.0,
+            170.0
+          ],
+          "DOC POCKET": [
+            70.0,
+            140.0
+          ]
+        },
+        "candidate_loop_configs": [
+          {
+            "source_file": "01.01.2025 90X90X100CM U+2.xlsx",
+            "gsm_per_m": 40.0,
+            "width_cm": 5.0,
+            "cut_cm": 180.0,
+            "qty": 4
+          },
+          {
+            "source_file": "TECHNOPACK WORK ORDER.xlsx",
+            "gsm_per_m": 50.0,
+            "width_cm": 7.5,
+            "cut_cm": 170.0,
+            "qty": 4
+          },
+          {
+            "source_file": "18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+            "gsm_per_m": 30.0,
+            "width_cm": 5.0,
+            "cut_cm": 185.0,
+            "qty": 4
+          }
+        ],
+        "weight_delta_analysis": [
+          {
+            "source_file": "01.01.2025 90X90X100CM U+2.xlsx",
+            "retrieved_actual_g": 1506.273,
+            "deterministic_actual_g": 1271.629,
+            "delta_g": 234.644
+          },
+          {
+            "source_file": "TECHNOPACK WORK ORDER.xlsx",
+            "retrieved_actual_g": 1899.646,
+            "deterministic_actual_g": 1271.629,
+            "delta_g": 628.017
+          },
+          {
+            "source_file": "18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+            "retrieved_actual_g": 2154.249,
+            "deterministic_actual_g": 1271.629,
+            "delta_g": 882.62
+          }
+        ],
+        "disagreement_report": []
+      },
+      "basis": "hybrid_retrieval"
+    }
+  ],
+  "rule_engine_bom": {
+    "bom_id": "bom-ae1b89c6-67b5-4fde-b4b9-e3241682833a",
+    "source": "rule_engine",
+    "source_spec_id": "spec-5593714f-80d9-498c-8e62-9b272d100696",
+    "source_file": null,
+    "source_sheet": null,
+    "customer": null,
+    "ref_no": null,
+    "bag_type": "u_panel",
+    "swl_kg": 1250.0,
+    "sf": 5.0,
+    "ext_L": 85.0,
+    "ext_W": 85.0,
+    "ext_H": 110.0,
+    "int_L": 81.0,
+    "int_W": 81.0,
+    "int_H": 106.0,
+    "bag_weight_target_g": 1500.0,
+    "bag_weight_actual_g": 1271.629,
+    "computed_total_g": 1271.629,
+    "components": [
+      {
+        "sr": 1,
+        "canonical_name": "BODY PANEL",
+        "original_name": null,
+        "gsm_area": 140.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 315.0,
+        "qty": 1.0,
+        "weight_g": 410.13,
+        "remark": "width=ext_W+8; cut=2*ext_H+ext_L+10",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 2,
+        "canonical_name": "SIDE PANEL",
+        "original_name": null,
+        "gsm_area": 140.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 118.0,
+        "qty": 2.0,
+        "weight_g": 307.272,
+        "remark": "qty=2; width=ext_W+8; cut=ext_H+8",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 3,
+        "canonical_name": "TOP PANEL",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 93.0,
+        "qty": 1.0,
+        "weight_g": 77.841,
+        "remark": "default top panel",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 4,
+        "canonical_name": "FILLING SPOUT",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 55.0,
+        "cut_cm": 121.9,
+        "qty": 1.0,
+        "weight_g": 60.34,
+        "remark": "cut=dia*3.14+12",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 5,
+        "canonical_name": "FS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 125.0,
+        "qty": 1.0,
+        "weight_g": 8.75,
+        "remark": "standard FS tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 6,
+        "canonical_name": "DISCHARGE SPOUT",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 80.0,
+        "cut_cm": 121.9,
+        "qty": 1.0,
+        "weight_g": 87.768,
+        "remark": "cut=dia*3.14+12",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 7,
+        "canonical_name": "DS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 147.9,
+        "qty": 1.0,
+        "weight_g": 10.353,
+        "remark": "iris tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 8,
+        "canonical_name": "DS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 125.0,
+        "qty": 1.0,
+        "weight_g": 8.75,
+        "remark": "standard DS tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 9,
+        "canonical_name": "CORNER LOOP",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 35.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 5.0,
+        "cut_cm": 170.0,
+        "qty": 4.0,
+        "weight_g": 238.0,
+        "remark": "LL+SL+50",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 10,
+        "canonical_name": "DOC POCKET",
+        "original_name": null,
+        "gsm_area": 70.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "NATURAL",
+        "width_cm": 25.0,
+        "cut_cm": 31.0,
+        "qty": 1.0,
+        "weight_g": 5.425,
+        "remark": "10x12 inch",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 11,
+        "canonical_name": "STITCHING",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": "WHITE",
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 55.0,
+        "remark": "fixed heuristic",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 12,
+        "canonical_name": "LABEL",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": null,
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 2.0,
+        "remark": "mandatory",
+        "source": "rule_engine"
+      }
+    ],
+    "candidate_optional_components": [],
+    "assumptions": [
+      {
+        "id": "A001",
+        "field": "body_gsm",
+        "assumption": "Selected 140 GSM with structural minimum floor.",
+        "basis": "minimum_structural_then_dataset_mode"
+      },
+      {
+        "id": "A002",
+        "field": "approved_widths",
+        "assumption": "Widths snapped upward to approved loom table.",
+        "basis": "width_rounding_policy"
+      }
+    ],
+    "rule_hits": [
+      {
+        "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "MINIMUM_STRUCTURAL_GSM",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GEOMETRY",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "LOOP_STANDARD_TABLE",
+        "rule_level": "default_preference",
+        "component": null
+      }
+    ],
+    "constraint_inputs": {
+      "design_load_kg": 6250.0,
+      "static_rule_table_version": "2026-05-26",
+      "body_gsm_min": 140,
+      "body_gsm_selected": 140
+    }
+  },
+  "rule_hits": [
+    {
+      "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "MINIMUM_STRUCTURAL_GSM",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "U_PANEL_GEOMETRY",
+      "rule_level": "hard_constraint",
+      "component": null
+    },
+    {
+      "rule_id": "LOOP_STANDARD_TABLE",
+      "rule_level": "default_preference",
+      "component": null
+    }
+  ],
+  "retrieved_boms": [
+    {
+      "retrieval_id": "ret-212d6f98-4113-4b1f-9d7b-91a4e02ba8b5",
+      "source_file": "01.01.2025 90X90X100CM U+2.xlsx",
+      "source_sheet": "01.01.25 8585110cm u+2",
+      "record_index": 0,
+      "score_total": 0.8599,
+      "score_breakdown": {
+        "geometric": 0.9716,
+        "categorical": 1.0,
+        "semantic": 0.1603
+      },
+      "why_matched": [
+        "same bag_type u_panel",
+        "matched bag_type",
+        "matched top_type",
+        "matched has_baffle",
+        "matched has_liner",
+        "matched has_fs_spout",
+        "matched has_ds_spout",
+        "matched has_ddp"
+      ],
+      "structured_spec_snapshot": {
+        "bag_type": "u_panel",
+        "int_L": 85,
+        "int_W": 85,
+        "int_H": 110,
+        "swl_kg": 1250,
+        "sf": 5,
+        "top_type": "TOP_PANEL",
+        "has_fs_spout": true,
+        "has_ds_spout": true,
+        "has_doc_pocket": true,
+        "has_ddp": false
+      },
+      "component_list": [
+        {
+          "sr": 1,
+          "canonical_name": "BODY PANEL",
+          "original_name": "BODY PANEL",
+          "gsm_area": 160.0,
+          "gsm_per_m": null,
+          "lami_ul": "UNLAMINATED",
+          "color": "WHITE",
+          "width_cm": 97.0,
+          "cut_cm": 320.0,
+          "qty": 1,
+          "weight_g": 496.64,
+          "remark": null
+        },
+        {
+          "sr": 2,
+          "canonical_name": "SIDE PANEL",
+          "original_name": "SIDE PANEL",
+          "gsm_area": 160.0,
+          "gsm_per_m": null,
+          "lami_ul": "UNLAMINATED",
+          "color": "WHITE",
+          "width_cm": 97.0,
+          "cut_cm": 122.0,
+          "qty": 2,
+          "weight_g": 378.688,
+          "remark": null
+        },
+        {
+          "sr": 3,
+          "canonical_name": "TOP PANEL",
+          "original_name": "TOP PANEL",
+          "gsm_area": 90.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 102.0,
+          "cut_cm": 102.0,
+          "qty": 1,
+          "weight_g": 93.636,
+          "remark": "65+25 LAMI"
+        },
+        {
+          "sr": 4,
+          "canonical_name": "FILLING SPOUT",
+          "original_name": "TOP / FS",
+          "gsm_area": 90.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 54.0,
+          "cut_cm": 138.0,
+          "qty": 1,
+          "weight_g": 67.068,
+          "remark": "65+25 LAMI"
+        },
+        {
+          "sr": 5,
+          "canonical_name": "DISCHARGE SPOUT",
+          "original_name": "D/S",
+          "gsm_area": 90.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 81.0,
+          "cut_cm": 121.0,
+          "qty": 1,
+          "weight_g": 88.209,
+          "remark": "65+25 LAMI"
+        },
+        {
+          "sr": 6,
+          "canonical_name": "DS TIE",
+          "original_name": "TIE/IRIS ROPE",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 165.0,
+          "qty": 1,
+          "weight_g": 11.55,
+          "remark": null
+        },
+        {
+          "sr": 7,
+          "canonical_name": "DS TIE",
+          "original_name": "TIE/ DS",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 125.0,
+          "qty": 1,
+          "weight_g": 8.75,
+          "remark": null
+        },
+        {
+          "sr": 9,
+          "canonical_name": "FS TIE",
+          "original_name": "TIE",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 125.0,
+          "qty": 1,
+          "weight_g": 8.75,
+          "remark": null
+        },
+        {
+          "sr": 10,
+          "canonical_name": "CORNER LOOP",
+          "original_name": "LOOP",
+          "gsm_area": null,
+          "gsm_per_m": 40.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 5.0,
+          "cut_cm": 180.0,
+          "qty": 4,
+          "weight_g": 288.0,
+          "remark": null
+        },
+        {
+          "sr": 13,
+          "canonical_name": "DOC POCKET",
+          "original_name": "DOC",
+          "gsm_area": 70.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "NATURAL",
+          "width_cm": 25.0,
+          "cut_cm": 31.0,
+          "qty": 1,
+          "weight_g": 9.982,
+          "remark": null
+        },
+        {
+          "sr": 14,
+          "canonical_name": "STITCHING",
+          "original_name": "STITCHING",
+          "gsm_area": null,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": "WHITE",
+          "width_cm": null,
+          "cut_cm": null,
+          "qty": 1,
+          "weight_g": 55.0,
+          "remark": null
+        }
+      ],
+      "bag_weight_target_g": 1500.0,
+      "bag_weight_actual_g": 1506.273,
+      "data_warnings": []
+    },
+    {
+      "retrieval_id": "ret-938d99a2-b36a-4497-add0-7238a5438fca",
+      "source_file": "TECHNOPACK WORK ORDER.xlsx",
+      "source_sheet": "4391",
+      "record_index": 499,
+      "score_total": 0.8381,
+      "score_breakdown": {
+        "geometric": 0.9404,
+        "categorical": 1.0,
+        "semantic": 0.1196
+      },
+      "why_matched": [
+        "same bag_type u_panel",
+        "matched bag_type",
+        "matched top_type",
+        "matched has_baffle",
+        "matched has_liner",
+        "matched has_fs_spout",
+        "matched has_ds_spout",
+        "matched has_ddp"
+      ],
+      "structured_spec_snapshot": {
+        "bag_type": "u_panel",
+        "int_L": 80,
+        "int_W": 80,
+        "int_H": 100,
+        "swl_kg": 1500,
+        "sf": 5,
+        "top_type": "TOP_PANEL",
+        "has_fs_spout": true,
+        "has_ds_spout": true,
+        "has_doc_pocket": true,
+        "has_ddp": false
+      },
+      "component_list": [
+        {
+          "sr": 1,
+          "canonical_name": "BODY PANEL",
+          "original_name": "BODY PANEL",
+          "gsm_area": 230.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 92.0,
+          "cut_cm": 302.0,
+          "qty": 1,
+          "weight_g": 639.032,
+          "remark": "200+30 GSM LAMINATED"
+        },
+        {
+          "sr": 2,
+          "canonical_name": "SIDE PANEL",
+          "original_name": "SIDE PANNEL",
+          "gsm_area": 230.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 92.0,
+          "cut_cm": 112.0,
+          "qty": 2,
+          "weight_g": 473.984,
+          "remark": "200+30 GSM LAMINATED"
+        },
+        {
+          "sr": 3,
+          "canonical_name": "TOP PANEL",
+          "original_name": "TOP PANNEL",
+          "gsm_area": 90.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 92.0,
+          "cut_cm": 92.0,
+          "qty": 1,
+          "weight_g": 76.176,
+          "remark": "65+25 LAMINATED"
+        },
+        {
+          "sr": 4,
+          "canonical_name": "FILLING SPOUT",
+          "original_name": "FILLING SPOUT",
+          "gsm_area": 90.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 55.0,
+          "cut_cm": 122.0,
+          "qty": 1,
+          "weight_g": 60.39,
+          "remark": "65+25 LAMINATED"
+        },
+        {
+          "sr": 5,
+          "canonical_name": "DISCHARGE SPOUT",
+          "original_name": "D/S",
+          "gsm_area": 100.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 58.0,
+          "cut_cm": 153.3,
+          "qty": 1,
+          "weight_g": 88.914,
+          "remark": "80+20 LAMINATED"
+        },
+        {
+          "sr": 7,
+          "canonical_name": "FS TIE",
+          "original_name": "FS TIE",
+          "gsm_area": null,
+          "gsm_per_m": 6.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.2,
+          "cut_cm": 130.0,
+          "qty": 1,
+          "weight_g": 7.8,
+          "remark": "PP TIE"
+        },
+        {
+          "sr": 8,
+          "canonical_name": "DS TIE",
+          "original_name": "DS TIE",
+          "gsm_area": null,
+          "gsm_per_m": 6.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 130.0,
+          "qty": 1,
+          "weight_g": 7.8,
+          "remark": "PP TIE"
+        },
+        {
+          "sr": 9,
+          "canonical_name": "CORNER LOOP",
+          "original_name": "LOOP",
+          "gsm_area": null,
+          "gsm_per_m": 50.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 7.5,
+          "cut_cm": 170.0,
+          "qty": 4,
+          "weight_g": 340.0,
+          "remark": "MULTIFILAMENT"
+        },
+        {
+          "sr": 12,
+          "canonical_name": "DOC POCKET",
+          "original_name": "DOC",
+          "gsm_area": 140.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 45.0,
+          "cut_cm": 85.0,
+          "qty": 1,
+          "weight_g": 53.55,
+          "remark": null
+        },
+        {
+          "sr": 13,
+          "canonical_name": "STITCHING",
+          "original_name": "STITCHING",
+          "gsm_area": null,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": "WHITE",
+          "width_cm": null,
+          "cut_cm": null,
+          "qty": 1,
+          "weight_g": 42.0,
+          "remark": "HR+DR BLUE PP YARN"
+        },
+        {
+          "sr": 15,
+          "canonical_name": "LABEL",
+          "original_name": "LABEL",
+          "gsm_area": null,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": null,
+          "width_cm": null,
+          "cut_cm": null,
+          "qty": 1,
+          "weight_g": 2.0,
+          "remark": null
+        }
+      ],
+      "bag_weight_target_g": 1900.0,
+      "bag_weight_actual_g": 1899.646,
+      "data_warnings": []
+    },
+    {
+      "retrieval_id": "ret-3c718af1-ae4c-4fbe-930b-aa62e528aae4",
+      "source_file": "18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+      "source_sheet": "9090120 CM",
+      "record_index": 30,
+      "score_total": 0.8237,
+      "score_breakdown": {
+        "geometric": 0.8974,
+        "categorical": 1.0,
+        "semantic": 0.1667
+      },
+      "why_matched": [
+        "same bag_type u_panel",
+        "matched bag_type",
+        "matched top_type",
+        "matched has_baffle",
+        "matched has_liner",
+        "matched has_fs_spout",
+        "matched has_ds_spout",
+        "matched has_ddp"
+      ],
+      "structured_spec_snapshot": {
+        "bag_type": "u_panel",
+        "int_L": 90,
+        "int_W": 90,
+        "int_H": 120,
+        "swl_kg": 1000,
+        "sf": 5,
+        "top_type": "TOP_PANEL",
+        "has_fs_spout": true,
+        "has_ds_spout": true,
+        "has_doc_pocket": true,
+        "has_ddp": false
+      },
+      "component_list": [
+        {
+          "sr": 1,
+          "canonical_name": "BODY PANEL",
+          "original_name": "BODY PANEL",
+          "gsm_area": 195.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 102.0,
+          "cut_cm": 350.0,
+          "qty": 1,
+          "weight_g": 696.15,
+          "remark": "170+25"
+        },
+        {
+          "sr": 2,
+          "canonical_name": "TOP PANEL",
+          "original_name": "TOP",
+          "gsm_area": 195.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 102.0,
+          "cut_cm": 102.0,
+          "qty": 1,
+          "weight_g": 202.878,
+          "remark": "170+25"
+        },
+        {
+          "sr": 3,
+          "canonical_name": "SIDE PANEL",
+          "original_name": "SIDE PANEL",
+          "gsm_area": 195.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 102.0,
+          "cut_cm": 132.0,
+          "qty": 2,
+          "weight_g": 525.096,
+          "remark": "170+25"
+        },
+        {
+          "sr": 4,
+          "canonical_name": "FILLING SPOUT",
+          "original_name": "F/S",
+          "gsm_area": 170.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 54.0,
+          "cut_cm": 121.0,
+          "qty": 1,
+          "weight_g": 111.078,
+          "remark": "145+25"
+        },
+        {
+          "sr": 5,
+          "canonical_name": "DISCHARGE SPOUT",
+          "original_name": "D/S",
+          "gsm_area": 170.0,
+          "gsm_per_m": null,
+          "lami_ul": "LAMINATED",
+          "color": "WHITE",
+          "width_cm": 117.0,
+          "cut_cm": 143.0,
+          "qty": 1,
+          "weight_g": 284.427,
+          "remark": "145+25"
+        },
+        {
+          "sr": 6,
+          "canonical_name": "DS TIE",
+          "original_name": "TIE/IRIS ROPE",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 165.0,
+          "qty": 1,
+          "weight_g": 11.55,
+          "remark": null
+        },
+        {
+          "sr": 7,
+          "canonical_name": "FS TIE",
+          "original_name": "TIE/FS",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 130.0,
+          "qty": 1,
+          "weight_g": 9.1,
+          "remark": null
+        },
+        {
+          "sr": 8,
+          "canonical_name": "DS TIE",
+          "original_name": "TIE/DS",
+          "gsm_area": null,
+          "gsm_per_m": 7.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 1.5,
+          "cut_cm": 130.0,
+          "qty": 1,
+          "weight_g": 9.1,
+          "remark": null
+        },
+        {
+          "sr": 9,
+          "canonical_name": "CORNER LOOP",
+          "original_name": "LOOP",
+          "gsm_area": null,
+          "gsm_per_m": 30.0,
+          "lami_ul": "PP",
+          "color": "WHITE",
+          "width_cm": 5.0,
+          "cut_cm": 185.0,
+          "qty": 4,
+          "weight_g": 222.0,
+          "remark": null
+        },
+        {
+          "sr": 12,
+          "canonical_name": "DOC POCKET",
+          "original_name": "DOC",
+          "gsm_area": 70.0,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": null,
+          "width_cm": 25.0,
+          "cut_cm": 35.0,
+          "qty": 1,
+          "weight_g": 11.27,
+          "remark": null
+        },
+        {
+          "sr": 13,
+          "canonical_name": "STITCHING",
+          "original_name": "STITCHING",
+          "gsm_area": null,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": "WHITE",
+          "width_cm": null,
+          "cut_cm": null,
+          "qty": 1,
+          "weight_g": 60.0,
+          "remark": null
+        },
+        {
+          "sr": 15,
+          "canonical_name": "LABEL",
+          "original_name": "LABEL",
+          "gsm_area": null,
+          "gsm_per_m": null,
+          "lami_ul": null,
+          "color": null,
+          "width_cm": null,
+          "cut_cm": null,
+          "qty": 1,
+          "weight_g": 2.0,
+          "remark": null
+        }
+      ],
+      "bag_weight_target_g": null,
+      "bag_weight_actual_g": 2154.249,
+      "data_warnings": []
+    }
+  ],
+  "llm_prompt_version": null,
+  "llm_raw_output": null,
+  "validation_reports": [
+    {
+      "schema_pass": true,
+      "hard_failures": [],
+      "soft_warnings": [
+        {
+          "code": "TARGET_ACTUAL_WEIGHT_GAP",
+          "path": "bag_weight_target_g",
+          "message": "Target and actual differ by more than warning threshold.",
+          "allowed_values": null,
+          "actual_value": 15.22,
+          "reference_value": 1500.0
+        }
+      ],
+      "retriable": false,
+      "error_context_for_llm": {},
+      "final_decision": "pass_with_warnings"
+    }
+  ],
+  "retry_count": 0,
+  "final_bom": {
+    "bom_id": "bom-ae1b89c6-67b5-4fde-b4b9-e3241682833a",
+    "source": "rule_engine",
+    "source_spec_id": "spec-5593714f-80d9-498c-8e62-9b272d100696",
+    "source_file": null,
+    "source_sheet": null,
+    "customer": null,
+    "ref_no": null,
+    "bag_type": "u_panel",
+    "swl_kg": 1250.0,
+    "sf": 5.0,
+    "ext_L": 85.0,
+    "ext_W": 85.0,
+    "ext_H": 110.0,
+    "int_L": 81.0,
+    "int_W": 81.0,
+    "int_H": 106.0,
+    "bag_weight_target_g": 1500.0,
+    "bag_weight_actual_g": 1271.629,
+    "computed_total_g": 1271.629,
+    "components": [
+      {
+        "sr": 1,
+        "canonical_name": "BODY PANEL",
+        "original_name": null,
+        "gsm_area": 140.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 315.0,
+        "qty": 1.0,
+        "weight_g": 410.13,
+        "remark": "width=ext_W+8; cut=2*ext_H+ext_L+10",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 2,
+        "canonical_name": "SIDE PANEL",
+        "original_name": null,
+        "gsm_area": 140.0,
+        "gsm_per_m": null,
+        "lami_ul": "UNLAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 118.0,
+        "qty": 2.0,
+        "weight_g": 307.272,
+        "remark": "qty=2; width=ext_W+8; cut=ext_H+8",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 3,
+        "canonical_name": "TOP PANEL",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 93.0,
+        "cut_cm": 93.0,
+        "qty": 1.0,
+        "weight_g": 77.841,
+        "remark": "default top panel",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 4,
+        "canonical_name": "FILLING SPOUT",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 55.0,
+        "cut_cm": 121.9,
+        "qty": 1.0,
+        "weight_g": 60.34,
+        "remark": "cut=dia*3.14+12",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 5,
+        "canonical_name": "FS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 125.0,
+        "qty": 1.0,
+        "weight_g": 8.75,
+        "remark": "standard FS tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 6,
+        "canonical_name": "DISCHARGE SPOUT",
+        "original_name": null,
+        "gsm_area": 90.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "WHITE",
+        "width_cm": 80.0,
+        "cut_cm": 121.9,
+        "qty": 1.0,
+        "weight_g": 87.768,
+        "remark": "cut=dia*3.14+12",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 7,
+        "canonical_name": "DS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 147.9,
+        "qty": 1.0,
+        "weight_g": 10.353,
+        "remark": "iris tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 8,
+        "canonical_name": "DS TIE",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 7.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 1.5,
+        "cut_cm": 125.0,
+        "qty": 1.0,
+        "weight_g": 8.75,
+        "remark": "standard DS tie",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 9,
+        "canonical_name": "CORNER LOOP",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": 35.0,
+        "lami_ul": "PP",
+        "color": "WHITE",
+        "width_cm": 5.0,
+        "cut_cm": 170.0,
+        "qty": 4.0,
+        "weight_g": 238.0,
+        "remark": "LL+SL+50",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 10,
+        "canonical_name": "DOC POCKET",
+        "original_name": null,
+        "gsm_area": 70.0,
+        "gsm_per_m": null,
+        "lami_ul": "LAMINATED",
+        "color": "NATURAL",
+        "width_cm": 25.0,
+        "cut_cm": 31.0,
+        "qty": 1.0,
+        "weight_g": 5.425,
+        "remark": "10x12 inch",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 11,
+        "canonical_name": "STITCHING",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": "WHITE",
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 55.0,
+        "remark": "fixed heuristic",
+        "source": "rule_engine"
+      },
+      {
+        "sr": 12,
+        "canonical_name": "LABEL",
+        "original_name": null,
+        "gsm_area": null,
+        "gsm_per_m": null,
+        "lami_ul": null,
+        "color": null,
+        "width_cm": null,
+        "cut_cm": null,
+        "qty": 1.0,
+        "weight_g": 2.0,
+        "remark": "mandatory",
+        "source": "rule_engine"
+      }
+    ],
+    "candidate_optional_components": [],
+    "assumptions": [
+      {
+        "id": "A001",
+        "field": "body_gsm",
+        "assumption": "Selected 140 GSM with structural minimum floor.",
+        "basis": "minimum_structural_then_dataset_mode"
+      },
+      {
+        "id": "A002",
+        "field": "approved_widths",
+        "assumption": "Widths snapped upward to approved loom table.",
+        "basis": "width_rounding_policy"
+      }
+    ],
+    "rule_hits": [
+      {
+        "rule_id": "U_PANEL_MANDATORY_BY_BAG_TYPE",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_COMPONENT_PRESENCE_BY_FLAGS",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "MINIMUM_STRUCTURAL_GSM",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "U_PANEL_GEOMETRY",
+        "rule_level": "hard_constraint",
+        "component": null
+      },
+      {
+        "rule_id": "LOOP_STANDARD_TABLE",
+        "rule_level": "default_preference",
+        "component": null
+      }
+    ],
+    "constraint_inputs": {
+      "design_load_kg": 6250.0,
+      "static_rule_table_version": "2026-05-26",
+      "body_gsm_min": 140,
+      "body_gsm_selected": 140
+    }
+  },
+  "final_pass_fail": "pass_with_warnings",
+  "created_at": "2026-05-26T17:12:15.744151"
+}

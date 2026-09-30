@@ -1,0 +1,13 @@
+SR,COMPONENT,GSM,GPM,LAMI_UL,COLOR,WIDTH_CM,CUT_CM,QTY,WEIGHT_G,REMARK,RULE_SOURCE,RETRIEVAL_SOURCE
+1,BODY PANEL,180.0,,UNLAMINATED,WHITE,93.0,315.0,1.0,527.31,width=ext_W+8; cut=2*ext_H+ext_L+10,rule_engine,
+2,SIDE PANEL,180.0,,UNLAMINATED,WHITE,93.0,118.0,2.0,395.064,qty=2; width=ext_W+8; cut=ext_H+8,rule_engine,
+3,TOP PANEL,90.0,,LAMINATED,WHITE,93.0,93.0,1.0,77.841,default top panel,rule_engine,
+4,FILLING SPOUT,90.0,,LAMINATED,WHITE,55.0,121.9,1.0,60.34,cut=dia*3.14+12,rule_engine,
+5,FS TIE,,7.0,PP,WHITE,1.5,125.0,1.0,8.75,standard FS tie,rule_engine,
+6,DISCHARGE SPOUT,90.0,,LAMINATED,WHITE,80.0,121.9,1.0,87.768,cut=dia*3.14+12,rule_engine,
+7,DS TIE,,7.0,PP,WHITE,1.5,147.9,1.0,10.353,iris tie,rule_engine,
+8,DS TIE,,7.0,PP,WHITE,1.5,125.0,1.0,8.75,standard DS tie,rule_engine,
+9,CORNER LOOP,,35.0,PP,WHITE,5.0,170.0,4.0,238.0,LL+SL+50,rule_engine,
+10,DOC POCKET,70.0,,LAMINATED,NATURAL,25.0,31.0,1.0,5.425,10x12 inch,rule_engine,
+11,STITCHING,,,,WHITE,,,1.0,55.0,fixed heuristic,rule_engine,
+12,LABEL,,,,,,,1.0,2.0,mandatory,rule_engine,

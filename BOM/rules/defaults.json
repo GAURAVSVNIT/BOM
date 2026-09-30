@@ -1,0 +1,57 @@
+{
+  "version": "2026-05-26",
+  "purpose": "Default preferences used only when customer intent is absent.",
+  "dimension_inference": {
+    "external_from_internal_add_cm": 4,
+    "internal_from_external_subtract_cm": 4
+  },
+  "u_panel_defaults": {
+    "body_laminated": false,
+    "double_layer": false,
+    "fabric_color": "WHITE",
+    "top_type": "OPEN_TOP",
+    "bottom_type": "FLAT_BOTTOM",
+    "loop_family": "corner_loop",
+    "loop_qty": 4,
+    "loop_LL_cm": 70,
+    "loop_SL_cm": 50,
+    "loop_color_policy": "same_as_body",
+    "top_panel_gsm_area": 90,
+    "top_panel_lami_ul": "LAMINATED",
+    "spout_gsm_area": 90,
+    "spout_lami_ul": "LAMINATED",
+    "tie_gsm_per_m": 7,
+    "stitching_weight_g": 55,
+    "label_weight_g": 2
+  },
+  "loop_standard_table": [
+    {"loop_family": "corner_loop", "sf": 5, "swl_min": 0, "swl_max": 500, "gsm_per_m": 25, "width_mm": 40},
+    {"loop_family": "corner_loop", "sf": 5, "swl_min": 501, "swl_max": 1000, "gsm_per_m": 30, "width_mm": 40},
+    {"loop_family": "corner_loop", "sf": 5, "swl_min": 1001, "swl_max": 1250, "gsm_per_m": 35, "width_mm": 50},
+    {"loop_family": "corner_loop", "sf": 5, "swl_min": 1251, "swl_max": 1500, "gsm_per_m": 35, "width_mm": 50},
+    {"loop_family": "corner_loop", "sf": 5, "swl_min": 1501, "swl_max": 2000, "gsm_per_m": 50, "width_mm": 50},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 0, "swl_max": 500, "gsm_per_m": 30, "width_mm": 40},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 501, "swl_max": 750, "gsm_per_m": 35, "width_mm": 40},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 751, "swl_max": 1000, "gsm_per_m": 35, "width_mm": 40},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 1001, "swl_max": 1250, "gsm_per_m": 45, "width_mm": 50},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 1251, "swl_max": 1500, "gsm_per_m": 45, "width_mm": 50},
+    {"loop_family": "corner_loop", "sf": 6, "swl_min": 1501, "swl_max": 2000, "gsm_per_m": 50, "width_mm": 50},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 0, "swl_max": 500, "gsm_per_m": 30, "width_mm": 50},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 501, "swl_max": 750, "gsm_per_m": 45, "width_mm": 75},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 751, "swl_max": 1000, "gsm_per_m": 45, "width_mm": 75},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 1001, "swl_max": 1250, "gsm_per_m": 50, "width_mm": 75},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 1251, "swl_max": 1500, "gsm_per_m": 50, "width_mm": 75},
+    {"loop_family": "cross_corner_loop", "sf": 5, "swl_min": 1501, "swl_max": 2000, "gsm_per_m": 60, "width_mm": 80}
+  ],
+  "doc_pocket_sizes": {
+    "A4": {"width_cm": 25, "cut_cm": 32, "gsm_area": 75, "lami_ul": "LDPE"},
+    "10x12 inch": {"width_cm": 25, "cut_cm": 31, "gsm_area": 70, "lami_ul": "LAMINATED"},
+    "11x18 inch": {"width_cm": 25, "cut_cm": 32, "gsm_area": 75, "lami_ul": "LDPE"}
+  },
+  "liner_defaults": {
+    "micron": 70,
+    "lami_ul": "LDPE",
+    "width_add_cm": 10,
+    "cut_add_cm": 20
+  }
+}

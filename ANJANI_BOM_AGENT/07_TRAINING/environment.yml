@@ -1,0 +1,12 @@
+# Minimal conda spec — Python + pip only. Torch (cu12x wheels), Unsloth, vLLM and
+# the bomft package are pip-installed on top by hpc/setup_env.sh, so the env
+# carries its own CUDA runtime and does not depend on a cluster cuda module.
+#
+#   conda env create -p "$PROJECT_DIR/envs/ajani_bom_finetune" -f environment.yml
+#   (hpc/setup_env.sh does this plus the pip steps)
+name: ajani_bom_finetune
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip

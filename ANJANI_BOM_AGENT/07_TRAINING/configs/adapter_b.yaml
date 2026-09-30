@@ -1,0 +1,43 @@
+# Adapter B — CONFIGURATION.  OrderSpec + retrieved top-3 + envelope -> BuildSpec
+# (plan §9.2, right column). ~70 closed-vocabulary decisions; never a number.
+run_name: adapter_b_configuration
+
+model:
+  name: ${BOM_MODEL_NAME:-Qwen3-4B-Instruct}   # ignored when --base-model is a path
+  backend: hf
+  max_seq_length: 4096          # three retrieved BuildSpecs sit in the prompt
+  load_in_4bit: false           # true = QLoRA if a 9B base OOMs at seq 4096
+  dtype: bfloat16
+  attn_implementation: sdpa
+  enable_thinking: false
+
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  bias: none
+
+train:
+  learning_rate: 1.0e-4
+  epochs: 3
+  warmup_ratio: 0.03
+  lr_scheduler_type: cosine
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 4
+  gradient_checkpointing: true
+  logging_steps: 10
+  eval_steps: 50
+  save_steps: 50
+  save_total_limit: 2
+  early_stopping_patience: 3
+  seed: 20260826
+  optim: adamw_torch
+  report_to: none
+
+data:
+  adapter: b
+  train_split: train
+  eval_split: val
+  response_template: "<|im_start|>assistant\n"
+  max_examples: null

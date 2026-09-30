@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anjani Interweave — U-Panel BOM Generator</title>
+<style>
+  :root {
+    --primary: #1a3a5c;
+    --accent:  #e67e22;
+    --ok:      #27ae60;
+    --warn:    #e74c3c;
+    --bg:      #f0f4f8;
+    --card:    #ffffff;
+    --border:  #dde3ea;
+    --text:    #2c3e50;
+    --muted:   #7f8c8d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg);
+         color: var(--text); font-size: 14px; }
+
+  /* ---- HEADER ---- */
+  header {
+    background: var(--primary); color: #fff;
+    padding: 14px 24px; display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  header .logo { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+  header .sub  { font-size: 13px; opacity: 0.75; }
+  header .badge {
+    margin-left: auto; background: var(--accent);
+    border-radius: 20px; padding: 4px 14px;
+    font-size: 12px; font-weight: 600;
+  }
+
+  /* ---- LAYOUT ---- */
+  .layout { display: flex; gap: 0; min-height: calc(100vh - 56px); }
+  .sidebar {
+    width: 380px; flex-shrink: 0;
+    background: var(--card); border-right: 1px solid var(--border);
+    overflow-y: auto; padding: 16px;
+  }
+  .main { flex: 1; padding: 16px; overflow-y: auto; }
+
+  /* ---- FORM SECTIONS ---- */
+  .section {
+    border: 1px solid var(--border); border-radius: 8px;
+    margin-bottom: 12px; overflow: hidden;
+  }
+  .section-head {
+    background: var(--primary); color: #fff;
+    padding: 8px 12px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .section-head:hover { background: #1e4570; }
+  .section-body { padding: 12px; }
+
+  .field { margin-bottom: 10px; }
+  .field label {
+    display: block; font-size: 11px; font-weight: 600;
+    color: var(--muted); margin-bottom: 3px; text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .field input, .field select {
+    width: 100%; padding: 7px 10px; border: 1px solid var(--border);
+    border-radius: 5px; font-size: 13px; color: var(--text);
+    background: #fafbfc; transition: border 0.2s;
+  }
+  .field input:focus, .field select:focus {
+    outline: none; border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(26,58,92,0.12);
+  }
+  .row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .toggle-row {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 8px; padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .toggle-row:last-child { border-bottom: none; margin-bottom: 0; }
+  .toggle-row label { flex: 1; font-size: 13px; cursor: pointer; }
+  .toggle-row input[type=checkbox] { width: 16px; height: 16px; cursor: pointer; }
+
+  /* GSM hint */
+  .gsm-hint {
+    background: #eaf4ff; border: 1px solid #b3d4f5;
+    border-radius: 5px; padding: 7px 10px; margin: 6px 0;
+    font-size: 12px; color: var(--primary);
+  }
+  .gsm-hint strong { color: var(--accent); font-size: 15px; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 18px; border: none; border-radius: 6px;
+    cursor: pointer; font-size: 13px; font-weight: 600;
+    transition: all 0.2s; text-decoration: none;
+  }
+  .btn-primary { background: var(--primary); color: #fff; width: 100%; justify-content: center; }
+  .btn-primary:hover { background: #1e4570; }
+  .btn-success { background: var(--ok); color: #fff; }
+  .btn-success:hover { background: #219a52; }
+  .btn-warn    { background: var(--accent); color: #fff; }
+  .btn-warn:hover { background: #d35400; }
+
+  /* ---- BOM OUTPUT ---- */
+  .bom-card {
+    background: var(--card); border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+  .bom-header {
+    background: var(--primary); color: #fff;
+    padding: 14px 20px; display: flex; justify-content: space-between;
+    align-items: center;
+  }
+  .bom-header h2 { font-size: 16px; font-weight: 700; }
+
+  .summary-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--border); border-bottom: 1px solid var(--border);
+  }
+  .summary-cell {
+    background: var(--card); padding: 10px 14px; text-align: center;
+  }
+  .summary-cell .val { font-size: 20px; font-weight: 700; color: var(--primary); }
+  .summary-cell .lbl { font-size: 10px; color: var(--muted); text-transform: uppercase;
+                       letter-spacing: 0.3px; margin-top: 2px; }
+
+  .bom-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead th {
+    background: #edf2f7; padding: 9px 10px;
+    text-align: left; font-size: 11px; font-weight: 700;
+    color: var(--muted); text-transform: uppercase;
+    border-bottom: 2px solid var(--border); white-space: nowrap;
+  }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:hover { background: #f8fafc; }
+  tbody td { padding: 8px 10px; vertical-align: top; }
+  tbody tr.structural { background: #fefefe; }
+  tbody tr.accessory  { background: #fffef8; }
+  tbody tr.other      { background: #f8fff8; }
+  tbody tr.total-row  {
+    background: var(--primary); color: #fff; font-weight: 700;
+  }
+  .badge-lam   { background:#dff0d8; color:#3c763d; border-radius:3px; padding:1px 5px; font-size:11px; }
+  .badge-unlam { background:#fcf8e3; color:#8a6d3b; border-radius:3px; padding:1px 5px; font-size:11px; }
+  .badge-ldpe  { background:#d9edf7; color:#31708f; border-radius:3px; padding:1px 5px; font-size:11px; }
+  .badge-pp    { background:#f2dede; color:#a94442; border-radius:3px; padding:1px 5px; font-size:11px; }
+
+  .note-cell { font-size: 11px; color: var(--muted); max-width: 250px;
+               white-space: normal; line-height: 1.4; }
+
+  /* Warnings */
+  .warn-box {
+    background: #fdf2f2; border: 1px solid #f5c6cb;
+    border-radius: 6px; padding: 10px 14px; margin-bottom: 12px;
+    font-size: 13px; color: #721c24;
+  }
+
+  /* Placeholder */
+  .placeholder {
+    text-align: center; padding: 80px 20px; color: var(--muted);
+  }
+  .placeholder .icon { font-size: 64px; margin-bottom: 16px; }
+  .placeholder h3 { font-size: 20px; margin-bottom: 8px; color: var(--primary); }
+
+  /* Loading */
+  .loading {
+    text-align: center; padding: 40px;
+    color: var(--muted); font-size: 16px;
+  }
+
+  @media(max-width:900px){
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+    .summary-grid { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">ANJANI INTERWEAVE</div>
+    <div class="sub">U-Panel FIBC BOM Generator — Powered by 39-Bag Knowledge Base</div>
+  </div>
+  <div class="badge">AI-Assisted Engineering</div>
+</header>
+
+<div class="layout">
+
+  <!-- ======== SIDEBAR: INPUT FORM ======== -->
+  <div class="sidebar">
+
+    <!-- BASIC SPECS -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        📦 BAG DIMENSIONS &amp; LOAD <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="field">
+          <label>Bag Type</label>
+          <select id="bag_type_label">
+            <option>U PANEL WITH CORNER LOOP</option>
+            <option>U+2 PANEL WITH CORNER LOOP</option>
+            <option>DOUBLE LAYER FABRIC U-PANEL BAG</option>
+            <option>U+2 BAG WITH TUNNEL LOOP</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>External Dimensions (cm) — L × W × H</label>
+          <div class="row3">
+            <input type="number" id="ext_L" placeholder="L" value="95" min="30">
+            <input type="number" id="ext_W" placeholder="W" value="95" min="30">
+            <input type="number" id="ext_H" placeholder="H" value="100" min="30">
+          </div>
+        </div>
+        <div class="field">
+          <label>Internal Dimensions (cm) — L × W × H</label>
+          <div class="row3">
+            <input type="number" id="int_L" placeholder="L" value="91" min="30">
+            <input type="number" id="int_W" placeholder="W" value="91" min="30">
+            <input type="number" id="int_H" placeholder="H" value="96" min="30">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>SWL (kg)</label>
+            <input type="number" id="swl_kg" value="1000" min="100" step="50" oninput="updateGsmHint()">
+          </div>
+          <div class="field">
+            <label>Safety Factor</label>
+            <select id="sf" onchange="updateGsmHint()">
+              <option value="5" selected>5 (Standard)</option>
+              <option value="6">6 (Enhanced)</option>
+            </select>
+          </div>
+        </div>
+        <div class="gsm-hint" id="gsm_hint">
+          Loading...
+        </div>
+      </div>
+    </div>
+
+    <!-- FABRIC SPEC -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        🧵 FABRIC SPECIFICATION <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="row2">
+          <div class="field">
+            <label>Fabric Color</label>
+            <select id="fabric_color">
+              <option>WHITE</option>
+              <option>MILKY WHITE</option>
+              <option>NATURAL</option>
+              <option>BLACK</option>
+              <option>CUSTOM</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Override GSM (0=auto)</label>
+            <input type="number" id="override_gsm" value="0" min="0" step="5">
+          </div>
+        </div>
+        <div class="toggle-row">
+          <input type="checkbox" id="body_laminated" checked onchange="updateGsmHint()">
+          <label for="body_laminated">Body Fabric Laminated (PE Coating)</label>
+        </div>
+        <div class="toggle-row">
+          <input type="checkbox" id="double_layer" onchange="updateGsmHint()">
+          <label for="double_layer">Double Layer Fabric</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP / CLOSURE -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        🔝 TOP CLOSURE TYPE <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="field">
+          <label>Top Type</label>
+          <select id="top_type" onchange="toggleTopFields()">
+            <option value="TOP_PANEL">Closed Top Panel (with FS spout)</option>
+            <option value="SKIRT">Skirt Top</option>
+            <option value="OPEN_TOP">Open Top</option>
+            <option value="TOP_FLAP">Top Flap (hook + tie)</option>
+          </select>
+        </div>
+        <div id="skirt_fields" style="display:none">
+          <div class="field">
+            <label>Skirt Height (cm)</label>
+            <input type="number" id="skirt_height_cm" value="40" min="20" max="120">
+          </div>
+        </div>
+        <div class="toggle-row">
+          <input type="checkbox" id="has_fs_spout" checked onchange="toggleSpoutFields()">
+          <label for="has_fs_spout">Has Filling Spout (FS)</label>
+        </div>
+        <div id="fs_fields">
+          <div class="row2">
+            <div class="field">
+              <label>FS Spout Width (cm)</label>
+              <input type="number" id="fs_spout_w" value="40" min="20">
+            </div>
+            <div class="field">
+              <label>FS Spout Length (cm)</label>
+              <input type="number" id="fs_spout_l" value="35" min="20">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        ⬇️ BOTTOM / DISCHARGE <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="field">
+          <label>Bottom Type</label>
+          <select id="bottom_type" onchange="toggleBottomFields()">
+            <option value="FLAT_BOTTOM">Flat Bottom (closed)</option>
+            <option value="DS_SPOUT">Discharge Spout (DS)</option>
+          </select>
+        </div>
+        <div id="ds_fields" style="display:none">
+          <div class="row2">
+            <div class="field">
+              <label>DS Spout Width (cm)</label>
+              <input type="number" id="ds_spout_w" value="35" min="20">
+            </div>
+            <div class="field">
+              <label>DS Spout Length (cm)</label>
+              <input type="number" id="ds_spout_l" value="50" min="20">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOOPS -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        🔗 LIFTING LOOPS <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="row2">
+          <div class="field">
+            <label>Lifting Length LL (cm)</label>
+            <input type="number" id="loop_ll_cm" value="70" min="30">
+          </div>
+          <div class="field">
+            <label>Sling Length SL (cm)</label>
+            <input type="number" id="loop_sl_cm" value="50" min="20">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Loop Width (mm)</label>
+            <select id="loop_width_mm">
+              <option value="50" selected>50mm (Standard)</option>
+              <option value="55">55mm</option>
+              <option value="60">60mm (Heavy)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Loop Color</label>
+            <select id="loop_color">
+              <option>WHITE</option>
+              <option>BLACK</option>
+              <option>BLUE</option>
+              <option>YELLOW</option>
+            </select>
+          </div>
+        </div>
+        <div class="toggle-row">
+          <input type="checkbox" id="has_stevedore">
+          <label for="has_stevedore">Stevedore / Extra Safety Loop (×2)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCESSORIES -->
+    <div class="section">
+      <div class="section-head" onclick="toggleSection(this)">
+        ➕ ACCESSORIES &amp; OPTIONS <span>▲</span>
+      </div>
+      <div class="section-body">
+        <div class="toggle-row">
+          <input type="checkbox" id="has_liner" onchange="toggleLinerFields()">
+          <label for="has_liner">PE Liner</label>
+        </div>
+        <div id="liner_fields" style="display:none; padding-left:8px;">
+          <div class="row3">
+            <div class="field">
+              <label>Width (cm)</label>
+              <input type="number" id="liner_w_cm" value="195" min="50">
+            </div>
+            <div class="field">
+              <label>Length (cm)</label>
+              <input type="number" id="liner_l_cm" value="275" min="50">
+            </div>
+            <div class="field">
+              <label>Micron</label>
+              <input type="number" id="liner_micron" value="70" min="50">
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-row">
+          <input type="checkbox" id="has_ddp" onchange="toggleDdpFields()">
+          <label for="has_ddp">Dust Discharge Port (DDP)</label>
+        </div>
+        <div id="ddp_fields" style="display:none; padding-left:8px;">
+          <div class="field">
+            <label>DDP Quantity</label>
+            <select id="ddp_qty">
+              <option value="1">1 pc</option>
+              <option value="2">2 pc</option>
+              <option value="4">4 pc</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toggle-row">
+          <input type="checkbox" id="has_doc_pocket" onchange="toggleDocFields()">
+          <label for="has_doc_pocket">Document Pocket</label>
+        </div>
+        <div id="doc_fields" style="display:none; padding-left:8px;">
+          <div class="field">
+            <label>Doc Pocket Qty</label>
+            <select id="doc_qty">
+              <option value="1">1 pc (1 side)</option>
+              <option value="2">2 pc (2 sides)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:8px;">
+          <label>Printing Sides</label>
+          <select id="printing_sides">
+            <option value="0">No Printing</option>
+            <option value="1">1 Side / 1-3 Color</option>
+            <option value="2">2 Sides / 4 Color</option>
+            <option value="4">All 4 Sides</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- GENERATE BUTTON -->
+    <button class="btn btn-primary" onclick="generateBOM()" style="margin-top:4px;">
+      ⚡ GENERATE COMPLETE BOM
+    </button>
+
+  </div>
+
+  <!-- ======== MAIN: BOM OUTPUT ======== -->
+  <div class="main" id="bom_output">
+    <div class="placeholder">
+      <div class="icon">🏭</div>
+      <h3>U-Panel BOM Generator</h3>
+      <p>Fill in the bag specification on the left and click <strong>Generate Complete BOM</strong>.</p>
+      <br>
+      <p style="font-size:12px; color:#999;">
+        Engineering rules derived from <strong>39 verified production BOMs</strong>.<br>
+        Covers all U-Panel variants: open top, skirt, DS spout, liner, DDP, and more.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// Helpers
+// ============================================================
+function toggleSection(head) {
+  const body = head.nextElementSibling;
+  const arrow = head.querySelector('span');
+  if (body.style.display === 'none') {
+    body.style.display = 'block'; arrow.textContent = '▲';
+  } else {
+    body.style.display = 'none'; arrow.textContent = '▼';
+  }
+}
+function v(id) { return document.getElementById(id).value; }
+function checked(id) { return document.getElementById(id).checked; }
+
+function toggleTopFields() {
+  const t = v('top_type');
+  document.getElementById('skirt_fields').style.display = t === 'SKIRT' ? 'block' : 'none';
+}
+function toggleSpoutFields() {
+  document.getElementById('fs_fields').style.display = checked('has_fs_spout') ? 'block' : 'none';
+}
+function toggleBottomFields() {
+  document.getElementById('ds_fields').style.display = v('bottom_type') === 'DS_SPOUT' ? 'block' : 'none';
+}
+function toggleLinerFields() {
+  document.getElementById('liner_fields').style.display = checked('has_liner') ? 'block' : 'none';
+}
+function toggleDdpFields() {
+  document.getElementById('ddp_fields').style.display = checked('has_ddp') ? 'block' : 'none';
+}
+function toggleDocFields() {
+  document.getElementById('doc_fields').style.display = checked('has_doc_pocket') ? 'block' : 'none';
+}
+
+// Live GSM hint
+async function updateGsmHint() {
+  const body = {
+    swl_kg: parseFloat(v('swl_kg')) || 1000,
+    sf: parseFloat(v('sf')) || 5,
+    body_laminated: checked('body_laminated'),
+    double_layer: checked('double_layer')
+  };
+  const res = await fetch('/api/suggest_gsm', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(body)
+  });
+  const d = await res.json();
+  document.getElementById('gsm_hint').innerHTML =
+    `Design Load: <strong>${d.design_load} kg</strong> &nbsp;|&nbsp; ` +
+    `Recommended Body GSM: <strong>${d.gsm}</strong> &nbsp;|&nbsp; ` +
+    `Loop Density: <strong>${d.loop_gsm} g/m</strong>`;
+}
+
+// ============================================================
+// Build spec from form
+// ============================================================
+function buildSpec() {
+  const spec = {
+    // dimensions
+    ext_L: parseFloat(v('ext_L')), ext_W: parseFloat(v('ext_W')), ext_H: parseFloat(v('ext_H')),
+    int_L: parseFloat(v('int_L')), int_W: parseFloat(v('int_W')), int_H: parseFloat(v('int_H')),
+    // load
+    swl_kg: parseFloat(v('swl_kg')), sf: parseFloat(v('sf')),
+    // fabric
+    fabric_color: v('fabric_color'),
+    body_laminated: checked('body_laminated'),
+    double_layer: checked('double_layer'),
+    override_gsm: parseInt(v('override_gsm')) || 0,
+    // closure
+    top_type: v('top_type'),
+    skirt_height_cm: parseFloat(v('skirt_height_cm')) || 40,
+    has_fs_spout: checked('has_fs_spout'),
+    fs_spout_w: parseFloat(v('fs_spout_w')),
+    fs_spout_l: parseFloat(v('fs_spout_l')),
+    // bottom
+    bottom_type: v('bottom_type'),
+    ds_spout_w: parseFloat(v('ds_spout_w')),
+    ds_spout_l: parseFloat(v('ds_spout_l')),
+    // loops
+    loop_ll_cm: parseFloat(v('loop_ll_cm')),
+    loop_sl_cm: parseFloat(v('loop_sl_cm')),
+    loop_width_mm: parseInt(v('loop_width_mm')),
+    loop_color: v('loop_color'),
+    has_stevedore: checked('has_stevedore'),
+    // accessories
+    has_liner: checked('has_liner'),
+    liner_w_cm: parseFloat(v('liner_w_cm')) || 195,
+    liner_l_cm: parseFloat(v('liner_l_cm')) || 275,
+    liner_micron: parseInt(v('liner_micron')) || 70,
+    has_ddp: checked('has_ddp'),
+    ddp_qty: parseInt(v('ddp_qty')) || 1,
+    has_doc_pocket: checked('has_doc_pocket'),
+    doc_qty: parseInt(v('doc_qty')) || 1,
+    printing_sides: parseInt(v('printing_sides')) || 0,
+    // label
+    bag_type_label: v('bag_type_label')
+  };
+  return spec;
+}
+
+// ============================================================
+// Render BOM
+// ============================================================
+function badgeLam(lam) {
+  if (!lam) return '';
+  const l = (lam+'').toUpperCase();
+  if (l.includes('LAM')) return `<span class="badge-lam">${lam}</span>`;
+  if (l.includes('UNLAM') || l.includes('UN LAM')) return `<span class="badge-unlam">${lam}</span>`;
+  if (l.includes('LDPE') || l.includes('PP')) return `<span class="badge-pp">${lam}</span>`;
+  return `<span class="badge-ldpe">${lam}</span>`;
+}
+
+function rowClass(sr) {
+  if (sr <= 5) return 'structural';
+  if (sr <= 12) return 'accessory';
+  return 'other';
+}
+
+function renderBOM(result) {
+  const r   = result;
+  const sp  = r.spec;
+  const comps = r.components;
+  const grandTotal = r.fabric_total_g;
+
+  // Compute volume for display
+  const vol = r.volume_m3;
+
+  let rows = '';
+  comps.forEach(c => {
+    rows += `
+    <tr class="${rowClass(c.sr || 99)}">
+      <td><strong>${c.sr || ''}</strong></td>
+      <td><strong>${c.component}</strong></td>
+      <td style="text-align:right">${c.gsm || ''}</td>
+      <td>${badgeLam(c.lami_ul)}</td>
+      <td>${c.color || ''}</td>
+      <td style="text-align:right">${c.fw || ''}</td>
+      <td style="text-align:right">${c.cut !== null && c.cut !== undefined ? c.cut : ''}</td>
+      <td style="text-align:right"><strong>${c.weight_g !== null && c.weight_g !== undefined ? c.weight_g.toFixed(1) : ''}</strong></td>
+      <td style="text-align:center">${c.qty || ''}</td>
+      <td>${c.remark || ''}</td>
+      <td class="note-cell">${c.note || ''}</td>
+    </tr>`;
+  });
+
+  // Grand total row
+  rows += `
+  <tr class="total-row">
+    <td colspan="7" style="text-align:right; padding-right:12px;">GRAND TOTAL FABRIC WEIGHT (g)</td>
+    <td style="text-align:right; font-size:16px;">${grandTotal.toFixed(1)}</td>
+    <td colspan="3"></td>
+  </tr>
+  <tr class="total-row" style="background:#0d2a42;">
+    <td colspan="7" style="text-align:right; padding-right:12px;">ESTIMATED BAG WEIGHT incl. 3% wastage (kg)</td>
+    <td style="text-align:right; font-size:18px;">${r.est_bag_wt_kg}</td>
+    <td colspan="3"></td>
+  </tr>`;
+
+  const warnHtml = r.warnings && r.warnings.length
+    ? `<div class="warn-box">⚠️ <strong>Warnings:</strong> ${r.warnings.join(' | ')}</div>` : '';
+
+  document.getElementById('bom_output').innerHTML = `
+    ${warnHtml}
+    <div class="bom-card">
+      <div class="bom-header">
+        <div>
+          <h2>📋 BILL OF MATERIAL — ${sp.bag_type_label || 'U-PANEL BAG'}</h2>
+          <div style="font-size:12px; opacity:0.8; margin-top:4px;">
+            EXT: ${sp.ext_L}×${sp.ext_W}×${sp.ext_H} cm &nbsp;|&nbsp;
+            INT: ${sp.int_L}×${sp.int_W}×${sp.int_H} cm &nbsp;|&nbsp;
+            SWL: ${sp.swl_kg} kg × SF ${sp.sf} = ${r.design_load_kg} kg Design Load
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn btn-success" onclick="exportCSV()">⬇ Export CSV</button>
+        </div>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-cell">
+          <div class="val">${r.gsm_auto}</div>
+          <div class="lbl">Body GSM (Auto)</div>
+        </div>
+        <div class="summary-cell">
+          <div class="val">${r.est_bag_wt_kg} kg</div>
+          <div class="lbl">Estimated Bag Weight</div>
+        </div>
+        <div class="summary-cell">
+          <div class="val">${vol} m³</div>
+          <div class="lbl">Bag Volume</div>
+        </div>
+        <div class="summary-cell">
+          <div class="val">${r.design_load_kg} kg</div>
+          <div class="lbl">Design Load</div>
+        </div>
+      </div>
+
+      <div class="bom-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>SR</th>
+              <th>COMPONENT</th>
+              <th>GSM</th>
+              <th>LAMI/UL</th>
+              <th>COLOR</th>
+              <th>FABRIC WIDTH</th>
+              <th>CUT LENGTH</th>
+              <th>CUT WT (g)</th>
+              <th>QTY</th>
+              <th>REMARK</th>
+              <th>ENGINEERING NOTE</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+
+      <div style="padding:12px 16px; background:#f8fafc; border-top:1px solid var(--border);
+                  font-size:11px; color:var(--muted);">
+        ✅ Rules derived from 39 production BOMs &nbsp;|&nbsp;
+        Body: cut=L+2H+22 &nbsp;|&nbsp; Side: cut=H+12 &nbsp;|&nbsp;
+        Skirt: cut=2(L+W)+12 &nbsp;|&nbsp; Loop: cut=LL+SL+50 &nbsp;|&nbsp;
+        Weight: GSM×W×L÷10000 (fabric) | g/m×L/100×qty (tape)
+      </div>
+    </div>`;
+}
+
+// ============================================================
+// API calls
+// ============================================================
+async function generateBOM() {
+  const spec = buildSpec();
+  document.getElementById('bom_output').innerHTML =
+    '<div class="loading">⚙️ Calculating BOM...</div>';
+  try {
+    const res = await fetch('/api/generate', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(spec)
+    });
+    const d = await res.json();
+    if (d.ok) {
+      renderBOM(d.result);
+    } else {
+      document.getElementById('bom_output').innerHTML =
+        `<div class="warn-box">❌ Error: ${d.error}</div>`;
+    }
+  } catch(e) {
+    document.getElementById('bom_output').innerHTML =
+      `<div class="warn-box">❌ Network error: ${e.message}</div>`;
+  }
+}
+
+async function exportCSV() {
+  const spec = buildSpec();
+  const res = await fetch('/api/export_csv', {
+    method: 'POST', headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(spec)
+  });
+  const blob = await res.blob();
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = 'BOM_Anjani.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Init
+updateGsmHint();
+</script>
+</body>
+</html>

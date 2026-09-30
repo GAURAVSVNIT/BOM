@@ -1,0 +1,429 @@
+{
+ "built": "2026-08-26T11:59:09",
+ "root": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANJANI_BOM_AGENT",
+ "n_files": 105,
+ "total_bytes": 84832498,
+ "missing": [],
+ "files": [
+  {
+   "path": "01_REPORTS/DATASET_REPORT.md",
+   "bytes": 8501
+  },
+  {
+   "path": "01_REPORTS/ENGINEER_QUESTIONNAIRE.md",
+   "bytes": 52500
+  },
+  {
+   "path": "01_REPORTS/FINAL_SYSTEM_REPORT.md",
+   "bytes": 34348
+  },
+  {
+   "path": "01_REPORTS/IMPLEMENTATION_PLAN.md",
+   "bytes": 87774
+  },
+  {
+   "path": "02_WEB_REPORTS/1_architecture_review_where_qwen_belongs.html",
+   "bytes": 56003
+  },
+  {
+   "path": "02_WEB_REPORTS/2_findings_and_44_questions.html",
+   "bytes": 48222
+  },
+  {
+   "path": "02_WEB_REPORTS/3_system_spec_architecture_data_finetuning.html",
+   "bytes": 67676
+  },
+  {
+   "path": "02_WEB_REPORTS/4_final_system_report.html",
+   "bytes": 51323
+  },
+  {
+   "path": "02_WEB_REPORTS/5_implementation_plan_v1.1.html",
+   "bytes": 64586
+  },
+  {
+   "path": "02_WEB_REPORTS/6_dataset_report_v1.0.html",
+   "bytes": 25975
+  },
+  {
+   "path": "02_WEB_REPORTS/ARTIFACT_LINKS.md",
+   "bytes": 1494
+  },
+  {
+   "path": "03_DATASET/DATASET_REPORT.md",
+   "bytes": 8501
+  },
+  {
+   "path": "03_DATASET/MANIFEST.json",
+   "bytes": 4109
+  },
+  {
+   "path": "03_DATASET/dedupe.json",
+   "bytes": 2748
+  },
+  {
+   "path": "03_DATASET/diagnostic.json",
+   "bytes": 54570
+  },
+  {
+   "path": "03_DATASET/extract_skipped.json",
+   "bytes": 997
+  },
+  {
+   "path": "03_DATASET/raw_records.json",
+   "bytes": 6219535
+  },
+  {
+   "path": "03_DATASET/reconciliation.json",
+   "bytes": 66994
+  },
+  {
+   "path": "03_DATASET/split.json",
+   "bytes": 6777
+  },
+  {
+   "path": "03_DATASET/sweep.json",
+   "bytes": 21467
+  },
+  {
+   "path": "03_DATASET/validation.json",
+   "bytes": 777
+  },
+  {
+   "path": "03_DATASET/adapter_a/hard_negatives.jsonl",
+   "bytes": 22313
+  },
+  {
+   "path": "03_DATASET/adapter_a/test.jsonl",
+   "bytes": 759771
+  },
+  {
+   "path": "03_DATASET/adapter_a/train.jsonl",
+   "bytes": 3422318
+  },
+  {
+   "path": "03_DATASET/adapter_a/val.jsonl",
+   "bytes": 827021
+  },
+  {
+   "path": "03_DATASET/adapter_b/test.jsonl",
+   "bytes": 505166
+  },
+  {
+   "path": "03_DATASET/adapter_b/train.jsonl",
+   "bytes": 6521019
+  },
+  {
+   "path": "03_DATASET/adapter_b/val.jsonl",
+   "bytes": 526295
+  },
+  {
+   "path": "03_DATASET/build/00_sweep.py",
+   "bytes": 3456
+  },
+  {
+   "path": "03_DATASET/build/01_diagnose.py",
+   "bytes": 6460
+  },
+  {
+   "path": "03_DATASET/build/02_reconcile.py",
+   "bytes": 3530
+  },
+  {
+   "path": "03_DATASET/build/03_extract.py",
+   "bytes": 3472
+  },
+  {
+   "path": "03_DATASET/build/04_gold.py",
+   "bytes": 23537
+  },
+  {
+   "path": "03_DATASET/build/05_split.py",
+   "bytes": 4089
+  },
+  {
+   "path": "03_DATASET/build/06_adapter_a.py",
+   "bytes": 20993
+  },
+  {
+   "path": "03_DATASET/build/07_adapter_b.py",
+   "bytes": 14196
+  },
+  {
+   "path": "03_DATASET/build/08_validate.py",
+   "bytes": 8689
+  },
+  {
+   "path": "03_DATASET/build/09_eval_real.py",
+   "bytes": 4766
+  },
+  {
+   "path": "03_DATASET/build/10_manifest.py",
+   "bytes": 13230
+  },
+  {
+   "path": "03_DATASET/build/99_collect.py",
+   "bytes": 8104
+  },
+  {
+   "path": "03_DATASET/build/bom_parse.py",
+   "bytes": 13153
+  },
+  {
+   "path": "03_DATASET/build/renderer.py",
+   "bytes": 7295
+  },
+  {
+   "path": "03_DATASET/build/rules.py",
+   "bytes": 20055
+  },
+  {
+   "path": "03_DATASET/build/xl_read.py",
+   "bytes": 14969
+  },
+  {
+   "path": "03_DATASET/eval_real/eval_real.jsonl",
+   "bytes": 21049
+  },
+  {
+   "path": "03_DATASET/eval_real/pending_ocr.json",
+   "bytes": 1271
+  },
+  {
+   "path": "03_DATASET/gold/build_spec.jsonl",
+   "bytes": 668158
+  },
+  {
+   "path": "03_DATASET/gold/clarification.jsonl",
+   "bytes": 487707
+  },
+  {
+   "path": "03_DATASET/gold/order_spec.jsonl",
+   "bytes": 2665131
+  },
+  {
+   "path": "03_DATASET/gold/physical_bom.jsonl",
+   "bytes": 1700036
+  },
+  {
+   "path": "04_ANALYSIS/outputs/corpus_allthings.json",
+   "bytes": 2228038
+  },
+  {
+   "path": "04_ANALYSIS/outputs/inv1.json",
+   "bytes": 776427
+  },
+  {
+   "path": "04_ANALYSIS/outputs/rules_out.txt",
+   "bytes": 19981
+  },
+  {
+   "path": "04_ANALYSIS/scripts/analyze.py",
+   "bytes": 4964
+  },
+  {
+   "path": "04_ANALYSIS/scripts/dump_xlsx.py",
+   "bytes": 863
+  },
+  {
+   "path": "04_ANALYSIS/scripts/gsm_test.py",
+   "bytes": 4477
+  },
+  {
+   "path": "04_ANALYSIS/scripts/gsm_test2.py",
+   "bytes": 2631
+  },
+  {
+   "path": "04_ANALYSIS/scripts/gsm_test3.py",
+   "bytes": 3226
+  },
+  {
+   "path": "04_ANALYSIS/scripts/pdf2.py",
+   "bytes": 665
+  },
+  {
+   "path": "04_ANALYSIS/scripts/pdfscan.py",
+   "bytes": 842
+  },
+  {
+   "path": "04_ANALYSIS/scripts/scan1_inventory.py",
+   "bytes": 2941
+  },
+  {
+   "path": "04_ANALYSIS/scripts/scan2_layouts.py",
+   "bytes": 1495
+  },
+  {
+   "path": "04_ANALYSIS/scripts/scan3_extract.py",
+   "bytes": 7752
+  },
+  {
+   "path": "04_ANALYSIS/scripts/scan4_rules.py",
+   "bytes": 10885
+  },
+  {
+   "path": "04_ANALYSIS/scripts/scan5_open.py",
+   "bytes": 6953
+  },
+  {
+   "path": "04_ANALYSIS/scripts/verify_answers.py",
+   "bytes": 6749
+  },
+  {
+   "path": "04_ANALYSIS/scripts/verify_final.py",
+   "bytes": 4592
+  },
+  {
+   "path": "04_ANALYSIS/scripts/verify_notebook.py",
+   "bytes": 5987
+  },
+  {
+   "path": "05_ENGINEER_INPUT/ANSWERS_to_44_questions.md",
+   "bytes": 63797
+  },
+  {
+   "path": "05_ENGINEER_INPUT/Rules from Data.pdf",
+   "bytes": 40955756
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j01.jpg",
+   "bytes": 306404
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j02.jpg",
+   "bytes": 290346
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j03.jpg",
+   "bytes": 294771
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j04.jpg",
+   "bytes": 302192
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j05.jpg",
+   "bytes": 289928
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j06.jpg",
+   "bytes": 304065
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j07.jpg",
+   "bytes": 245001
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j08.jpg",
+   "bytes": 308743
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j09.jpg",
+   "bytes": 310626
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j10.jpg",
+   "bytes": 294096
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j11.jpg",
+   "bytes": 289248
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j12.jpg",
+   "bytes": 269034
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j13.jpg",
+   "bytes": 269613
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j14.jpg",
+   "bytes": 277109
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j15.jpg",
+   "bytes": 247279
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j16.jpg",
+   "bytes": 323432
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j17.jpg",
+   "bytes": 265927
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j18.jpg",
+   "bytes": 343334
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j19.jpg",
+   "bytes": 279613
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j20.jpg",
+   "bytes": 375949
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j21.jpg",
+   "bytes": 331118
+  },
+  {
+   "path": "05_ENGINEER_INPUT/rules_pdf_pages_readable/j22.jpg",
+   "bytes": 278137
+  },
+  {
+   "path": "06_REFERENCE/A Buyer's Guide to Purchasing Bulk Bags - National Bulk Bag.pdf",
+   "bytes": 2757139
+  },
+  {
+   "path": "06_REFERENCE/Bulk Density List - National Bulk Bag.pdf",
+   "bytes": 3847404
+  },
+  {
+   "path": "06_REFERENCE/Buyer's Guide to UN Certified Bulk Bags.pdf",
+   "bytes": 2118569
+  },
+  {
+   "path": "06_REFERENCE/GSM- GPM VS SWL-SF.xlsx",
+   "bytes": 15567
+  },
+  {
+   "path": "06_REFERENCE/REFERENCE_BOM_85x85x85 (filename says 90x90x90).xlsx",
+   "bytes": 36752
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/01-construction-and-fabric.md",
+   "bytes": 55675
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/02-types-abcd-and-safety.md",
+   "bytes": 23928
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/03-liners-foodgrade-un.md",
+   "bytes": 62032
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/04-glossary-and-faq.md",
+   "bytes": 9214
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/05-industries-and-sourcing.md",
+   "bytes": 27722
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/06-manufacturing-process.md",
+   "bytes": 49240
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/08-buyer-decision-criteria.md",
+   "bytes": 15441
+  },
+  {
+   "path": "06_REFERENCE/fibc_domain_notes/09-adjacent-products-and-terms.md",
+   "bytes": 26703
+  }
+ ]
+}

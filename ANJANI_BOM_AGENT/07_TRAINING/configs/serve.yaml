@@ -1,0 +1,17 @@
+# vLLM serving (plan §9.3): grammar-constrained JSON, both LoRA adapters hot.
+run_name: serve
+
+model:
+  name: ${BOM_MODEL_NAME:-Qwen3-4B-Instruct}   # ignored when --base-model is a path
+  enable_thinking: false
+
+serve:
+  host: 0.0.0.0
+  port: 8000
+  dtype: bfloat16
+  max_model_len: 4096
+  gpu_memory_utilization: 0.90   # fraction of the shard vLLM is given; lower for a small shard
+  enable_lora: true
+  max_loras: 2
+  max_lora_rank: 32              # adapter B is r=32
+  guided_decoding_backend: xgrammar

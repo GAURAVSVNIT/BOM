@@ -1,0 +1,2727 @@
+{
+ "aggregate": {
+  "workbooks_ok": 118,
+  "sheets": 744,
+  "cells_compared": 172092,
+  "engine_disagreements": 266,
+  "merge_echo_cells": 109160,
+  "calamine_used": 118,
+  "empty_file": 1
+ },
+ "per_file": [
+  {
+   "file": "90X90X90 CM.xlsx",
+   "sheets": 1,
+   "cells_compared": 701,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 403,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Calculator.xlsx",
+   "sheets": 1,
+   "cells_compared": 90,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 40,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Circular_85x85x85.xlsx",
+   "sheets": 1,
+   "cells_compared": 132,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 268,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Circular_85x85x85_Aggregates.xlsx",
+   "sheets": 3,
+   "cells_compared": 294,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 306,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Circular_90x90x100.xlsx",
+   "sheets": 1,
+   "cells_compared": 165,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 184,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Circular_90x90x100_v2.xlsx",
+   "sheets": 1,
+   "cells_compared": 280,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 363,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_U2Panel_90x90x90.xlsx",
+   "sheets": 4,
+   "cells_compared": 286,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 213,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_BOM_Variance_Analysis_85x85x85.xlsx",
+   "sheets": 4,
+   "cells_compared": 387,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 122,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "FIBC_Product_BagType_Matrix.xlsx",
+   "sheets": 4,
+   "cells_compared": 2109,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 169,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "GSM- GPM VS SWL-SF.xlsx",
+   "sheets": 1,
+   "cells_compared": 811,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 90,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "new bom training.xlsx",
+   "sheets": 3,
+   "cells_compared": 5161,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 0,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\10.03.2025 105105115cm baffle bag VJN.xlsx",
+   "sheets": 1,
+   "cells_compared": 199,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 155,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\105X105X120 CM BAFFLE BAG.xlsx",
+   "sheets": 3,
+   "cells_compared": 710,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 288,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\17.01.2025 9595120  seasom carbon.xlsx",
+   "sheets": 1,
+   "cells_compared": 250,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 174,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+   "sheets": 2,
+   "cells_compared": 376,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 308,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\2 LOOP BAG.xlsx",
+   "sheets": 1,
+   "cells_compared": 228,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 165,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\23.01.25 VINAYKA.xlsx",
+   "sheets": 1,
+   "cells_compared": 194,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 154,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\23.12.24 SAMPLE BAG REQUEST U+2 RICE BAG.xlsx",
+   "sheets": 1,
+   "cells_compared": 194,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 169,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\24.12 CLY USE 90X90X110CM cir..xlsx",
+   "sheets": 1,
+   "cells_compared": 197,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 86,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+   "sheets": 4,
+   "cells_compared": 1192,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 773,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\3214 & 3215.xlsx",
+   "sheets": 4,
+   "cells_compared": 678,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 494,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\3299.xlsx",
+   "sheets": 1,
+   "cells_compared": 277,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 201,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\90X90X100 CM.xlsx",
+   "sheets": 1,
+   "cells_compared": 238,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 161,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\AFPL 179.xlsx",
+   "sheets": 3,
+   "cells_compared": 646,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 489,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\AFPL-180.xlsx",
+   "sheets": 4,
+   "cells_compared": 881,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 549,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ANKLESWAR 969695CM CIR + LAM WITH PETAL FS DS.xlsx",
+   "sheets": 1,
+   "cells_compared": 278,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 215,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ARUN SIR INQUIRY.xlsx",
+   "sheets": 14,
+   "cells_compared": 1658,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1016,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ASHAPURA CHAINA CLAY.xlsx",
+   "sheets": 5,
+   "cells_compared": 1338,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 847,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ASTOROID MICRON.xlsx",
+   "sheets": 3,
+   "cells_compared": 826,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 576,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\BAG SPECIFICATION OF RUNNING ORDER 25.12.24.xlsx",
+   "sheets": 1,
+   "cells_compared": 100,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 6,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\BOM.xlsx",
+   "sheets": 5,
+   "cells_compared": 1141,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 256,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\Book1.xlsx",
+   "sheets": 1,
+   "cells_compared": 252,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 182,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\Book2.xlsx",
+   "sheets": 1,
+   "cells_compared": 252,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 188,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\CANADA BAG.xlsx",
+   "sheets": 1,
+   "cells_compared": 342,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 111,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\CAPA.xlsx",
+   "sheets": 1,
+   "cells_compared": 24,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 6,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\CIRCULAR BAG WITH LOOSE LINER (NAGPUR).xlsx",
+   "sheets": 1,
+   "cells_compared": 253,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 185,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheets": 9,
+   "cells_compared": 703,
+   "engine_disagreements": 71,
+   "merge_echo_cells": 452,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\COASTING SHEET JAN-MAY.xlsx",
+   "sheets": 15,
+   "cells_compared": 898,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 517,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\CONTRACTOR BILL 1.xlsx",
+   "sheets": 5,
+   "cells_compared": 256,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 62,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\CONTRACTOR BILL.xlsx",
+   "sheets": 32,
+   "cells_compared": 2336,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1253,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\Copy of ANKLESWAR_969695CM_CIR_+_LAM_WITH_PETAL_FS_DS(1).xlsx",
+   "sheets": 1,
+   "cells_compared": 291,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 197,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\Copy of Untitled_spreadsheet(1).xlsx",
+   "sheets": 1,
+   "cells_compared": 146,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\DOMESTIC (95 X 95 X 125 ^J LINER).xlsx",
+   "sheets": 1,
+   "cells_compared": 257,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 191,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\DOMESTIC (OMEGA DESIGN).xlsx",
+   "sheets": 2,
+   "cells_compared": 518,
+   "engine_disagreements": 2,
+   "merge_echo_cells": 376,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\DOMESTIC ENQUIRY.xlsx",
+   "sheets": 59,
+   "cells_compared": 16462,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 12124,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\DURGA MICRON.xlsx",
+   "sheets": 1,
+   "cells_compared": 278,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 192,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\enquiry sheet 22.05.2023.xlsx",
+   "sheets": 3,
+   "cells_compared": 322,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 0,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\EUROPE.xlsx",
+   "sheets": 1,
+   "cells_compared": 240,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 170,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\EXPORT ENQUIRY.xlsx",
+   "sheets": 35,
+   "cells_compared": 8205,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 6215,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\EXPORT ORDER PLANNING SHEET.xlsx",
+   "sheets": 3,
+   "cells_compared": 835,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 266,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\EXPORT_ENQUIRY.xlsx",
+   "sheets": 47,
+   "cells_compared": 10886,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 8078,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\FERTILIZER 2 LOOP BAG.xlsx",
+   "sheets": 1,
+   "cells_compared": 244,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 105,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\FIBC BOM FORMAT.xlsx",
+   "sheets": 1,
+   "cells_compared": 100,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 121,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheets": 13,
+   "cells_compared": 3369,
+   "engine_disagreements": 45,
+   "merge_echo_cells": 207,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION DEC-2025.xlsx",
+   "error": "zero-byte file",
+   "sheets": 0
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheets": 22,
+   "cells_compared": 7808,
+   "engine_disagreements": 113,
+   "merge_echo_cells": 514,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\G A.xlsx",
+   "sheets": 1,
+   "cells_compared": 288,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 187,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\Galaxy mine.xlsx",
+   "sheets": 2,
+   "cells_compared": 392,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 313,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\GCL  updated work order.xlsx",
+   "sheets": 1,
+   "cells_compared": 290,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 204,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\GCL WORKING SHEET.xlsx",
+   "sheets": 2,
+   "cells_compared": 624,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 442,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\HONDA BAG.xlsx",
+   "sheets": 3,
+   "cells_compared": 286,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 183,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\INDRESH JI.xlsx",
+   "sheets": 3,
+   "cells_compared": 673,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 498,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\INSPECTION REPORT.xlsx",
+   "sheets": 1,
+   "cells_compared": 52,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 72,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ISRAEL ( 56 X56 X 80 CM).xlsx",
+   "sheets": 1,
+   "cells_compared": 242,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 152,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\JK SINGH NEW ENQUIRY.xlsx",
+   "sheets": 14,
+   "cells_compared": 1389,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1688,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\JUMBO BAG.xlsx",
+   "sheets": 2,
+   "cells_compared": 661,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 206,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\KHEMKESWAR LINER TABBING BAG.xlsx",
+   "sheets": 1,
+   "cells_compared": 255,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 190,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\MIL(1).xlsx",
+   "sheets": 1,
+   "cells_compared": 156,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 10,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\NEW EXPORT.xlsx",
+   "sheets": 3,
+   "cells_compared": 738,
+   "engine_disagreements": 3,
+   "merge_echo_cells": 567,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\New Microsoft Excel Worksheet.xlsx",
+   "sheets": 1,
+   "cells_compared": 189,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 159,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\NEW ORDER PO 28 - 2025-26.xlsx",
+   "sheets": 19,
+   "cells_compared": 4322,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 3174,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\NISHANT BOM.xlsx",
+   "sheets": 2,
+   "cells_compared": 173,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 167,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\NUDITEX 3326 & 3327.xlsx",
+   "sheets": 2,
+   "cells_compared": 468,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 328,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\ORDER SUMMURY 1.xlsx",
+   "sheets": 1,
+   "cells_compared": 229,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 11,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PACKING LIST.xlsx",
+   "sheets": 60,
+   "cells_compared": 10137,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 3005,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO 28 WORK ORDER.xlsx",
+   "sheets": 10,
+   "cells_compared": 2278,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1672,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO 29 PACKING LIST.xlsx",
+   "sheets": 1,
+   "cells_compared": 391,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 180,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO 38.xlsx",
+   "sheets": 2,
+   "cells_compared": 428,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 322,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO 39.xlsx",
+   "sheets": 3,
+   "cells_compared": 695,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 562,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO 40.xlsx",
+   "sheets": 10,
+   "cells_compared": 3342,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1084,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\PO-28-BOM BY CLINT .xlsx",
+   "sheets": 1,
+   "cells_compared": 880,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 21,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\POLAND.xlsx",
+   "sheets": 2,
+   "cells_compared": 484,
+   "engine_disagreements": 2,
+   "merge_echo_cells": 346,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\production detail.xlsx",
+   "sheets": 1,
+   "cells_compared": 112,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 44,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheets": 20,
+   "cells_compared": 4890,
+   "engine_disagreements": 14,
+   "merge_echo_cells": 1010,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+   "sheets": 7,
+   "cells_compared": 1450,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 1200,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\S C 100100130 cm 27.02.2025 4-PANNEL Baffle UP.xlsx",
+   "sheets": 1,
+   "cells_compared": 215,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 170,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SEASOM CARBON (2).xlsx",
+   "sheets": 1,
+   "cells_compared": 251,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 179,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SEASOM CARBON (BAFFLE BAG).xlsx",
+   "sheets": 1,
+   "cells_compared": 258,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 188,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SEASOM CARBON.xlsx",
+   "sheets": 2,
+   "cells_compared": 505,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 362,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SEASOM CORBON 27.02.25 UNPRINTED 100100130.xlsx",
+   "sheets": 1,
+   "cells_compared": 194,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 158,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SENDING SAMPLE REPORT.xlsx",
+   "sheets": 7,
+   "cells_compared": 1224,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 229,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SHREE MARUTI BULK PAVKAGING ( TOP SPOUT AND BOTTOM SPOUT).xlsx",
+   "sheets": 1,
+   "cells_compared": 181,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 33,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SINGLEE LOOP BAG JK SINGH JI.xlsx",
+   "sheets": 1,
+   "cells_compared": 240,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 217,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SUDARSHAN.xlsx",
+   "sheets": 2,
+   "cells_compared": 493,
+   "engine_disagreements": 2,
+   "merge_echo_cells": 349,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\SV ISPAT.xlsx",
+   "sheets": 7,
+   "cells_compared": 1651,
+   "engine_disagreements": 2,
+   "merge_echo_cells": 8324,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNO PACK BAFFLE BAG.xlsx",
+   "sheets": 5,
+   "cells_compared": 1410,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 970,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPAC ORDER SUMMURY.xlsx",
+   "sheets": 1,
+   "cells_compared": 87,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 2,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK 16-02-2026.xlsx",
+   "sheets": 4,
+   "cells_compared": 932,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 650,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK 18-09-2025.xlsx",
+   "sheets": 3,
+   "cells_compared": 864,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 912,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK 235&232.xlsx",
+   "sheets": 5,
+   "cells_compared": 1262,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 845,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK IN 2025-332.xlsx",
+   "sheets": 1,
+   "cells_compared": 235,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 160,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK NEW.xlsx",
+   "sheets": 5,
+   "cells_compared": 1190,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 805,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\TECHNOPACK WORK ORDER.xlsx",
+   "sheets": 5,
+   "cells_compared": 1315,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 899,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\U+2 PANEL (EXPORT).xlsx",
+   "sheets": 1,
+   "cells_compared": 246,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 189,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\USA (BAFFLE BAG).xlsx",
+   "sheets": 1,
+   "cells_compared": 271,
+   "engine_disagreements": 1,
+   "merge_echo_cells": 188,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\VIJAY NAGAR BAG.xlsx",
+   "sheets": 3,
+   "cells_compared": 843,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 567,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\VIJAYNAGAR BOM95X95X135 cm.xlsx",
+   "sheets": 4,
+   "cells_compared": 882,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 683,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\VINAYAKA MICRON WITHOUT LINER & PRINTING.xlsx",
+   "sheets": 1,
+   "cells_compared": 311,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 199,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\WHITE & WHITE.xlsx",
+   "sheets": 1,
+   "cells_compared": 264,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 185,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\BOM DOMESTIC\\DOMESTIC ENQUIRY.xlsx",
+   "sheets": 81,
+   "cells_compared": 22445,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 17296,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\9090120 1.8kg cir 22.01.25.xlsx",
+   "sheets": 1,
+   "cells_compared": 305,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 205,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\AKASH AGRO 9898172CM 06.01.25.xlsx",
+   "sheets": 1,
+   "cells_compared": 219,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 170,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\ANKLESWAR 969695CM CIR + LINER WITH PETAL FS DS.xlsx",
+   "sheets": 1,
+   "cells_compared": 221,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 170,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\circular 9090110 ddp for cly.xlsx",
+   "sheets": 1,
+   "cells_compared": 197,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 86,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\SAMPLE BAG REQUEST G C.xlsx",
+   "sheets": 1,
+   "cells_compared": 213,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 169,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+   "sheets": 6,
+   "cells_compared": 1243,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 934,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\RUNNING sample request of decenmber\\SEASOM CORBON B.O.M..xlsx",
+   "sheets": 1,
+   "cells_compared": 194,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 169,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "All_Things\\WORK ORDER FOR ENQUIRY\\EXPORT ENQUIRY.xlsx",
+   "sheets": 33,
+   "cells_compared": 7741,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 5856,
+   "drawing_text_blocks": 0,
+   "calamine_used": true
+  },
+  {
+   "file": "BOM_2\\u_pannel.xlsx",
+   "sheets": 39,
+   "cells_compared": 10182,
+   "engine_disagreements": 0,
+   "merge_echo_cells": 7692,
+   "drawing_text_blocks": 1,
+   "calamine_used": true
+  }
+ ],
+ "disagreements": [
+  {
+   "file": "All_Things\\Book1.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R15C13",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\Book2.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\CIRCULAR BAG WITH LOOSE LINER (NAGPUR).xlsx",
+   "sheet": "Sheet1",
+   "cell": "R15C13",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R5C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R5C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R5C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R5C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R5C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R6C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R6C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R6C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R6C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R6C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R7C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R7C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R7C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R7C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R7C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R8C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R8C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R8C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R8C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R8C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R9C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R9C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R9C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R9C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R9C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R10C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R10C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R10C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R10C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R10C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R11C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R11C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R11C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R11C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R11C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R12C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R12C9",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R12C12",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R12C15",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "COSTING REPORT ",
+   "cell": "R12C18",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R3C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R4C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R5C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\COASTING REPORT.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R6C6",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\DOMESTIC (95 X 95 X 125 ^J LINER).xlsx",
+   "sheet": "Sheet1",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\DOMESTIC (OMEGA DESIGN).xlsx",
+   "sheet": "95X95X110CM",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\DOMESTIC (OMEGA DESIGN).xlsx",
+   "sheet": "95X95X125",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\EUROPE.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FERTILIZER 2 LOOP BAG.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R31C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R32C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R33C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R34C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R50C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R51C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R11C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R25C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R27C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R50C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R51C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R52C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R53C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R54C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R55C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R31C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R32C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R33C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R34C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R50C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "DAILY PRODUCTION APRIL ",
+   "cell": "R51C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R11C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R25C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "MAY PRODUCTION ",
+   "cell": "R27C13",
+   "openpyxl": "#VALUE!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R50C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R51C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R52C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R53C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R54C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT JUNE - 2025 ",
+   "cell": "R55C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R34C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R50C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R51C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R52C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R53C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT July 2025",
+   "cell": "R54C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R10C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R11C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R12C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R13C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R14C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R15C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R16C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R17C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R18C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R19C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R20C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R21C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R22C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R23C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R24C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R25C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R26C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R27C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R28C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R29C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R30C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R31C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R32C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R33C5",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R34C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R42C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R43C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R44C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R45C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R46C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R47C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R48C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "WASTAGE REPORT AUGUST 2025",
+   "cell": "R49C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "EXPORT ORDER ",
+   "cell": "R10C12",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "sheet": "EXPORT ORDER ",
+   "cell": "R10C13",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\ISRAEL ( 56 X56 X 80 CM).xlsx",
+   "sheet": "56 X 56 X 80 CM (ISRAEL)",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\KHEMKESWAR LINER TABBING BAG.xlsx",
+   "sheet": "KHEMKESWAR LINER BAG",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\NEW EXPORT.xlsx",
+   "sheet": "90 X 90 X 130",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\NEW EXPORT.xlsx",
+   "sheet": "90X90X90(PRINT)",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\NEW EXPORT.xlsx",
+   "sheet": "90X90X90(PLAIN)",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\POLAND.xlsx",
+   "sheet": "90 X 90 X 90 CM",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\POLAND.xlsx",
+   "sheet": "90 X 90 X 160 CM",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R35C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R36C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R37C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R38C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R39C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R40C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (2)",
+   "cell": "R41C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R8C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R9C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R10C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R11C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R12C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R13C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\quality rport.xlsx",
+   "sheet": "ADVANCE SHEET  (3)",
+   "cell": "R14C1",
+   "openpyxl": "#REF!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SEASOM CARBON (2).xlsx",
+   "sheet": "Sheet1",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SEASOM CARBON (BAFFLE BAG).xlsx",
+   "sheet": "ASAHI MODI HONDA BAG",
+   "cell": "R16C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SUDARSHAN.xlsx",
+   "sheet": "Sheet1",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SUDARSHAN.xlsx",
+   "sheet": "Sheet2",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SV ISPAT.xlsx",
+   "sheet": "95X95X100 CM WITH PRINTED",
+   "cell": "R44C16",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\SV ISPAT.xlsx",
+   "sheet": "95X95X100 CM WITH PRINTED",
+   "cell": "R45C16",
+   "openpyxl": "#DIV/0!",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\U+2 PANEL (EXPORT).xlsx",
+   "sheet": "Sheet1",
+   "cell": "R15C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  },
+  {
+   "file": "All_Things\\USA (BAFFLE BAG).xlsx",
+   "sheet": "Sheet1",
+   "cell": "R14C12",
+   "openpyxl": "#NAME?",
+   "calamine": null
+  }
+ ],
+ "drawing_text": [
+  {
+   "file": "BOM_2\\u_pannel.xlsx",
+   "n": 1,
+   "sample": "ANJANI INTERWEAVE DOC LABEL"
+  }
+ ]
+}

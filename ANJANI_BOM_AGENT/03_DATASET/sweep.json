@@ -1,0 +1,624 @@
+{
+ "root": "C:\\Users\\Nikhil1616\\Desktop\\BOM",
+ "n_workbooks": 130,
+ "n_unique": 119,
+ "kept": [
+  {
+   "md5": "5f77cdcce09dae349ba11958a2035658",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\90X90X90 CM.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "a72c5914086d3f9f958027c508ec4a0d",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Calculator.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Calculator.xlsx"
+   ]
+  },
+  {
+   "md5": "6e911d7ad5250d499de5b4127787155f",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Circular_85x85x85.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Circular_85x85x85.xlsx"
+   ]
+  },
+  {
+   "md5": "8dc5f0e1810a88e662964efb619a6c85",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Circular_85x85x85_Aggregates.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Circular_85x85x85_Aggregates.xlsx"
+   ]
+  },
+  {
+   "md5": "e721519b2114ce9d0850428eff7765a0",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Circular_90x90x100.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Circular_90x90x100.xlsx"
+   ]
+  },
+  {
+   "md5": "817f58ebc6047d078699b59f7ea74fbd",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Circular_90x90x100_v2.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Circular_90x90x100_v2.xlsx"
+   ]
+  },
+  {
+   "md5": "4d33dad5b5f95c404e57b56d81e211a1",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_U2Panel_90x90x90.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_U2Panel_90x90x90.xlsx"
+   ]
+  },
+  {
+   "md5": "b7a10b9faa9afca3154dfd202134b8c0",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_BOM_Variance_Analysis_85x85x85.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_BOM_Variance_Analysis_85x85x85.xlsx"
+   ]
+  },
+  {
+   "md5": "01a359ecc5015fdebb2a91f056f66296",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\FIBC_Product_BagType_Matrix.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\ANTIGRAVITY\\FIBC_Product_BagType_Matrix.xlsx"
+   ]
+  },
+  {
+   "md5": "650d21620669f64d04eef6c0c1fbed79",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\GSM- GPM VS SWL-SF.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d6bf8fd259f7034d082fcd5bfd21ca66",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\new bom training.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\BOM\\BOM\\new bom training.xlsx"
+   ]
+  },
+  {
+   "md5": "643f65c36ab093c239a3c3e64c412855",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\10.03.2025 105105115cm baffle bag VJN.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "25226e6f1d5cc814438d297c14ae493b",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\105X105X120 CM BAFFLE BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "7f3425acbaf509b3022610afd7dbf9b5",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\17.01.2025 9595120  seasom carbon.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "726d081cf68506ccbb2c9531b0ac21c9",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "2c72c3ca5f9d60ba3d2d85821defaa72",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\2 LOOP BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b4f280907856c14c2ca3451efad95d7c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\23.01.25 VINAYKA.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "ce3725a17d15c59f4e254c14a0ebd3d0",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\23.12.24 SAMPLE BAG REQUEST U+2 RICE BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "f29f64a49bdbb817742863b63050f6cb",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\24.12 CLY USE 90X90X110CM cir..xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "a69baaf58623d76326bfa0ef50bf92f3",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "f3a20c3eca741aa8a0cc26c72514c6a4",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\3214 & 3215.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "07734c15667f5538198da0b23be010a7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\3299.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b97ce9443c01be4e90bdbac6f81d98d8",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\90X90X100 CM.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "ca99d136a4449cd4e679d601b8d7a80d",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\AFPL 179.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "1a98049611eee876dacdd7ade2e07ad0",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\AFPL-180.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b68bb2dadca8f06a324a37b5950bccf6",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ANKLESWAR 969695CM CIR + LAM WITH PETAL FS DS.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "de6cb6d6d9d6fb2aa051c80e99025c1c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ARUN SIR INQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "4b869986aa45db569cc6e8bdfa7dcf79",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ASHAPURA CHAINA CLAY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "f17bded1b06afc01890ef35c55d57709",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ASTOROID MICRON.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9136b9c9da01453100347c0ff94fede3",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\BAG SPECIFICATION OF RUNNING ORDER 25.12.24.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "3a9d02ae692906dd8af42616b5cf3c19",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\BOM.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "4a98c597b4a024e3304761b79f0941a7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\Book1.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "8b2d259152e0458c07210ab08afdc583",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\Book2.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6a82388150d1a776af18ff5d52007280",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\CANADA BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "f7b63e00127ffd7bdd7b731ad46be403",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\CAPA.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "7cb91ced4ec0b39352860ad8c09db78a",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\CIRCULAR BAG WITH LOOSE LINER (NAGPUR).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "e66279a345eb9bbc7845ed86fbf6337b",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\COASTING REPORT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "bc3b8f614c33b6b4dc668724847227b3",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\COASTING SHEET JAN-MAY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "87032aff3160e55493cd4d6137168840",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\CONTRACTOR BILL 1.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "19a1e0672e292f85d2c9e504da3d335e",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\CONTRACTOR BILL.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "03c72045f8008aa30f6976d5dc0a2664",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\Copy of ANKLESWAR_969695CM_CIR_+_LAM_WITH_PETAL_FS_DS(1).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "4aaba5cb420c85923fbf09dae4897eba",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\Copy of Untitled_spreadsheet(1).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "a2a36b933668d07093bd831c2a56fcb7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\DOMESTIC (95 X 95 X 125 ^J LINER).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "951b32a6349fad39e7bc5e2d04e66965",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\DOMESTIC (OMEGA DESIGN).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "c18df55ceda492cf88eb1be75078f370",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\DOMESTIC ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d1b3978a9ca840c42ef33d398f574d84",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\DURGA MICRON.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "8d5034b14f482bf5bd5877b87f5afee1",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\enquiry sheet 22.05.2023.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "aa58b7903e41247b3986031febd0fc44",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\EUROPE.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d9009bc4f6f6311475acd1ae265ef3e3",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\EXPORT ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "1e99fa2dca1170969e2f5d5ada0f6354",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\EXPORT ORDER PLANNING SHEET.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d97d3194d55c2455d5cb2fe6209fa1ec",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\EXPORT_ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "999b133dcb88ab54f2d1005a14b25b32",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\FERTILIZER 2 LOOP BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b9d6d8613ba53bccdb0cbcd74fa43e22",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\FIBC BOM FORMAT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "0fba3280c054610b9a6a4023e3b1b9b8",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\FIBC DAILY PRODUCTION.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d41d8cd98f00b204e9800998ecf8427e",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\FIBC PRODUCTION DEC-2025.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "26d221d0a0a3491912eccaeedd513e54",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\FIBC PRODUCTION REPORT 1.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "47e5309b040d6719b2def9155f5284a6",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\G A.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "ceccdfe049b455e0bc98f81afdd7d871",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\Galaxy mine.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "df8e1e8934cf2c32251b359b8852fae1",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\GCL  updated work order.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "ad72567147886fad74a8796767fd2fc2",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\GCL WORKING SHEET.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d0c617d5bb9440828519c008864da1e6",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\HONDA BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6143ce30fd451d6c1e7cedf7a96ea389",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\INDRESH JI.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9220147eb766d7dbf086fd45212d667b",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\INSPECTION REPORT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "58573376bbd8dd5e75dadc8f8d99bdfe",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ISRAEL ( 56 X56 X 80 CM).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9be1cb5cebbc8ca9e4e93f35133a6c82",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\JK SINGH NEW ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "08b6183ad69b3fb2bb35b7a62d06aa29",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\JUMBO BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "c5ffc1632419e517f9943ca5331d03ce",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\KHEMKESWAR LINER TABBING BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "135edc9f49dfb26cec6dd822fc6497d8",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\MIL(1).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "929c9eba32fbc0a547e74b61937d738c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\NEW EXPORT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "5ffef8ee97c239362119c25659ba8b53",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\New Microsoft Excel Worksheet.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "4f800b6e1822f25185577363de96da24",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\NEW ORDER PO 28 - 2025-26.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b7c6cd2b2a0488e1cb409bff77581b05",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\NISHANT BOM.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "5745e50a858acf12558229c3e223fdaa",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\NUDITEX 3326 & 3327.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "628f071d1a4c644d8a2acbd22492c7b2",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\ORDER SUMMURY 1.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "3726daf721b8dc60602637f1bdd753f5",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PACKING LIST.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "f0c92582ca1b13f6794e0b1ba9ed3c3a",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO 28 WORK ORDER.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "a5e4840902d53a1830028b4fc39c8ad7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO 29 PACKING LIST.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "c06d78346621f0859b4431d9f2704e16",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO 38.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "0ce4dc65564eb3505bbc8228636fb3a5",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO 39.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "3330994539617876ed3667a8878ddfcc",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO 40.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "239d6a3f388abec21e97dccb52ac42a4",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\PO-28-BOM BY CLINT .xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6f6c4278c5143b9126b4531ca8ccfbcd",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\POLAND.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "fa4eaf8d3bd9a9371a2bd80da42a9f2e",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\production detail.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9dccbb63e306bfd0c723676658497246",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\quality rport.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "4e0dbbdec816b8a490dd883b4672fb6c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "c813b20e8d53c1278f979cc34e601a02",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\S C 100100130 cm 27.02.2025 4-PANNEL Baffle UP.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "aa23b890adbd68bbf7d880f1eac3f638",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SEASOM CARBON (2).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d5111ad4cb33a2ace357b011e7cb6b04",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SEASOM CARBON (BAFFLE BAG).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "bdc42543b8af895ccd4987d545ef14cf",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SEASOM CARBON.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9d728d8b9fe51692416f94fbb4561863",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SEASOM CORBON 27.02.25 UNPRINTED 100100130.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "0b0e4b0804ae59d9fbbc14e2d64eb0fd",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SENDING SAMPLE REPORT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "1a4f170c655c2757b3224f93aaa38618",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SHREE MARUTI BULK PAVKAGING ( TOP SPOUT AND BOTTOM SPOUT).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "9a6389ca339d85e37bc89e814918b6b7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SINGLEE LOOP BAG JK SINGH JI.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "2be0750f497d030438fc2136e09a0caf",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SUDARSHAN.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6f07945ce94e82db6f3f74ee3dff79f8",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\SV ISPAT.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "824930e55e1c6b56bc152ada95adbe38",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNO PACK BAFFLE BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "7254f42f6fe69024ed117f14ef16e984",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPAC ORDER SUMMURY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b5bffe8e23f18de7ae855621e70aedf3",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK 16-02-2026.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "8d77f5790af025e4ca92e24559ea6fb8",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK 18-09-2025.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "b63dc504982c666f2a9594b9b5166117",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK 235&232.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "fa32463dc4b2482f812bf468e679428b",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK IN 2025-332.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6276406cdc704c47ca313d1963499a38",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK NEW.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "26818a90b008d791b8bb25541fcd9319",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\TECHNOPACK WORK ORDER.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "bb170c2631f278444d35abb19226617e",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\U+2 PANEL (EXPORT).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "3618f123bfcf8e4a407e3018692f2ae1",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\USA (BAFFLE BAG).xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "e760f7631484533f486d336f7289088f",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\VIJAY NAGAR BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "257c5d51a6cccdc1f35a68c96168e90c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\VIJAYNAGAR BOM95X95X135 cm.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "3acc590dfb827297c26ad66f9dc08c2a",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\VINAYAKA MICRON WITHOUT LINER & PRINTING.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "8a56caef4c7794a460c47dc050046f39",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\WHITE & WHITE.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6fc52f7454cbe7e117a84da21f16d0f9",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\BOM DOMESTIC\\DOMESTIC ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "219ede9c9d1a33954f3a994bd5367b3c",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\9090120 1.8kg cir 22.01.25.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "519256c843885e421edd2cae7d51efc4",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\AKASH AGRO 9898172CM 06.01.25.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "d1368d9409d295450704076ac0da1a3e",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\ANKLESWAR 969695CM CIR + LINER WITH PETAL FS DS.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "7af0b2d3b97ba487df7fb4af96ea18ea",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\circular 9090110 ddp for cly.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "1d2035947896e5df4a7bbddeb08f16b7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\SAMPLE BAG REQUEST G C.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "06c9669d673bd76d741d1668f5897eff",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "67a9cf017f212687015db111bb9efb7a",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\RUNNING sample request of decenmber\\SEASOM CORBON B.O.M..xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "6100637340656eb0ac9312ab0b9a97ca",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\All_Things\\WORK ORDER FOR ENQUIRY\\EXPORT ENQUIRY.xlsx",
+   "duplicates": []
+  },
+  {
+   "md5": "019cd2a12a75b90948c238a94466a3d7",
+   "keep": "C:\\Users\\Nikhil1616\\Desktop\\BOM\\BOM_2\\u_pannel.xlsx",
+   "duplicates": [
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\BOM\\BOM\\u_pannel.xlsx",
+    "C:\\Users\\Nikhil1616\\Desktop\\BOM\\model\\BOM\\u_pannel.xlsx"
+   ]
+  }
+ ],
+ "unreadable": []
+}

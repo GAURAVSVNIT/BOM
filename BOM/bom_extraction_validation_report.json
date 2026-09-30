@@ -1,0 +1,4492 @@
+{
+  "rebuild_mode": "existing_valid_sheet_index",
+  "total_source_files_reopened": 140,
+  "total_sheets_reparsed": 559,
+  "total_valid_boms_extracted": 559,
+  "total_records_with_data_warning": 78,
+  "validation": {
+    "records": 559,
+    "bag_weight_mismatch_gt_5pct": 0,
+    "major_fabric_component_mismatch_gt_5pct": 0,
+    "baffle_flag_mismatch": 0,
+    "bag_mismatch_samples": [],
+    "component_mismatch_samples": [],
+    "baffle_flag_samples": []
+  },
+  "audits": [
+    {
+      "file": "01.01.2025 90X90X100CM U+2.xlsx",
+      "sheet": "01.01.25 8585110cm u+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1506.273,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "01.01.2025 90X90X100CM U+2.xlsx",
+      "sheet": "01.01.25 9090100cm U+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1943.063,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "01.01.2025 90X90X100CM U+2.xlsx",
+      "sheet": "01.01.25 9090105 cm id",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2000.187,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "08.01.2025 606080 CM OTFB U+2.xlsx",
+      "sheet": "08.01.25 606080 OTFB U+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 402.236,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "09.01.25 tecnopack 868695 id - in2024-426.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1118.372,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "10.03.2025 105105115cm baffle bag VJN.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2556.131,
+      "source_grand_total_rel_error": 0.008728
+    },
+    {
+      "file": "100X100X230 CM.xlsx",
+      "sheet": "100X100X230 CM WITH LINER ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 3170.742,
+      "source_grand_total_rel_error": 0.00539
+    },
+    {
+      "file": "101X101X110 CM WITH BAFFLE BAG.xlsx",
+      "sheet": "101X101X110 CM WITH BAFFLE BAG ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3075.385,
+      "source_grand_total_rel_error": 0.328455
+    },
+    {
+      "file": "102X102X200 CM  CIRCULAR BAG.xlsx",
+      "sheet": "102X102X200 CM CIRCULAR BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2376.886,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "105X105X120 CM BAFFLE BAG (1).xlsx",
+      "sheet": "105X105X120 CM BAFFLE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2448.227,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "105X105X120 CM BAFFLE BAG.xlsx",
+      "sheet": "105X105X120 CM BAFFLE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2696.633,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "17.01.2025 9595120  seasom carbon.xlsx",
+      "sheet": "9595120cm BAFFLE",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2285.206,
+      "source_grand_total_rel_error": 0.013572
+    },
+    {
+      "file": "17.12.24 baffle BAG.xlsx",
+      "sheet": "17.12 100100130",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2314.892,
+      "source_grand_total_rel_error": 0.010759
+    },
+    {
+      "file": "17.12.24 baffle BAG.xlsx",
+      "sheet": "17.12105105125D",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2641.001,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "17.12.24 baffle BAG.xlsx",
+      "sheet": "17.12105105125EX",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2641.001,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "17.12.24 baffle BAG.xlsx",
+      "sheet": "17.129595130",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1938.037,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 100100654PPANEL BAFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2091.306,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 10010120 C-PANEL BAFF",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2787.305,
+      "source_grand_total_rel_error": 0.009071
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 105105120 C-PANEL BAFF",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2798.376,
+      "source_grand_total_rel_error": 0.00459
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 10510565 4PANEL BAFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2094.306,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 4-PANNEL 105105120",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2369.102,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 9090110 2-PANEL",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2208.689,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 9090117 2-PANEL",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2283.334,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "18.02.2025 ALL C+BAFFLE AND 4 PANNEL.xlsx",
+      "sheet": "18.02.25 9090117 U+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2397.37,
+      "source_grand_total_rel_error": 0.010562
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 100100110 4PANEL BAFFL",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2710.383,
+      "source_grand_total_rel_error": 0.006499
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 10010065 4PANEL BAFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2091.815,
+      "source_grand_total_rel_error": 0.008437
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 105105120cm 4pannel ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2930.551,
+      "source_grand_total_rel_error": 0.006007
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 9090110 4PANEL  BAFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2299.103,
+      "source_grand_total_rel_error": 0.00767
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 9090117 4PANNEL BAFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2289.403,
+      "source_grand_total_rel_error": 0.007703
+    },
+    {
+      "file": "18.02.25 4-PANNEL AND 4 PANEL BAFFLE 10010065 TO 105105120 CM.xlsx",
+      "sheet": "18.02.25 9090117cm 4-PANEL",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2159.035,
+      "source_grand_total_rel_error": 0.008172
+    },
+    {
+      "file": "18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+      "sheet": "9090120 CM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2154.249,
+      "source_grand_total_rel_error": 0.004476
+    },
+    {
+      "file": "18.02.25 Conductive U+2 909080 cm & 9090120 cm.xlsx",
+      "sheet": "909080 CM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1778.031,
+      "source_grand_total_rel_error": 0.005429
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "38.5\"46\"54\" BAFFLE PRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2771.767,
+      "source_grand_total_rel_error": 0.038828
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414140\" BAFFLE UNPRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2080.521,
+      "source_grand_total_rel_error": 0.051554
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414140\" BAFFLE WITH PRINT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2085.521,
+      "source_grand_total_rel_error": 0.051424
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414146\" BAFFLE UNPRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2376.817,
+      "source_grand_total_rel_error": 0.044839
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414146\" BAFFLE UNPRINTED DUFFLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2544.129,
+      "source_grand_total_rel_error": 0.041767
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414146\" BAFFLE WITH PRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2381.817,
+      "source_grand_total_rel_error": 0.04474
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414154\" BAFFLED PRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2697.813,
+      "source_grand_total_rel_error": 0.039935
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414154\" BAFFLED UNPRINT DUFFLE ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2860.125,
+      "source_grand_total_rel_error": 0.037583
+    },
+    {
+      "file": "19.02.25 USA WORKING SHEET 414140 inch BAFFLE BAG.xlsx",
+      "sheet": "414154\" BAFFLED UNPRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2692.813,
+      "source_grand_total_rel_error": 0.040012
+    },
+    {
+      "file": "2 LOOP BAG.xlsx",
+      "sheet": "2 LOOP BAG POLAND ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 769.928,
+      "source_grand_total_rel_error": 0.00944
+    },
+    {
+      "file": "2 PANEL C+BAFFLE BAG.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 6,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 440.465,
+      "source_grand_total_rel_error": 0.845326
+    },
+    {
+      "file": "20.12. GOA CARBON 121X121X121.xlsx",
+      "sheet": "G CORBON",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3520.913,
+      "source_grand_total_rel_error": 0.092124
+    },
+    {
+      "file": "23.01.25 VINAYKA.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2538.858,
+      "source_grand_total_rel_error": 0.176684
+    },
+    {
+      "file": "23.12.24 SAMPLE BAG REQUEST U+2 RICE BAG.xlsx",
+      "sheet": "RAJESH JI",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1686.952,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "24..02.25 4-PANNEL BAFFLE 105105110 cm.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2599.638,
+      "source_grand_total_rel_error": 0.012763
+    },
+    {
+      "file": "24.12 CLY USE 90X90X110CM cir..xlsx",
+      "sheet": "24.12 CIR. 90X90X110 cly used",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2137.232,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "25.12.24 DOMESTIC ENQIRY.xlsx",
+      "sheet": "25.12 8585110 U+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1393.697,
+      "source_grand_total_rel_error": 0.05017
+    },
+    {
+      "file": "25.12.24 DOMESTIC ENQIRY.xlsx",
+      "sheet": "25.12 9090130 CIRCULAR",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2097.888,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "25.12.24 DOMESTIC ENQIRY.xlsx",
+      "sheet": "25.12 9797200 U+2",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 3559.252,
+      "source_grand_total_rel_error": 0.021785
+    },
+    {
+      "file": "25.12.24 DOMESTIC ENQIRY.xlsx",
+      "sheet": "25.12 Q-BAG 100X100X140",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 2397.85,
+      "source_grand_total_rel_error": 0.193899
+    },
+    {
+      "file": "27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+      "sheet": "100100130 4CORNER LOOP BAFFLE",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2260.088,
+      "source_grand_total_rel_error": 0.010624
+    },
+    {
+      "file": "27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+      "sheet": "100100130 PRINTED U+2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1911.328,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+      "sheet": "100100130 U+2 PANNEL",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1915.328,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "27.02.25 SESOM CARBON UPDATE SHEET.xlsx",
+      "sheet": "9595120cm 4CORNER LOOP BAFFLE B",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2285.206,
+      "source_grand_total_rel_error": 0.013572
+    },
+    {
+      "file": "30.12.24 cir with full round loop 9595135 cm.xlsx",
+      "sheet": "30.12.24 9595135 WITH FULL LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3630.407,
+      "source_grand_total_rel_error": 0.003289
+    },
+    {
+      "file": "3214 & 3215.xlsx",
+      "sheet": "3214",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 721.95,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "3214 & 3215.xlsx",
+      "sheet": "3215",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 962.134,
+      "source_grand_total_rel_error": 0.070882
+    },
+    {
+      "file": "3214 & 3215.xlsx",
+      "sheet": "new",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 962.134,
+      "source_grand_total_rel_error": 0.070882
+    },
+    {
+      "file": "3299.xlsx",
+      "sheet": "3299",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2146.699,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "60X60X80 CM DOUBLE LAYER BAG.xlsx",
+      "sheet": "60X60X80 CM DOUBLE LAYER BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1790.209,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "85X85X85 CM OT-FB.xlsx",
+      "sheet": "85X85X85 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 775.591,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "88X88X88 CM OT-FB (1).xlsx",
+      "sheet": "88X88X88 CM OT-FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 889.304,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "88X88X88 CM OT-FB.xlsx",
+      "sheet": "88X88X88 CM OT-FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 822.2,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "90 X 90 X 100 CM (NEW U+2).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 203.787,
+      "source_grand_total_rel_error": 0.859563
+    },
+    {
+      "file": "9090120 1.8kg cir 22.01.25.xlsx",
+      "sheet": "22.01.25 cir 1.8kg",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1809.384,
+      "source_grand_total_rel_error": 0.192279
+    },
+    {
+      "file": "90X90X100 CM SHAPED LINER WITH TABBING.xlsx",
+      "sheet": "90X90X100 CM WITH SHAPED LINER ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3257.607,
+      "source_grand_total_rel_error": 0.022602
+    },
+    {
+      "file": "90X90X100 CM.xlsx",
+      "sheet": "90X90X100 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 2665.644,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "90X90X75 CM CONDUCTIVE  WITH LINER BAG.xlsx",
+      "sheet": "90X90X75 CM WITH LINER ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2780.049,
+      "source_grand_total_rel_error": 0.026625
+    },
+    {
+      "file": "90x90x100 AND 90X90X80 CM WITH LINER BAG.xlsx",
+      "sheet": "90x90x100 cm 1.5 ton bag with",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3401.91,
+      "source_grand_total_rel_error": 0.069141
+    },
+    {
+      "file": "90x90x100 AND 90X90X80 CM WITH LINER BAG.xlsx",
+      "sheet": "90x90x80 cm 1 ton bag",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3068.262,
+      "source_grand_total_rel_error": 0.069729
+    },
+    {
+      "file": "90x90x145 export inquiry.xlsx",
+      "sheet": "90x90x145 cm ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2439.272,
+      "source_grand_total_rel_error": 0.005814
+    },
+    {
+      "file": "95X95X120 CM WITH LINER BAG.xlsx",
+      "sheet": "95X95X120 CM ",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2547.115,
+      "source_grand_total_rel_error": 0.042885
+    },
+    {
+      "file": "95X95X170 CM PUNEET SIR.xlsx",
+      "sheet": "95X95X170 CM ",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1878.734,
+      "source_grand_total_rel_error": 0.357746
+    },
+    {
+      "file": "A TECHNICAL SPECIFICATION.xlsx",
+      "sheet": "50X50X70 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 348.604,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "A TECHNICAL SPECIFICATION.xlsx",
+      "sheet": "55X55X77 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 391.359,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "A TECHNICAL SPECIFICATION.xlsx",
+      "sheet": "57X57X75 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 383.065,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "A TECHNICAL SPECIFICATION.xlsx",
+      "sheet": "57X57X78 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 404.163,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "A TECHNICAL SPECIFICATION.xlsx",
+      "sheet": "57X57X78 CM  (2)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 404.163,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "AFPL 179.xlsx",
+      "sheet": "90X90X110 CM BITUMEN PRINT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1180.32,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "AFPL 179.xlsx",
+      "sheet": "90X90X110 CM ISOLATIE PRINT ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 926.7,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "AFPL 179.xlsx",
+      "sheet": "90X90X110 CM UNPRINTED ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 924.7,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "AFPL-177.xlsx",
+      "sheet": "140X220 CM 7770",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 449.98,
+      "source_grand_total_rel_error": 0.04457
+    },
+    {
+      "file": "AFPL-177.xlsx",
+      "sheet": "90X90X120 CM 60+20 GSM 64281",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 889.747,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "AFPL-177.xlsx",
+      "sheet": "90X90X120 CM WHITE 2040",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1230.712,
+      "source_grand_total_rel_error": 0.098152
+    },
+    {
+      "file": "AKASH AGRO 9898172CM 06.01.25.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3198.591,
+      "source_grand_total_rel_error": 0.017925
+    },
+    {
+      "file": "ANKLESWAR 969695CM CIR + LAM WITH PETAL FS DS.xlsx",
+      "sheet": "13.02.25 949497",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1780.902,
+      "source_grand_total_rel_error": 0.04797
+    },
+    {
+      "file": "ANKLESWAR 969695CM CIR + LINER WITH PETAL FS DS.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1705.274,
+      "source_grand_total_rel_error": 0.024889
+    },
+    {
+      "file": "ARUN SIR INQUIRY.xlsx",
+      "sheet": "90X90X120 CM WITH TOP FLAP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1218.752,
+      "source_grand_total_rel_error": 0.085543
+    },
+    {
+      "file": "ARUN SIR INQUIRY.xlsx",
+      "sheet": "90X90X120 CM WITH TOP SKIRT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 894.464,
+      "source_grand_total_rel_error": 0.384054
+    },
+    {
+      "file": "ASHAPURA CHAINA CLAY.xlsx",
+      "sheet": "100X100X200 CM BAFFLE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3417.582,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ASHAPURA CHAINA CLAY.xlsx",
+      "sheet": "100X100X200 CM U PANNEL BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3054.346,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ASHAPURA CHAINA CLAY.xlsx",
+      "sheet": "106X106X115 CM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2748.798,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ASHAPURA CHAINA CLAY.xlsx",
+      "sheet": "106X106X200 CM WITH DDP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3424.846,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ASHAPURA CHAINA CLAY.xlsx",
+      "sheet": "106X106X200 CM WITHOUT DDP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3177.346,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ASTOROID MICRON.xlsx",
+      "sheet": "95X95X125 CM 1200 KGS BAG",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2080.23,
+      "source_grand_total_rel_error": 0.007263
+    },
+    {
+      "file": "ASTOROID MICRON.xlsx",
+      "sheet": "95X95X145 CM 650 KGS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1960.942,
+      "source_grand_total_rel_error": 0.015273
+    },
+    {
+      "file": "ASTOROID MICRON.xlsx",
+      "sheet": "95X95X185 CM 750 KGS",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2197.442,
+      "source_grand_total_rel_error": 0.006873
+    },
+    {
+      "file": "Book1.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 77.051,
+      "source_grand_total_rel_error": 0.588456
+    },
+    {
+      "file": "Book2.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 244.344,
+      "source_grand_total_rel_error": 0.89843
+    },
+    {
+      "file": "CIRCULAR BAG WITH LOOSE LINER (NAGPUR).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 436.015,
+      "source_grand_total_rel_error": 0.560057
+    },
+    {
+      "file": "Copy of ANKLESWAR_969695CM_CIR_+_LAM_WITH_PETAL_FS_DS(1).xlsx",
+      "sheet": "13.02.25 949497",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1780.902,
+      "source_grand_total_rel_error": 0.04797
+    },
+    {
+      "file": "DOMESTIC (95 X 95 X 125 ^J LINER).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 433.087,
+      "source_grand_total_rel_error": 0.808006
+    },
+    {
+      "file": "DOMESTIC (OMEGA DESIGN).xlsx",
+      "sheet": "95X95X110CM",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 354.044,
+      "source_grand_total_rel_error": 0.864253
+    },
+    {
+      "file": "DOMESTIC (OMEGA DESIGN).xlsx",
+      "sheet": "95X95X125",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 380.509,
+      "source_grand_total_rel_error": 0.863307
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "100X105X130CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2769.715,
+      "source_grand_total_rel_error": 0.018444
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "100x100x130 cm ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2767.442,
+      "source_grand_total_rel_error": 0.01846
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "105X105X120 CM BAFFLE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2441.915,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "105x105x210 CM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2448.227,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "110x110x112 cm baffle bag",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2706.715,
+      "source_grand_total_rel_error": 0.020328
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "120X50X62 CM FERRO BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1448.61,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "60x60x80 cm double layer ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1790.209,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "88x88x100 cm puneet sir ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2661.846,
+      "source_grand_total_rel_error": 0.032381
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90X90X100 CM QTY 10000 PCS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 943.952,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90X90X100 CM cobalt bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1754.528,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90X90X145 CM CIRCULAR",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2439.272,
+      "source_grand_total_rel_error": 0.005814
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90X90X90 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 986.0,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90x90x125 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1863.165,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "90x90x140 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3019.334,
+      "source_grand_total_rel_error": 0.038166
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95X95X100 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2099.767,
+      "source_grand_total_rel_error": 0.171993
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95X95X120 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2193.899,
+      "source_grand_total_rel_error": 0.021226
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95X95X125 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2697.346,
+      "source_grand_total_rel_error": 0.520329
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95X95X130 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1766.233,
+      "source_grand_total_rel_error": 0.040232
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95X95X140 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1412.002,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95x95x120 CM OMEGA ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2541.202,
+      "source_grand_total_rel_error": 0.03558
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "95x95x130 dg kim ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1554.0,
+      "source_grand_total_rel_error": 0.009747
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "97x97x130 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2797.271,
+      "source_grand_total_rel_error": 0.159745
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "98.5x98.5x115 cm puneet sir ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2536.069,
+      "source_grand_total_rel_error": 0.07079
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "98x98x135 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2655.684,
+      "source_grand_total_rel_error": 0.002832
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "ALLIANCE ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2528.472,
+      "source_grand_total_rel_error": 0.018782
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "ASHAI MODI 90X90X110 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2400.0,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "AV INTERPRISES",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2050.803,
+      "source_grand_total_rel_error": 0.087672
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "AV interprisses 90x90x135 cm ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2205.286,
+      "source_grand_total_rel_error": 0.068218
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "BAFFLE ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2272.118,
+      "source_grand_total_rel_error": 0.020857
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "CONDUCTIVE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1922.416,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "FERRO ALLOYS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1598.64,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "G A ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2666.153,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "HONDA BAG  WITHOUT LINER",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1347.84,
+      "source_grand_total_rel_error": 0.065452
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "HONDA BAG WITH LINER ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1699.342,
+      "source_grand_total_rel_error": 0.006754
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "MADHU SILICA ",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2168.71,
+      "source_grand_total_rel_error": 0.007293
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "RICE BAG - 1100 KGS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2641.17,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "SAHYADRI STARCH",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2750.757,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "SHIVAM STARCH ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2562.769,
+      "source_grand_total_rel_error": 0.019051
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "SV ISPAT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2774.71,
+      "source_grand_total_rel_error": 0.144503
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "ashai modi 90x90x95 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1975.278,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "container liner bag ",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 10920.98,
+      "source_grand_total_rel_error": 0.158063
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "dg kim - 3 without liner ",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2015.831,
+      "source_grand_total_rel_error": 0.00533
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "dg kim 2",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 4250.564,
+      "source_grand_total_rel_error": 0.011259
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "dg kim-1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2767.196,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "goa carbon",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3403.337,
+      "source_grand_total_rel_error": 0.12287
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "kayadari",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2743.722,
+      "source_grand_total_rel_error": 0.018604
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "new",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2107.128,
+      "source_grand_total_rel_error": 0.381803
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "puneet sir 111x111x117 cm ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2362.102,
+      "source_grand_total_rel_error": 0.020041
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "puneet sir 95x95x130 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2581.22,
+      "source_grand_total_rel_error": 0.002914
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "rio",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3728.918,
+      "source_grand_total_rel_error": 0.038633
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "south 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1930.32,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "south 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1930.32,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "south 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1813.64,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "u+2 pannel 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2496.373,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "DOMESTIC ENQUIRY.xlsx",
+      "sheet": "u+2 pannel 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1992.999,
+      "source_grand_total_rel_error": 0.121869
+    },
+    {
+      "file": "DURGA MICRON.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1791.222,
+      "source_grand_total_rel_error": 0.008445
+    },
+    {
+      "file": "EUROPE.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 244.227,
+      "source_grand_total_rel_error": 0.772727
+    },
+    {
+      "file": "EXPORT ALGERIA U+2 CROSS CORNER BAG.xlsx",
+      "sheet": "ALGERIA EXPORT",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2325.905,
+      "source_grand_total_rel_error": 0.007729
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "100X100X230 CM WITH LINER ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 3170.742,
+      "source_grand_total_rel_error": 0.00539
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "109X70X130 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1752.381,
+      "source_grand_total_rel_error": 0.293566
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "62.5X62.5X150+50 CM SINGLE LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.537,
+      "source_grand_total_rel_error": 0.010811
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "62.5X62.5X160+50 CM SINGLE LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 870.977,
+      "source_grand_total_rel_error": 0.010442
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "80X80X80 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 672.856,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "88X88X88 CM OT  FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 796.0,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "90X90X210 cm jk singh ji",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1998.16,
+      "source_grand_total_rel_error": 0.033847
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "90x90x100 cm circular puneet si",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3257.607,
+      "source_grand_total_rel_error": 0.022602
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "90x90x120 CM PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1247.216,
+      "source_grand_total_rel_error": 0.006049
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "90x90x170 cm jk singh ji",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1750.96,
+      "source_grand_total_rel_error": 0.038441
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "95X95X180 CM 1 ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.338,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "95x95x180 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.338,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "98.5X98.5X115 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2594.825,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "BAG TYPE -4 (2)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1514.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1427.145,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1635.545,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1938.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2127.529,
+      "source_grand_total_rel_error": 0.049943
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2093.051,
+      "source_grand_total_rel_error": 0.050807
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "POLAND DOUBLE LOOP BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 776.928,
+      "source_grand_total_rel_error": 0.009354
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SINGLE LOOP BAG NEW DEV SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1033.837,
+      "source_grand_total_rel_error": 0.008781
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SPAIN 75x75x90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 696.288,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SPAIN 80X80X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 730.6,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SPAIN 85X85X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 765.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SPAIN 90X90X100 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 867.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "SPAIN 90X90X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 801.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "aaa",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1289.092,
+      "source_grand_total_rel_error": 0.005852
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "isreal",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 399.087,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "single loop bag ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1144.376,
+      "source_grand_total_rel_error": 0.007749
+    },
+    {
+      "file": "EXPORT ENQUIRY.xlsx",
+      "sheet": "two loop bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1345.33,
+      "source_grand_total_rel_error": 0.018164
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "102x102x200 cm circular bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2376.886,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "105x105x110 cm baffle bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2189.432,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "109X70X130 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1752.381,
+      "source_grand_total_rel_error": 0.293566
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "35x35x34 inch ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1145.304,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "62.5X62.5X150+50 CM SINGLE LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.537,
+      "source_grand_total_rel_error": 0.010811
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "62.5X62.5X160+50 CM SINGLE LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 870.977,
+      "source_grand_total_rel_error": 0.010442
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "80X80X80 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 672.856,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "80x80x170 cm single loop bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1898.234,
+      "source_grand_total_rel_error": 0.004764
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "85X85X85 CM OT-FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 775.591,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "90x90x100 cm circular puneet si",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3257.607,
+      "source_grand_total_rel_error": 0.022602
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "90x90x120 CM PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1247.216,
+      "source_grand_total_rel_error": 0.006049
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "90x90x120 CM UN BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1743.96,
+      "source_grand_total_rel_error": 0.004319
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "90x90x90 cm ot-fb",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 831.024,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "95X95X180 CM 1 ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.338,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "95x95x180 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.338,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "98.5X98.5X115 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2594.825,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "BAG TYPE -4 (2)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1514.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-1 UAE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1427.145,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1635.545,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "BAG TYPE-3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1938.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2127.529,
+      "source_grand_total_rel_error": 0.049943
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2093.051,
+      "source_grand_total_rel_error": 0.050807
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM DOUBLE LOOP BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 761.917,
+      "source_grand_total_rel_error": 0.00954
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MARUTI EXIM WITH FLAT BOTTOM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1946.322,
+      "source_grand_total_rel_error": 0.035926
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MGSD001-rev02",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1426.006,
+      "source_grand_total_rel_error": 0.0055
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MGSD002-rev02",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1637.823,
+      "source_grand_total_rel_error": 0.004785
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MGSD003-rev02",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1926.784,
+      "source_grand_total_rel_error": 0.004065
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "MGSD004-rev02",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1515.443,
+      "source_grand_total_rel_error": 0.005173
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SINGLE LOOP BAG NEW DEV SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1033.837,
+      "source_grand_total_rel_error": 0.008781
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SPAIN 75x75x90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 696.288,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SPAIN 80X80X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 730.6,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SPAIN 85X85X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 765.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SPAIN 90X90X100 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 867.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "SPAIN 90X90X90 CM OT-FB",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 801.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "aaa",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1289.092,
+      "source_grand_total_rel_error": 0.005852
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "isreal",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 399.087,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "puneet sir ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1560.394,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "single loop bag ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1134.376,
+      "source_grand_total_rel_error": 0.007818
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "technopack ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 3620.412,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "EXPORT_ENQUIRY.xlsx",
+      "sheet": "two loop bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1345.33,
+      "source_grand_total_rel_error": 0.018164
+    },
+    {
+      "file": "FERTILIZER 2 LOOP BAG.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 178.255,
+      "source_grand_total_rel_error": 0.752372
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "105X66X126 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1752.38,
+      "source_grand_total_rel_error": 0.293673
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "3299 95x95x200 cm circular bag ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2146.7,
+      "source_grand_total_rel_error": 4.7e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "35X35X34 INCH PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1145.3,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "80X80X80 CM OTFB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 672.86,
+      "source_grand_total_rel_error": 5.9e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "90X90X100 CM PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3257.61,
+      "source_grand_total_rel_error": 0.022605
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "90X90X120 CM UN BAG PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1743.96,
+      "source_grand_total_rel_error": 0.004296
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "90X90X90 CM OT  FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 831.02,
+      "source_grand_total_rel_error": 2.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "95X95X180 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.34,
+      "source_grand_total_rel_error": 2.9e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "95X95X180 CM PUNEET SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2095.34,
+      "source_grand_total_rel_error": 2.9e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AAA",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1289.09,
+      "source_grand_total_rel_error": 0.005844
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL177 ITEM 2040",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1230.71,
+      "source_grand_total_rel_error": 0.098162
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL177 ITEM 64281",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 889.75,
+      "source_grand_total_rel_error": 5.6e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL177 ITEM 7770",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 449.98,
+      "source_grand_total_rel_error": 0.044522
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL179 90X90X110 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 924.7,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL179 90X90X110 CM BITUMEN PR",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1180.32,
+      "source_grand_total_rel_error": 1.7e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "AFPL179 90X90X110 CM ISOLATIE P",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 926.7,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "INDRESH JI ENQUIRY 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1926.78,
+      "source_grand_total_rel_error": 0.004002
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "INDRESH JI ENQUIRY 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1426.01,
+      "source_grand_total_rel_error": 0.005436
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "INDRESH JI ENQUIRY 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1515.44,
+      "source_grand_total_rel_error": 0.005134
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "INDRESH JI ENQUIRY 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1637.82,
+      "source_grand_total_rel_error": 0.004736
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "ISREAL BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 399.09,
+      "source_grand_total_rel_error": 2.5e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "MARUTI",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2127.53,
+      "source_grand_total_rel_error": 0.049854
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "MARUTI 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1946.32,
+      "source_grand_total_rel_error": 0.035883
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO  28 ( ITEM NO # 11 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1228.41,
+      "source_grand_total_rel_error": 8e-06
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 26",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1870.73,
+      "source_grand_total_rel_error": 3.7e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM # 5 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1423.68,
+      "source_grand_total_rel_error": 1.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM # 8 )",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1247.31,
+      "source_grand_total_rel_error": 0.036506
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 1 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1317.05,
+      "source_grand_total_rel_error": 3.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 10)",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1365.81,
+      "source_grand_total_rel_error": 0.033233
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 12 )",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1557.2,
+      "source_grand_total_rel_error": 0.029023
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 13 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1410.16,
+      "source_grand_total_rel_error": 2.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 2 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1126.96,
+      "source_grand_total_rel_error": 3.5e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 4 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 2276.43,
+      "source_grand_total_rel_error": 1.3e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 6 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1749.09,
+      "source_grand_total_rel_error": 6e-06
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ( ITEM NO # 7 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1847.97,
+      "source_grand_total_rel_error": 3.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ITEM # 9",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1098.49,
+      "source_grand_total_rel_error": 9e-06
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 28 ITEM NO # 3 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1402.45,
+      "source_grand_total_rel_error": 3.6e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 809.54,
+      "source_grand_total_rel_error": 7.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 828.29,
+      "source_grand_total_rel_error": 1.2e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 813.54,
+      "source_grand_total_rel_error": 7.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 811.54,
+      "source_grand_total_rel_error": 7.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 730.36,
+      "source_grand_total_rel_error": 8.2e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1355.41,
+      "source_grand_total_rel_error": 7e-06
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 938.12,
+      "source_grand_total_rel_error": 8.5e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 29 ITEM # 8",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2038.96,
+      "source_grand_total_rel_error": 6.9e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 31 3214",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 721.95,
+      "source_grand_total_rel_error": 6.9e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 31 3215",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 962.13,
+      "source_grand_total_rel_error": 0.070818
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 34 3207",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1135.33,
+      "source_grand_total_rel_error": 6.2e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 34 3217",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 904.07,
+      "source_grand_total_rel_error": 0.000144
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 35",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 763.64,
+      "source_grand_total_rel_error": 5.2e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "PO 39  ( BBSTAP001239 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 732.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "POLAND DOUBLE LOOP BAG",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 776.93,
+      "source_grand_total_rel_error": 0.009393
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SINGLE LOOP BAG ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1144.38,
+      "source_grand_total_rel_error": 0.007732
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SINGLE LOOP BAG JK SINGH JI",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1134.38,
+      "source_grand_total_rel_error": 0.0078
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SINGLE LOOP DEV SIR ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1033.84,
+      "source_grand_total_rel_error": 0.008821
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SINGLE LOOP UNPRINTED",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 870.98,
+      "source_grand_total_rel_error": 0.010418
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SINGLE LOOP UNPRINTED 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.54,
+      "source_grand_total_rel_error": 0.010737
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SPAIN IQ 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 696.29,
+      "source_grand_total_rel_error": 1.4e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SPAIN IQ 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 730.6,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SPAIN IQ 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 765.54,
+      "source_grand_total_rel_error": 7.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SPAIN IQ 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 801.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "SPAIN IQ 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 867.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 3620.41,
+      "source_grand_total_rel_error": 3e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK 2330",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3362.42,
+      "source_grand_total_rel_error": 0.020139
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK 2382",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2569.31,
+      "source_grand_total_rel_error": 0.017911
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN 2023-295",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 3786.92,
+      "source_grand_total_rel_error": 0.026349
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN 2025-232",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2748.8,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN 2025-348",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 3633.87,
+      "source_grand_total_rel_error": 0.027475
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN-2025-315",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3177.35,
+      "source_grand_total_rel_error": 1.6e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN-2025-321",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 1440.86,
+      "source_grand_total_rel_error": 2.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN-2025-322",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 1338.63,
+      "source_grand_total_rel_error": 5.2e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN-2025-332",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1094.78,
+      "source_grand_total_rel_error": 1.8e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TECHNOPACK IN-2025-350",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3591.58,
+      "source_grand_total_rel_error": 0.020521
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "TWO LOOP BAG 55X114X130 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1345.33,
+      "source_grand_total_rel_error": 0.01811
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "UAE 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1427.15,
+      "source_grand_total_rel_error": 3.5e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "UAE 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1635.55,
+      "source_grand_total_rel_error": 3.1e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "UAE 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1938.75,
+      "source_grand_total_rel_error": 2.6e-05
+    },
+    {
+      "file": "FIBC EXPORT WORKING SHEET (1).xlsx",
+      "sheet": "UAE 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1514.75,
+      "source_grand_total_rel_error": 3.3e-05
+    },
+    {
+      "file": "G A.xlsx",
+      "sheet": "G A",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2658.634,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "GCL  updated work order.xlsx",
+      "sheet": "121X121X121 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2993.431,
+      "source_grand_total_rel_error": 0.137745
+    },
+    {
+      "file": "GCL WORKING SHEET.xlsx",
+      "sheet": "Goa Carbon 3.1 KG BAG ",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3081.804,
+      "source_grand_total_rel_error": 0.171189
+    },
+    {
+      "file": "GCL WORKING SHEET.xlsx",
+      "sheet": "Goa Carbon 3.45 KG BAG",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3436.251,
+      "source_grand_total_rel_error": 0.164912
+    },
+    {
+      "file": "Galaxy mine.xlsx",
+      "sheet": "18.12.24 G.M",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1620.884,
+      "source_grand_total_rel_error": 0.009341
+    },
+    {
+      "file": "Galaxy mine.xlsx",
+      "sheet": "19.12.24 9797130",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2938.176,
+      "source_grand_total_rel_error": 0.152508
+    },
+    {
+      "file": "HONDA BAG.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1377.975,
+      "source_grand_total_rel_error": 0.012744
+    },
+    {
+      "file": "IN 2025-232 TECHNOPACK.xlsx",
+      "sheet": "IN 2025-232",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2268.003,
+      "source_grand_total_rel_error": 0.022617
+    },
+    {
+      "file": "INDRESH JI.xlsx",
+      "sheet": "90X90X120 CM FSDS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1472.932,
+      "source_grand_total_rel_error": 0.042996
+    },
+    {
+      "file": "INDRESH JI.xlsx",
+      "sheet": "90X90X120 CM OT- FB PRINTED ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1257.428,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "INDRESH JI.xlsx",
+      "sheet": "90X90X120 CM OT-FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1253.528,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "ISRAEL ( 56 X56 X 80 CM).xlsx",
+      "sheet": "56 X 56 X 80 CM (ISRAEL)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 56.738,
+      "source_grand_total_rel_error": 0.863242
+    },
+    {
+      "file": "JK SINGH JI  SINGLE LOOP BAG.xlsx",
+      "sheet": "62.5X62.5X150 CM SINGLE LOOP",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.537,
+      "source_grand_total_rel_error": 0.010811
+    },
+    {
+      "file": "JK SINGH JI  SINGLE LOOP BAG.xlsx",
+      "sheet": "62.5X62.5X160 CM SINGLE LOOP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 870.977,
+      "source_grand_total_rel_error": 0.010442
+    },
+    {
+      "file": "KHEMKESWAR LINER TABBING BAG.xlsx",
+      "sheet": "KHEMKESWAR LINER BAG",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 457.326,
+      "source_grand_total_rel_error": 0.809874
+    },
+    {
+      "file": "NEW CLIENT SAMPLE BAG WORK ORDER.xlsx",
+      "sheet": "62.5X62.5X110 CM SINGLE LOOP  ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 748.815,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW CLIENT SAMPLE BAG WORK ORDER.xlsx",
+      "sheet": "62.5X62.5X120 CM TWO LOOP BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 498.732,
+      "source_grand_total_rel_error": 0.018377
+    },
+    {
+      "file": "NEW CLIENT SAMPLE BAG WORK ORDER.xlsx",
+      "sheet": "62.5X62.5X160 CM WITH SUS LINER",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 996.61,
+      "source_grand_total_rel_error": 0.009113
+    },
+    {
+      "file": "NEW EXPORT.xlsx",
+      "sheet": "90 X 90 X 130",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 235.429,
+      "source_grand_total_rel_error": 0.881452
+    },
+    {
+      "file": "NEW EXPORT.xlsx",
+      "sheet": "90X90X90(PLAIN)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 123.956,
+      "source_grand_total_rel_error": 0.882757
+    },
+    {
+      "file": "NEW EXPORT.xlsx",
+      "sheet": "90X90X90(PRINT)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 124.616,
+      "source_grand_total_rel_error": 0.882133
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "DEV SIR BAFFLE BAG ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2792.624,
+      "source_grand_total_rel_error": 0.020523
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1603.018,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 10",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1548.995,
+      "source_grand_total_rel_error": 0.029181
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1393.914,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1676.9,
+      "source_grand_total_rel_error": 0.004493
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2647.232,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1683.242,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2017.648,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2137.528,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 8",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1247.308,
+      "source_grand_total_rel_error": 0.036497
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "ITEM NO # 9",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1365.808,
+      "source_grand_total_rel_error": 0.033225
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 809.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 828.288,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 813.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 811.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 730.359,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1355.414,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 938.122,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NEW ORDER PO 28 - 2025-26.xlsx",
+      "sheet": "po 29 item # 8 (2)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2038.959,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NISHANT BOM.xlsx",
+      "sheet": "15.12.24 NISHANT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2530.134,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NUDITEX 3326 & 3327.xlsx",
+      "sheet": "3326",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 831.784,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "NUDITEX 3326 & 3327.xlsx",
+      "sheet": "3327 ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1794.674,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "New Microsoft Excel Worksheet.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1283.888,
+      "source_grand_total_rel_error": 0.028888
+    },
+    {
+      "file": "PO 26 95X95X175 CM work order.xlsx",
+      "sheet": "95X95X175 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1870.732,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1603.018,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 10",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1548.995,
+      "source_grand_total_rel_error": 0.029181
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1393.914,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1676.9,
+      "source_grand_total_rel_error": 0.004493
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2647.232,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1683.242,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2017.648,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 2137.528,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 8",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1247.308,
+      "source_grand_total_rel_error": 0.036497
+    },
+    {
+      "file": "PO 28 WORK ORDER.xlsx",
+      "sheet": "ITEM # 9",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1365.808,
+      "source_grand_total_rel_error": 0.033225
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 809.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 828.288,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 813.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 811.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 730.359,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1355.414,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 938.122,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 29 work order.xlsx",
+      "sheet": "ITEM # 8",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2038.959,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 31 3214 & 3215 work order.xlsx",
+      "sheet": "3214",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 721.95,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 31 3214 & 3215 work order.xlsx",
+      "sheet": "3215",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 962.134,
+      "source_grand_total_rel_error": 0.070882
+    },
+    {
+      "file": "PO 34 3207 work order.xlsx",
+      "sheet": "3207",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1135.325,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 34 3207 work order.xlsx",
+      "sheet": "3217",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 904.072,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 35  85X85X90 CM work order.xlsx",
+      "sheet": "85X85X90 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 763.636,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 38.xlsx",
+      "sheet": "DG KIM COVERR BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 747.0,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 38.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1012.568,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 39.xlsx",
+      "sheet": "PO 39 ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 735.096,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 39.xlsx",
+      "sheet": "PO 39  (2)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 735.096,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 39.xlsx",
+      "sheet": "Sheet2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 735.096,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "63053200",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1176.858,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "DAR00311",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1022.158,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "DAR01146",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 810.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "DAR02405",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 778.259,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "DAR02411",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 778.259,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 49.xlsx",
+      "sheet": "DBB16301",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1645.982,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0263",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 952.614,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0265",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1456.14,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0268",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1456.14,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0276",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1240.775,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0278",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 802.776,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0327",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 768.636,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PO 62.xlsx",
+      "sheet": "1012601POH0333",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1713.587,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "POLAND.xlsx",
+      "sheet": "90 X 90 X 160 CM",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 213.34,
+      "source_grand_total_rel_error": 0.864267
+    },
+    {
+      "file": "POLAND.xlsx",
+      "sheet": "90 X 90 X 90 CM",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 148.466,
+      "source_grand_total_rel_error": 0.849883
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "100X100X135 CM SKIRT - DS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1748.35,
+      "source_grand_total_rel_error": 0.004308
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "85X85X90 CM OT - DS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 828.645,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "85X85X90 CM OT - FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 742.636,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "90X90X105 CM OT - FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1284.976,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "90X90X120 CM SKIRT - DS",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1409.302,
+      "source_grand_total_rel_error": 0.074407
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "90X90X150 CM SKIRT - DS ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1693.27,
+      "source_grand_total_rel_error": 0.004449
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "90X90X90 CM OT - DS",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 864.208,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PUNEET SIR NEW EXPORT ORDER.xlsx",
+      "sheet": "90X90X90 CM OT - FB ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 776.776,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "PUNEET SIR NEW ORDER.xlsx",
+      "sheet": "95X95X130 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1766.233,
+      "source_grand_total_rel_error": 0.040232
+    },
+    {
+      "file": "PUNEET SIR NEW SPEC.xlsx",
+      "sheet": "105X105X120 CM BAFFLE BAG ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2537.113,
+      "source_grand_total_rel_error": 0.100986
+    },
+    {
+      "file": "PUNEET SIR NEW SPEC.xlsx",
+      "sheet": "90X90X80 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1969.199,
+      "source_grand_total_rel_error": 0.074227
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "9898172 Akash Agro06.01.25",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3182.591,
+      "source_grand_total_rel_error": 0.018017
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "GALXY MINE",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1620.884,
+      "source_grand_total_rel_error": 0.009341
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "ISRAEL 484868",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 331.318,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "NISHANT",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2530.134,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "SEASOM CORBON",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1924.288,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "SEASOM CORBON UPTD.",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1915.328,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RUNNING ORDER OF MONTH DECEMBER 2024.xlsx",
+      "sheet": "VINAYKA MICRON",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2715.48,
+      "source_grand_total_rel_error": 0.188696
+    },
+    {
+      "file": "RXPORT ENQUIRY 24-03-25.xlsx",
+      "sheet": "BAG TYPE -4",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1514.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RXPORT ENQUIRY 24-03-25.xlsx",
+      "sheet": "BAG TYPE-1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1427.145,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RXPORT ENQUIRY 24-03-25.xlsx",
+      "sheet": "BAG TYPE-2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1635.545,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "RXPORT ENQUIRY 24-03-25.xlsx",
+      "sheet": "BAG TYPE-3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1938.745,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "S C 100100130 cm 27.02.2025 4-PANNEL Baffle UP.xlsx",
+      "sheet": "100x100x130 up baffle",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2240.53,
+      "source_grand_total_rel_error": 0.010718
+    },
+    {
+      "file": "SAMPLE BAG REQUEST G C.xlsx",
+      "sheet": "G C SAMPLE",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3446.045,
+      "source_grand_total_rel_error": 0.094314
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "25.12.24 105105216",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3859.798,
+      "source_grand_total_rel_error": 0.020327
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "25.12.25 9090110 omega",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1560.508,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "9090120 RAJESH JI ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1686.952,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "969695 ANKLESHWAR",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2399.674,
+      "source_grand_total_rel_error": 0.01756
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "GOA CARBON 12121121",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3520.913,
+      "source_grand_total_rel_error": 0.092124
+    },
+    {
+      "file": "SAMPLE REQUEST OF BAFFLE BAG.xlsx",
+      "sheet": "VADODARA CLY 9090110",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2137.232,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SEASOM CARBON (2).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 287.583,
+      "source_grand_total_rel_error": 0.859822
+    },
+    {
+      "file": "SEASOM CARBON (BAFFLE BAG).xlsx",
+      "sheet": "ASAHI MODI HONDA BAG",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 290.252,
+      "source_grand_total_rel_error": 0.801302
+    },
+    {
+      "file": "SEASOM CARBON.xlsx",
+      "sheet": "100X100X130 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1932.913,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SEASOM CARBON.xlsx",
+      "sheet": "95X95X80 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1285.535,
+      "source_grand_total_rel_error": 0.17068
+    },
+    {
+      "file": "SEASOM CORBON 27.02.25 UNPRINTED 100100130.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1915.328,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SEASOM CORBON B.O.M..xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1924.288,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SINGLE LOOP JK SINGH JI.xlsx",
+      "sheet": "62.5x62.5x150 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.537,
+      "source_grand_total_rel_error": 0.010811
+    },
+    {
+      "file": "SINGLE LOOP JK SINGH JI.xlsx",
+      "sheet": "62.5x62.5x160 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 869.477,
+      "source_grand_total_rel_error": 0.008701
+    },
+    {
+      "file": "SINGLE LOOP.xlsx",
+      "sheet": "62.5X62.5X160 CM +50 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 870.977,
+      "source_grand_total_rel_error": 0.010442
+    },
+    {
+      "file": "SINGLE LOOP.xlsx",
+      "sheet": "62.5X62X.5X150 CM +50 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 841.537,
+      "source_grand_total_rel_error": 0.010811
+    },
+    {
+      "file": "SINGLEE LOOP BAG JK SINGH JI.xlsx",
+      "sheet": "62.5X62.5X160 CM SINGLE LOOP BA",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1045.117,
+      "source_grand_total_rel_error": 0.008492
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "100X100X200 CM 3187",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2161.774,
+      "source_grand_total_rel_error": 0.003481
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "80X80X85 CM 3178",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 744.4,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "88X88X88 CM 3177",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 876.684,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X100 CM 3179",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 924.85,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X120 CM 3180",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 1027.25,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X120 CM 3181 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1263.25,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X120 CM 3182",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1326.934,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X140 CM  3183",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1468.334,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X160 CM 3184",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1598.514,
+      "source_grand_total_rel_error": 0.009473
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X160 CM 3185 ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1566.334,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "90X90X50 CM 3188",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 614.65,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SPAIN ENQUIRY.xlsx",
+      "sheet": "92X92X160 CM 3186",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1587.734,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "SUDARSHAN.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 288.021,
+      "source_grand_total_rel_error": 0.876836
+    },
+    {
+      "file": "SUDARSHAN.xlsx",
+      "sheet": "Sheet2",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 375.867,
+      "source_grand_total_rel_error": 0.917533
+    },
+    {
+      "file": "TECHNO PACK BAFFLE BAG.xlsx",
+      "sheet": "3659 standard baffle",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3400.754,
+      "source_grand_total_rel_error": 0.018436
+    },
+    {
+      "file": "TECHNO PACK BAFFLE BAG.xlsx",
+      "sheet": "3659 stronger baffle",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3498.354,
+      "source_grand_total_rel_error": 0.017912
+    },
+    {
+      "file": "TECHNO PACK BAFFLE BAG.xlsx",
+      "sheet": "3660",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3096.666,
+      "source_grand_total_rel_error": 0.017988
+    },
+    {
+      "file": "TECHNO PACK BAFFLE BAG.xlsx",
+      "sheet": "IN 2026-044 acc 150+30",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3782.546,
+      "source_grand_total_rel_error": 0.018416
+    },
+    {
+      "file": "TECHNO PACK BAFFLE BAG.xlsx",
+      "sheet": "IN 2026-044 acc 180+30",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 4024.154,
+      "source_grand_total_rel_error": 0.017291
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3410 (IN 2019-413)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1732.648,
+      "source_grand_total_rel_error": 0.318766
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3411 IN (2019-412)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1839.801,
+      "source_grand_total_rel_error": 0.311296
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3412 (IN 2019-414)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1869.629,
+      "source_grand_total_rel_error": 0.315491
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3413 IN 2019-825",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1802.914,
+      "source_grand_total_rel_error": 0.285005
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3414 (IN 2019-826)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 2055.108,
+      "source_grand_total_rel_error": 0.210361
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3415 (IN 2019-415)",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 2269.04,
+      "source_grand_total_rel_error": 0.293313
+    },
+    {
+      "file": "TECHNOPACK ( U+2 PANEL) TRANSPARENT SIDE PAANEL.xlsx",
+      "sheet": "3416 (IN 2019-940)",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 2752.777,
+      "source_grand_total_rel_error": 0.411695
+    },
+    {
+      "file": "TECHNOPACK (1).xlsx",
+      "sheet": "3967",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1460.98,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (1).xlsx",
+      "sheet": "3968",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2312.684,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (1).xlsx",
+      "sheet": "3969",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1197.004,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (1).xlsx",
+      "sheet": "3975",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1900.84,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (2).xlsx",
+      "sheet": "3967",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1460.98,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (2).xlsx",
+      "sheet": "3968",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2312.684,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (2).xlsx",
+      "sheet": "3969",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1197.004,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (2).xlsx",
+      "sheet": "3975",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1900.84,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK (BAFFLE).xlsx",
+      "sheet": "TECHNOPACK (BAFFLE)",
+      "adjusted_components": 6,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 565.828,
+      "source_grand_total_rel_error": 0.871028
+    },
+    {
+      "file": "TECHNOPACK 16-02-2026.xlsx",
+      "sheet": "3647",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2613.777,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 16-02-2026.xlsx",
+      "sheet": "3689",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1392.0,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 18-09-2025.xlsx",
+      "sheet": "106X106X120 CM BAFFLE BAG",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2569.306,
+      "source_grand_total_rel_error": 0.017907
+    },
+    {
+      "file": "TECHNOPACK 18-09-2025.xlsx",
+      "sheet": "107X107X167 CM BAFFLE BAG",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3362.425,
+      "source_grand_total_rel_error": 0.020159
+    },
+    {
+      "file": "TECHNOPACK 18-09-2025.xlsx",
+      "sheet": "107X107X180 CM BAFFLE BAG ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3591.579,
+      "source_grand_total_rel_error": 0.02055
+    },
+    {
+      "file": "TECHNOPACK 235&232.xlsx",
+      "sheet": "106X106X115 CM WITH DDP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2748.798,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 235&232.xlsx",
+      "sheet": "106X106X200 CM WITH DDP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3424.846,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 235&232.xlsx",
+      "sheet": "106X106X200 CM WITHOUT DDP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 3177.346,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 235&232.xlsx",
+      "sheet": "IN 2025-321",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 1440.86,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 235&232.xlsx",
+      "sheet": "IN 2025-322",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 1338.632,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 321 &322.xlsx",
+      "sheet": "IN 2025-321",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 1440.86,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 321 &322.xlsx",
+      "sheet": "IN 2025-322",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 10,
+      "source_grand_total_g": 1338.632,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 3357+3356.xlsx",
+      "sheet": "3356",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1329.86,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK 3357+3356.xlsx",
+      "sheet": "3357",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1329.86,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK IN 2025-296.xlsx",
+      "sheet": "IN 2025-296",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 3620.412,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK IN 2025-332.xlsx",
+      "sheet": "IN 2025-332",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1094.776,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW (1).xlsx",
+      "sheet": "2913 ( IN 2020-022 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1297.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW (1).xlsx",
+      "sheet": "2914 ( IN 2020-022 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1299.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW (1).xlsx",
+      "sheet": "IN 2026-087",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1299.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW.xlsx",
+      "sheet": "2913 ( IN 2020-022 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1297.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW.xlsx",
+      "sheet": "2914 ( IN 2020-022 )",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1299.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK NEW.xlsx",
+      "sheet": "IN 2026-087",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1299.717,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK WORK ORDER.xlsx",
+      "sheet": "4391",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1899.646,
+      "source_grand_total_rel_error": 0.06028
+    },
+    {
+      "file": "TECHNOPACK WORK ORDER.xlsx",
+      "sheet": "4470",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1772.004,
+      "source_grand_total_rel_error": 0.057279
+    },
+    {
+      "file": "TECHNOPACK.xlsx",
+      "sheet": "87X87X105 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1144.945,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK.xlsx",
+      "sheet": "87X87X210 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1864.252,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "TECHNOPACK.xlsx",
+      "sheet": "99X99X118 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1424.036,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "Technopac(U+2 PANEL BAG).xlsx",
+      "sheet": "93 X 93 X 190 (130 GSM)",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2720.882,
+      "source_grand_total_rel_error": 0.355878
+    },
+    {
+      "file": "Technopac(U+2 PANEL BAG).xlsx",
+      "sheet": "93 X 93 X 190 CM (140 GSM)",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2801.166,
+      "source_grand_total_rel_error": 0.245561
+    },
+    {
+      "file": "U+2 PANEL (EXPORT).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 292.022,
+      "source_grand_total_rel_error": 0.87988
+    },
+    {
+      "file": "U+2 PANEL BAG FOR EXPORT.xlsx",
+      "sheet": "90X90X90(PRINTED)",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1764.822,
+      "source_grand_total_rel_error": 0.567981
+    },
+    {
+      "file": "U+2 PANEL BAG FOR EXPORT.xlsx",
+      "sheet": "90X90X90(UNPRINTED)",
+      "adjusted_components": 3,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1748.822,
+      "source_grand_total_rel_error": 0.553765
+    },
+    {
+      "file": "UN BAG.xlsx",
+      "sheet": "90X90X120 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1743.96,
+      "source_grand_total_rel_error": 0.004319
+    },
+    {
+      "file": "USA (BAFFLE BAG).xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 5,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 398.997,
+      "source_grand_total_rel_error": 0.844331
+    },
+    {
+      "file": "VENTILATED BAG.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 2,
+      "skipped_zero_rows": 9,
+      "source_grand_total_g": 302.183,
+      "source_grand_total_rel_error": 0.87517
+    },
+    {
+      "file": "VIJAY NAGAR BAG.xlsx",
+      "sheet": "100X100X120 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2491.831,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "VIJAY NAGAR BAG.xlsx",
+      "sheet": "95X95X105 CM ",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2006.665,
+      "source_grand_total_rel_error": 0.120907
+    },
+    {
+      "file": "VIJAY NAGAR BAG.xlsx",
+      "sheet": "98X98X135 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2062.35,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "VIJAYNAGAR BOM95X95X135 cm.xlsx",
+      "sheet": "9595135 MAIZE STARCH",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1949.427,
+      "source_grand_total_rel_error": 0.00383
+    },
+    {
+      "file": "VIJAYNAGAR BOM95X95X135 cm.xlsx",
+      "sheet": "95x95x125 cm ",
+      "adjusted_components": 4,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2076.483,
+      "source_grand_total_rel_error": 0.230334
+    },
+    {
+      "file": "VIJAYNAGAR BOM95X95X135 cm.xlsx",
+      "sheet": "VIJICATO",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1949.427,
+      "source_grand_total_rel_error": 0.00383
+    },
+    {
+      "file": "VIJAYNAGAR BOM95X95X135 cm.xlsx",
+      "sheet": "VIJILOX",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 1949.427,
+      "source_grand_total_rel_error": 0.00383
+    },
+    {
+      "file": "VINAYAKA MICRON WITHOUT LINER & PRINTING.xlsx",
+      "sheet": "Without liner & printing",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1848.767,
+      "source_grand_total_rel_error": 0.239363
+    },
+    {
+      "file": "WHITE & WHITE.xlsx",
+      "sheet": "white & white ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 2750.595,
+      "source_grand_total_rel_error": 0.002734
+    },
+    {
+      "file": "circular 9090110 ddp for cly.xlsx",
+      "sheet": "Sheet1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2137.232,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3174",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 3183.54,
+      "source_grand_total_rel_error": 0.006322
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3178",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 747.6,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3180",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 989.74,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3181",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1187.036,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3182",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1298.53,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3186",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 1590.53,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3233",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 797.397,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3242",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 895.1,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "final_fibc_inquiries  FROM STOCK (4).xlsx",
+      "sheet": "3243",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 4,
+      "source_grand_total_g": 1189.49,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 1",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 796.737,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 10",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 398.502,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 11",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 499.56,
+      "source_grand_total_rel_error": 0.052237
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 2",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2159.546,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 3",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 3199.521,
+      "source_grand_total_rel_error": 0.131324
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 4",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 5,
+      "source_grand_total_g": 1242.84,
+      "source_grand_total_rel_error": 0.091482
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 5",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1456.544,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 6",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 810.538,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 7",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2525.09,
+      "source_grand_total_rel_error": 0.007581
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 8",
+      "adjusted_components": 1,
+      "skipped_zero_rows": 3,
+      "source_grand_total_g": 2705.396,
+      "source_grand_total_rel_error": 0.027575
+    },
+    {
+      "file": "new client sending sample work order.xlsx",
+      "sheet": "SR NO. 9",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 3172.824,
+      "source_grand_total_rel_error": 0.08926
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "72X72X87 CM WITH 2 LOOP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 7,
+      "source_grand_total_g": 1199.74,
+      "source_grand_total_rel_error": 0.008405
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "80X80X75 CM",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 771.26,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "85X85X75 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 808.435,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "85X85X80 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 833.935,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "90X90X100 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 8,
+      "source_grand_total_g": 988.26,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "90X90X100 CM WITH SKIRT ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1297.08,
+      "source_grand_total_rel_error": 0.005816
+    },
+    {
+      "file": "puneet sir export inquiry.xlsx",
+      "sheet": "90X90X112 CM WITH 2 LOOP ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 6,
+      "source_grand_total_g": 1533.64,
+      "source_grand_total_rel_error": 0.006563
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "85X85X90 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 828.645,
+      "source_grand_total_rel_error": 1e-06
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "85X85X90 CM (OT-FB)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 742.636,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "90X90X100 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 1335.286,
+      "source_grand_total_rel_error": 0.005649
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "90X90X120 CM (OT-FB)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1198.608,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "90X90X150 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 1693.27,
+      "source_grand_total_rel_error": 0.004449
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "90X90X90 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 864.208,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "90X90X90 CM (OT-FB)",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 776.776,
+      "source_grand_total_rel_error": 0.0
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "95x95x175 cm ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 0,
+      "source_grand_total_g": 2180.644,
+      "source_grand_total_rel_error": 0.003451
+    },
+    {
+      "file": "puneet sir new.xlsx",
+      "sheet": "96X96X260 CM ",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 1,
+      "source_grand_total_g": 2595.246,
+      "source_grand_total_rel_error": 0.002898
+    },
+    {
+      "file": "technopack 3647.xlsx",
+      "sheet": "3647",
+      "adjusted_components": 0,
+      "skipped_zero_rows": 2,
+      "source_grand_total_g": 2545.735,
+      "source_grand_total_rel_error": 0.0
+    }
+  ],
+  "skipped": [],
+  "bag_type_null_reparse_updates": 6
+}

@@ -1,0 +1,47 @@
+# Adapter A — EXTRACTION.  enquiry text -> OrderSpec  (plan §9.2, left column)
+# Job: read only what the customer said; mark everything else not_specified.
+# Primary gate: hallucination rate < 2% on eval_real.
+run_name: adapter_a_extraction
+
+model:
+  # `name` is only used when $BOM_BASE_MODEL is NOT a direct path. On the cluster
+  # --base-model points straight at ~/u24ai026/BOM/model_weights, so whatever HF
+  # folder is there (4B, 8-9B, Qwen2.5 or Qwen3) is what trains.
+  name: ${BOM_MODEL_NAME:-Qwen3-4B-Instruct}
+  backend: hf                   # peft + trl, matches the built env. "unsloth" to opt in.
+  max_seq_length: 2048
+  load_in_4bit: false           # bf16 LoRA. true = QLoRA (needs bitsandbytes) if a 9B base OOMs.
+  dtype: bfloat16
+  attn_implementation: sdpa     # "flash_attention_2" if flash-attn is installed
+  enable_thinking: false        # Qwen3 thinking base -> keep off (JSON-only target)
+
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  bias: none
+
+train:
+  learning_rate: 2.0e-4
+  epochs: 2
+  warmup_ratio: 0.03
+  lr_scheduler_type: cosine
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 4      # effective batch 8
+  gradient_checkpointing: true
+  logging_steps: 10
+  eval_steps: 50
+  save_steps: 50
+  save_total_limit: 2
+  early_stopping_patience: 3
+  seed: 20260826
+  optim: adamw_torch           # "paged_adamw_8bit" for QLoRA / tight VRAM
+  report_to: none
+
+data:
+  adapter: a
+  train_split: train
+  eval_split: val
+  response_template: "<|im_start|>assistant\n"
+  max_examples: null

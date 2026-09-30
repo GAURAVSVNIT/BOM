@@ -1,0 +1,35 @@
+# Installed by hpc/setup_env.sh into the conda env, AFTER `pip install torch`.
+# The Aurora env already carries a modern stack (torch 2.13 / transformers 5 /
+# peft 0.20 / trl 1.9 / datasets 5 / accelerate 1.14); the floors below are just
+# so a fresh env still resolves. Does NOT list torch.
+#
+# The submit scripts `unset PYTHONPATH` + `export PYTHONNOUSERSITE=1` so the
+# anaconda module's older nvidia-nccl-cu12 ("undefined symbol: ncclCommResume")
+# never shadows these wheels.
+
+# --- training (backend="hf" — the default, uses what the env already has) ---
+transformers>=4.46
+peft>=0.13
+trl>=0.11
+datasets>=2.20
+accelerate>=1.0
+pyyaml>=6.0
+kernels>=0.11.1            # silences transformers 5.x "No module named 'kernels'"
+pytest>=8                  # torch-free test suite / hpc/preflight.sh
+
+# --- optional: QLoRA / 8-bit optimizer (only if model.load_in_4bit=true or
+#     train.optim=paged_adamw_8bit) ---
+# bitsandbytes>=0.44
+
+# --- optional: Unsloth backend (model.backend=unsloth). May conflict with
+#     transformers 5.x — install into a SEPARATE env if it tries to downgrade. ---
+# unsloth>=2025.9.1
+# unsloth_zoo>=2025.9.1
+
+# --- eval + serving: grammar-constrained JSON decoding (plan §9.3).
+#     vLLM pins torch tightly — if `pip install vllm` wants to move torch 2.13,
+#     build a separate serving env, or use the transformers+xgrammar fallback. ---
+# vllm>=0.6.3
+xgrammar>=0.1.9
+
+pydantic>=2.6

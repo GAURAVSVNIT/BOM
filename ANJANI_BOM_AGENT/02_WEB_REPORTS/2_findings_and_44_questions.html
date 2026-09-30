@@ -1,0 +1,583 @@
+<title>Questions for the BOM Engineer — Anjani FIBC BOM System</title>
+<style>
+  :root{
+    --mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Segoe UI Mono", Consolas, "Liberation Mono", monospace;
+    --paper:#FAFAF8; --sheet:#FFFFFF; --sunk:#F2F3F1;
+    --ink:#11181F; --graphite:#5C6A78; --faint:#8794A1;
+    --rule:#DFE3E7; --rule-strong:#C4CBD2;
+    --redline:#AF2C1C; --redline-wash:#FBF0EE;
+    --verified:#16645A; --verified-wash:#EDF5F3;
+    --hold:#8A6212; --hold-wash:#FAF4E6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+      --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+      --rule:#252F39; --rule-strong:#33404C;
+      --redline:#E8705C; --redline-wash:#221614;
+      --verified:#4FBFA9; --verified-wash:#11201E;
+      --hold:#D6A63F; --hold-wash:#1F1A0F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0E1318; --sheet:#141B22; --sunk:#181F27;
+    --ink:#E6EAEE; --graphite:#9AA7B4; --faint:#6F7D8B;
+    --rule:#252F39; --rule-strong:#33404C;
+    --redline:#E8705C; --redline-wash:#221614;
+    --verified:#4FBFA9; --verified-wash:#11201E;
+    --hold:#D6A63F; --hold-wash:#1F1A0F;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Iowan Old Style","Charter","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:17px; line-height:1.6; margin:0; padding:0 20px 110px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto}
+  .col{max-width:680px}
+  .col p,.col ul,.col ol{max-width:66ch}
+
+  .mast{padding:60px 0 26px;margin-bottom:40px;border-bottom:2px solid var(--ink)}
+  .stamp{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+         color:var(--graphite);display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:24px}
+  .stamp b{color:var(--ink);font-weight:600}
+  h1{font-family:var(--mono);font-weight:600;font-size:clamp(26px,4vw,42px);line-height:1.1;
+     letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+  .standfirst{font-size:19px;line-height:1.55;color:var(--graphite);margin:0;max-width:62ch}
+  .standfirst em{color:var(--ink);font-style:italic}
+
+  section{margin:0 0 60px}
+  h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.14em;
+     text-transform:uppercase;margin:0 0 6px;padding-bottom:10px;
+     border-bottom:1px solid var(--rule-strong);display:flex;align-items:baseline;gap:14px}
+  h2 .num{color:var(--faint);font-weight:400}
+  h2 + .lede{font-size:19px;line-height:1.5;color:var(--graphite);margin:20px 0 0;max-width:62ch}
+  h3{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.05em;
+     margin:38px 0 4px;color:var(--redline);text-transform:uppercase}
+  h3 + .sub{font-family:var(--mono);font-size:12px;color:var(--faint);margin:0 0 14px}
+  p{margin:0 0 15px}
+  code{font-family:var(--mono);font-size:.85em;background:var(--sunk);padding:1px 5px;
+       border-radius:3px;border:1px solid var(--rule)}
+  ul,ol{margin:0 0 15px;padding-left:22px}
+  li{margin-bottom:8px}
+  li::marker{color:var(--faint)}
+
+  .tablewrap{overflow-x:auto;margin:24px 0;border:1px solid var(--rule);border-radius:4px;background:var(--sheet)}
+  table{border-collapse:collapse;width:100%;font-family:var(--mono);font-size:13px;
+        font-variant-numeric:tabular-nums;min-width:500px}
+  caption{text-align:left;font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+          text-transform:uppercase;color:var(--graphite);padding:12px 16px;
+          border-bottom:1px solid var(--rule);background:var(--sunk)}
+  th{text-align:left;font-weight:600;color:var(--graphite);padding:10px 16px;
+     border-bottom:1px solid var(--rule-strong);font-size:11px;letter-spacing:.06em;
+     text-transform:uppercase;white-space:nowrap}
+  td{padding:9px 16px;border-bottom:1px solid var(--rule);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .num-col{text-align:right}
+  .win{color:var(--verified);font-weight:600}
+  .lose{color:var(--redline)}
+
+  .finding{border-left:3px solid var(--redline);background:var(--redline-wash);
+           padding:16px 20px;margin:24px 0;border-radius:0 4px 4px 0}
+  .finding.confirmed{border-left-color:var(--verified);background:var(--verified-wash)}
+  .finding .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+                text-transform:uppercase;color:var(--redline);font-weight:600;
+                display:block;margin-bottom:7px}
+  .finding.confirmed .tag{color:var(--verified)}
+  .finding p{margin:0;font-size:16.5px}
+  .finding p+p{margin-top:11px}
+
+  /* ── question blocks ───────────────────────────────────────────── */
+  .qs{margin:18px 0 0;border-top:1px solid var(--rule)}
+  .q{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:18px 0;
+     border-bottom:1px solid var(--rule);align-items:start}
+  .qn{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--faint);
+      padding-top:2px;letter-spacing:.02em}
+  .q.block .qn{color:var(--redline)}
+  .qtext{font-size:16.5px;line-height:1.55;margin:0 0 8px;max-width:64ch}
+  .ev{font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--graphite);
+      background:var(--sunk);border-left:2px solid var(--rule-strong);
+      padding:8px 12px;border-radius:0 3px 3px 0;max-width:70ch}
+  .ev b{color:var(--ink);font-weight:600}
+  .q.block .ev{border-left-color:var(--redline)}
+  .flag{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.1em;
+        text-transform:uppercase;color:var(--redline);border:1px solid currentColor;
+        border-radius:3px;padding:2px 6px;margin-left:8px;white-space:nowrap;
+        vertical-align:middle;background:var(--redline-wash)}
+  @media(max-width:620px){
+    .q{grid-template-columns:1fr;gap:8px}
+    .qn{padding-top:0}
+  }
+
+  .rule-off{border:none;border-top:1px solid var(--rule);margin:48px 0}
+  .foot{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--faint);
+        border-top:2px solid var(--ink);padding-top:18px;margin-top:18px}
+  .foot b{color:var(--graphite);font-weight:600}
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt;padding:0}
+    .q{break-inside:avoid} section{break-inside:auto}
+  }
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <div class="stamp">
+    <span>Anjani Interweave Pvt Ltd</span>
+    <span>FIBC BOM Generation System</span>
+    <span><b>Findings + questions for the engineer</b></span>
+    <span>10 Aug 2026</span>
+  </div>
+  <h1>What the sheets already tell us —<br>and what only the engineer can</h1>
+  <p class="standfirst">
+    I parsed <em>395 real BOM sheets</em> from <code>All_Things</code> and tested every candidate rule against
+    them. Most of the geometry is now settled to 90%+ certainty. What is left is not
+    arithmetic — it is judgement, and it is concentrated in about
+    <em>forty questions</em>. Answer these and the model has something worth learning.
+  </p>
+</header>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">01</span> What I actually read</h2>
+  <div class="col">
+    <p>107 workbooks, 681 sheets, of which <strong>395 carry a real component table</strong>. One
+    workbook (<code>FIBC PRODUCTION DEC-2025.xlsx</code>) is a renamed <code>.xls</code> and cannot be
+    opened; nine other files are <code>.doc</code>/<code>.pdf</code>/images.</p>
+
+    <p>The format is remarkably consistent. Every sheet is the same document:</p>
+    <ul>
+      <li><strong>Header</strong> — customer, order, ref, SWL, SF, qty, bag type, colour, bag weight; and on the right, printing, external size, internal size, loop, top, bottom, doc pocket, liner, packing.</li>
+      <li><strong>Component table</strong> — a fixed 15-row template: <code>SR NO. · COMPONENT · GSM · LAMI/UL · FABRIC COLOR · FABRIC WIDTH · CUT LENGTH · CUT PIECE WEIGHT · REMARK</code>, closed by GRAND TOTAL.</li>
+      <li><strong>INSTRACTION block</strong> — 3–6 free-text production lines. Fold type, stitch type, yarn spec, packing, tolerance.</li>
+      <li><strong>TAPE PLANT / LOOM DEPARTMENT / NIDDLE LOOM</strong> — denier, tenacity, GPD, elongation, tape width; fabric GSM, warp/weft strength, mesh; belt strength in KGF, GPM, yarn denier.</li>
+      <li><strong>MIXING</strong> — <code>PP 80% · CC 8% · UV 1.5% · RP 12.5%</code>.</li>
+    </ul>
+
+    <div class="finding confirmed">
+      <span class="tag">This changes the scope in a good way</span>
+      <p>The BOM is not a materials list. It is a <strong>complete manufacturing instruction</strong> that
+      runs tape plant → loom → needle loom → cutting → stitching → finishing → packing. The
+      component table is the middle third of it.</p>
+      <p>Per your instruction I have dropped the costing block entirely. The tape/loom/needle-loom
+      and INSTRACTION blocks I have <em>kept</em>, because they are core BOM, not price.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">02</span> Rules the data settles</h2>
+  <p class="lede">These held across hundreds of sheets. They can be hard-coded and the model never
+  needs to touch them — but each one still needs a yes/no from the engineer before it goes in.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Geometry measured against external dimensions · All_Things · n = sheets tested</caption>
+      <thead><tr><th>Family</th><th>Component</th><th>Rule the data gives</th><th class="num-col">Agreement</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="4">U-panel</td><td>Body</td><td>width = <b>W + 8</b></td><td class="num-col win">94% · n=174</td></tr>
+        <tr><td>Body</td><td>cut = <b>2H + L + 10</b></td><td class="num-col">79% · n=174</td></tr>
+        <tr><td>Side ×2</td><td>width = <b>L + 8</b></td><td class="num-col win">94% · n=166</td></tr>
+        <tr><td>Side ×2</td><td>cut = <b>H + 8</b></td><td class="num-col win">98% · n=166</td></tr>
+        <tr><td rowspan="3">Circular</td><td>Body ×2</td><td>flat width = <b>W + L</b> (tube, no allowance)</td><td class="num-col">38% mode · n=104</td></tr>
+        <tr><td>Body</td><td>cut = <b>H + 8</b></td><td class="num-col">52% · n=104</td></tr>
+        <tr><td>Top / Bottom</td><td>(<b>L + 10</b>) × (<b>W + 10</b>)</td><td class="num-col win">86% · n=94</td></tr>
+        <tr><td rowspan="3">4-panel baffle</td><td>Body ×4</td><td>width = <b>W + 8</b>, cut = <b>H + 8</b></td><td class="num-col">64% / 57% · n=70</td></tr>
+        <tr><td>Top / Bottom</td><td>(<b>L + 8</b>) × (<b>W + 8</b>)</td><td class="num-col">61% · n=70</td></tr>
+        <tr><td>Baffle ×4</td><td>qty is always 4</td><td class="num-col win">100% · n=53</td></tr>
+        <tr><td>All</td><td>Corner loop</td><td>cut = <b>2 × free-height + LL + SL</b></td><td class="num-col win">87% · n=226</td></tr>
+        <tr><td>All</td><td>Loop qty</td><td>4</td><td class="num-col win">99% · n=363</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col">
+    <div class="finding confirmed">
+      <span class="tag">The loop formula is solved</span>
+      <p>The header writes the loop as <code>4X25 · LL 60 CM · SL 40 CM</code> — that is
+      <em>quantity × free height</em>, then the two attachment lengths. Cut length is
+      <code>2×25 + 60 + 40 = 150 cm</code>, and the weight is <code>GPM × cut/100 × 4</code>. It reproduces
+      exactly on 197 of 226 testable sheets.</p>
+      <p>This matters because the earlier system used <code>LL + SL + 50</code> and scored 31% — it was
+      simply the wrong formula. Corner-loop geometry was never the hard problem it appeared to be.</p>
+    </div>
+
+    <h3 style="color:var(--ink)">Quantity is not written down anywhere</h3>
+    <p class="sub" style="color:var(--graphite);font-family:var(--mono);font-size:12px;margin-bottom:14px">
+      There is no QTY column. It is recoverable only by dividing the recorded weight by the unit weight.</p>
+    <p>Body panel resolves to qty 1 on 43% of sheets, qty 2 on 39%, qty 4 on 18% — that is U-panel,
+    circular (two tube walls) and 4-panel respectively. Side panel is always 2, loop always 4, baffle
+    always 4. This is reliable, but it is inference, and it is the single most fragile step in
+    reading these sheets.</p>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">03</span> Where the data runs out</h2>
+  <p class="lede">Three places. Every question in §5 traces back to one of them.</p>
+
+  <div class="col">
+    <h3>GSM is not a function of anything I can see</h3>
+    <p class="sub">108 spec groups · 24 disagree on body GSM</p>
+    <p>Taking every group of sheets that share family, exact external dimensions, SWL and safety
+    factor — <strong>22% of them were built at different GSM</strong>. Not slightly different:</p>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Same bag, same load, same safety factor — different fabric</caption>
+        <thead><tr><th>Spec</th><th>Body GSM chosen</th><th>Who ordered it</th></tr></thead>
+        <tbody>
+          <tr><td>u_panel 90×90×110 · SWL 1000 · 5:1</td><td class="lose">125 · 150 · 210</td><td>AIRSON / AAA / DOMESTIC INQUIRY</td></tr>
+          <tr><td>u_panel 90×90×120 · SWL 1000 · 5:1</td><td class="lose">125 · 130 · 150</td><td>PO 28 / EXPORT ENQUIRY</td></tr>
+          <tr><td>u_panel 90×90×100 · SWL 1000 · 5:1</td><td class="lose">125 · 140</td><td>SPAIN export vs DOMESTIC</td></tr>
+          <tr><td>u_panel 85×85×90 · SWL 1000</td><td class="lose">140 · 165</td><td>U+2 PANNEL sheets 1 and 2</td></tr>
+          <tr><td>baffle 105×105×135 · SWL 1000 · 5:1</td><td class="lose">175 · 230</td><td>PUNEET SIR vs PRINTING</td></tr>
+          <tr><td>circular 85×85×129 · SWL 1250 · 5:1</td><td class="lose">165 · 170 · 190</td><td>VINAYKA / VNK / VM RAJASTHAN</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>125 to 210 GSM is a 68% spread on an identical specification. There is a reason for it, it is
+    not in the sheet, and it is the single largest thing the model has to learn. Questions 14–21.</p>
+
+    <h3>The customer's stated weight is the real constraint</h3>
+    <p class="sub">n=350 · median gap 0.67% · within 2%: 78%</p>
+    <p>Across every sheet that states both, the component total lands within 2% of the stated bag
+    weight on 78% of orders and within 1% on 61%. One instruction line, appearing verbatim on seven
+    sheets, states the tolerance outright: <code>BAG WT +/-2 %</code>. The engineer is solving for a
+    number, not reporting one.</p>
+
+    <h3>The vocabulary is enormous</h3>
+    <p class="sub">60 raw bag-type strings · 127 component labels · 127 instruction lines</p>
+    <p><code>U PANNEL</code>, <code>U-PANNEL</code>, <code>U+2</code>, <code>U+2 PANEL</code>,
+    <code>U PANEL BAG</code> — five spellings of one construction. <code>D/S</code>,
+    <code>D SPOUT</code>, <code>DS SPOUT</code>, <code>DISCHARGE SPOUT</code>, <code>BOTTOM SPOUT</code>,
+    <code>D/ SPOUT</code> — six labels for one component. And genuine typos that carry meaning:
+    <code>CIRCULAR NAG</code>, <code>4-CORNER LOOPBAFFLE BAG</code>, <code>IRISH CLOUSER</code>.</p>
+    <p>This is exactly what a fine-tuned model handles well and a regex never will — but somebody has
+    to confirm the canonical list once.</p>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">04</span> Domain notes from outside the factory</h2>
+  <p class="lede">Checked against published FIBC practice so the questions below are asked in the
+  industry's own terms, not invented ones.</p>
+
+  <div class="col">
+    <ul>
+      <li><strong>Construction families</strong> are standard industry terms: U-panel (one U-piece forms bottom and two sides, plus two panels), 4-panel (four pieces sewn to a square), circular/tubular (woven as a tube, seams only at top and bottom). Shape retention runs 4-panel &gt; U-panel &gt; circular; cost runs the other way. Baffle / Q-bag / formstable all name the same thing — internal corner panels that stop the bag bulging.</li>
+      <li><strong>Safety factor</strong> is not a free choice. 5:1 means single-trip; 6:1 is required for multi-trip and for UN-certified bags. ISO 21898 is the governing standard for FIBC construction and testing. This means SF is dictated by the customer's use case, which explains why it is almost never missing from your sheets (absent on only 3 of 395).</li>
+      <li><strong>Type A/B/C/D</strong> is a static-protection classification, not a construction one. Type A = no protection; Type B = low breakdown voltage, dry flammable powders only; Type C = conductive threads, must be grounded; Type D = static-dissipative, no grounding needed. Your sheets record this as "Static Protection Type" and as bag types like <code>type - C bag</code> and <code>U+2 CORNER LOOP CONDUCTIV</code>.</li>
+      <li><strong>Manufacturing sequence</strong> — tape extrusion (PP + CaCO₃ + UV masterbatch, drawn to denier and tenacity), weaving on flat or circular looms, separate needle-loom production of lifting webbing, then cutting, printing, stitching and finishing. Your TAPE PLANT / LOOM / NIDDLE LOOM blocks map onto exactly these stages, which is why they belong in the BOM.</li>
+      <li><strong>Denier</strong> is grams per 9,000 m of yarn — so the <code>3200 DNR</code> / <code>3600 DNR</code> figures in the stitching row are a yarn thickness spec, not a weight.</li>
+    </ul>
+    <p>None of this contradicts your sheets. It does mean the system can safely use standard
+    terminology in its output, which will matter when a European customer reads the spec.</p>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">05</span> Questions for the engineer</h2>
+  <p class="lede">Forty-four questions. Twelve are marked <span class="flag">blocking</span> — the
+  system cannot be built correctly without them. The rest improve accuracy. Each carries the
+  evidence that prompted it, so the engineer can see exactly which sheets are being asked about.</p>
+
+  <h3>A · Classification and defaults</h3>
+  <p class="sub">Because misclassifying the construction poisons every number downstream</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">A1</div><div>
+      <p class="qtext">When the customer says only "open top, flat bottom" and gives no construction — you default to U+2. Is that always the default, or does it change with bag size, SWL, product density, or whether it is an export order?<span class="flag">blocking</span></p>
+      <div class="ev">Our example query has no construction stated and was built as U-Panel corner loop. Across the corpus the family split is <b>u_panel 174 · circular 113 · baffle 70 · 4-panel 11</b> — so circular is common enough that "always U+2" needs confirming.</div>
+    </div></div>
+    <div class="q block"><div class="qn">A2</div><div>
+      <p class="qtext">What makes you choose <b>corner loop</b> versus <b>cross-corner loop</b>? Is it the construction, the SWL, the customer, or something about how they lift?<span class="flag">blocking</span></p>
+      <div class="ev">Circular bags are cross-corner on 71 of 113 sheets; U-panel is corner loop on essentially all. But <code>4 PANNEL BAFFLE</code> appears with both. The choice drives a completely different GSM table and belt table.</div>
+    </div></div>
+    <div class="q"><div class="qn">A3</div><div>
+      <p class="qtext">Are these all the same construction, or do any differ? <code>U PANNEL</code> · <code>U-PANNEL</code> · <code>U PANEL BAG</code> · <code>U+2</code> · <code>U+2 PANEL</code> · <code>U+2 PANNEL</code></p>
+      <div class="ev">Five spellings, 174 sheets. Assuming they are one family; if <code>U+2</code> ever means something different from <code>U PANNEL</code>, the whole u_panel group is contaminated.</div>
+    </div></div>
+    <div class="q"><div class="qn">A4</div><div>
+      <p class="qtext">Is <code>DOUBLE LAYER U-PANNEL BAG</code> a separate construction, or U-panel with a modifier? Same question for <code>U+2 WITH DOUBLE LAYER (STEVE' DOOR)</code>.</p>
+      <div class="ev">4 sheets each. Body-panel implied quantity is 2 on some U-panel sheets, which is what a double layer would look like — but I cannot tell it apart from an extraction error.</div>
+    </div></div>
+    <div class="q"><div class="qn">A5</div><div>
+      <p class="qtext">Which of these do we need to support, and which are one-offs we can leave out of v1? <code>H BOTTOM BAG</code> · <code>OMEGA</code> · <code>TUNNEL</code> · <code>TUBELAR WITH TOP HEMMING</code> · <code>CONTAINER LINER BAG</code> · <code>2 LOOP</code> · <code>SINGLE LOOP</code> · <code>CIRCULAR ROUND WITH FULL RUNNING LOOP</code></p>
+      <div class="ev">Between 2 and 14 sheets each — enough to name, not enough to learn a rule from.</div>
+    </div></div>
+    <div class="q"><div class="qn">A6</div><div>
+      <p class="qtext">Does <b>Q-bag</b> always mean 4-panel baffle, or can a Q-bag be built on a circular body?</p>
+      <div class="ev"><code>4 PANNEL BAFFLE BAG ( Q BAG )</code> appears 7 times, <code>4 PANNEL WITH BAFFLE BAG ( Q BAG )</code> 6 times. Industry usage treats Q-bag as any formstable baffled FIBC, which is broader.</div>
+    </div></div>
+  </div>
+
+  <h3>B · Cut sizes and seam allowances</h3>
+  <p class="sub">Because one sheet disagrees with the other 138 and it happens to be the example we are building against</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">B1</div><div>
+      <p class="qtext">U-panel body cut length: is the standard <b>2H + L + 10</b> or <b>2H + L + 8</b>? What makes it change?<span class="flag">blocking</span></p>
+      <div class="ev">+10 on <b>138 of 174</b> sheets (79%), +8 on 12 (7%). But the 85×85×85 sheet you gave me as the reference uses <b>+8</b> (cut 263 = 170 + 85 + 8). By customer: EXPORT ENQUIRY 29/31 use +10; VIJAYNAGAR 3/4 use +8; DOMESTIC uses +3, +6 and +8.</div>
+    </div></div>
+    <div class="q block"><div class="qn">B2</div><div>
+      <p class="qtext">Are all cut sizes computed from the <b>external</b> dimensions, or does any component work off internal?<span class="flag">blocking</span></p>
+      <div class="ev">Every rule I fitted works off external and lands on a clean +8/+10. Your sheets state both sizes (external usually internal + 4 to 5 cm). If any component is actually cut off internal, that rule is wrong by 4–5 cm and I would not detect it.</div>
+    </div></div>
+    <div class="q"><div class="qn">B3</div><div>
+      <p class="qtext">Confirm the fixed U-panel set: body width = W + 8, side panel = (L + 8) × (H + 8), quantity 2. Is the +8 four centimetres of seam on each edge?</p>
+      <div class="ev">94%, 94% and 98% agreement respectively. The <code>3_Corrected_UPanel</code> sheet in your variance analysis says "4 cm seam each long edge", which fits.</div>
+    </div></div>
+    <div class="q"><div class="qn">B4</div><div>
+      <p class="qtext">Circular body: is the flat woven width exactly <b>W + L</b> with no seam allowance because it comes off the loom as a tube? And is the body always counted as 2 walls?</p>
+      <div class="ev">Mode of (width − W) is 90 on square 90×90 bags, i.e. width = W + L. Body implied quantity is 2 on 39% of all sheets, which is close to the circular share (113/395).</div>
+    </div></div>
+    <div class="q"><div class="qn">B5</div><div>
+      <p class="qtext">Why do circular top/bottom panels use +10 while baffle top/bottom use +8?</p>
+      <div class="ev">Circular top/bottom: +10 on 86% of 94. Baffle top/bottom: +8 on 61% of 70. Consistent enough to be deliberate, but I do not know the reason and cannot generalise it to a new family without one.</div>
+    </div></div>
+    <div class="q block"><div class="qn">B6</div><div>
+      <p class="qtext">Do you round the computed fabric width <b>up to an available loom width</b>, or does the loom get set to whatever the calculation says?<span class="flag">blocking</span></p>
+      <div class="ev">On the 85×85×85 sheet, body and side are both 93 cm — one loom setting serves both. That looks deliberate. But if loom width is a hard constraint, the whole geometry needs a snap-to-available-width step; if not, it must not have one. What are the actual available widths?</div>
+    </div></div>
+    <div class="q"><div class="qn">B7</div><div>
+      <p class="qtext">Filling and discharge spouts — what are the width and cut formulas? Is the stated size (e.g. <code>40×50 CM</code>) a diameter or a flat width, and which of the two numbers is the height?</p>
+      <div class="ev">Observed: FS <code>40×50</code> → 55 × 137.6 cut; DS <code>35×50</code> with iris → 85 × 122; DS <code>40×50</code> iris → 85 × 137.6. I can see the pattern but cannot pin the formula, and the same stated size gives different widths on different sheets.</div>
+    </div></div>
+    <div class="q"><div class="qn">B8</div><div>
+      <p class="qtext">How much extra fabric and tie length does each closure add — <b>open/tied</b>, <b>iris</b>, <b>petal</b>, <b>pyjama</b>?</p>
+      <div class="ev">Iris rope cut lengths observed: 165, 195, 175 cm on otherwise similar bags. Tie rows run 125–195 cm at 6–7 g/m.</div>
+    </div></div>
+  </div>
+
+  <h3>C · GSM selection — the biggest gap</h3>
+  <p class="sub">Because the same bag was built at 125 and at 210</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">C1</div><div>
+      <p class="qtext">Two orders, same construction, same 90×90×110 cm, same SWL 1000 kg, same 5:1 — one built at 125 GSM, one at 210. What is the difference between those two orders?<span class="flag">blocking</span></p>
+      <div class="ev">This is the question the whole project turns on. 24 of 108 identical-spec groups disagree on body GSM. If the answer is "the customer's product" or "export versus domestic" or "how many trips they reuse it", that field has to be captured in the enquiry and fed to the model.</div>
+    </div></div>
+    <div class="q block"><div class="qn">C2</div><div>
+      <p class="qtext">Do you work <b>forward</b> from SWL and safety factor to a GSM, or <b>backward</b> from the customer's required bag weight to whatever GSM lands on it?<span class="flag">blocking</span></p>
+      <div class="ev">The data says backward: the component total is within 2% of the stated bag weight on 78% of 350 sheets. Inverting the weight formula predicts the chosen GSM with a median error of 0.00%, against 3.33% for the load-chart cell. If that is really how you work, the software should work that way too.</div>
+    </div></div>
+    <div class="q block"><div class="qn">C3</div><div>
+      <p class="qtext">Your <code>GSM- GPM VS SWL-SF.xlsx</code> has tables for two-panel, omega, 4-panel baffle (both loop types) and tunnel — but <b>no U-panel table</b>. Which table do you read for a U+2 bag?<span class="flag">blocking</span></p>
+      <div class="ev">U-panel is 44% of the corpus and has no chart. An earlier analysis assumed the 4-panel corner-loop column (140 GSM at 751–1000 kg, 5:1), which would make the 85×85×85 bag's 150 GSM a +7% margin. Please confirm or correct.</div>
+    </div></div>
+    <div class="q"><div class="qn">C4</div><div>
+      <p class="qtext">SWL of exactly 1000 kg falls in both the <code>751–1000</code> and <code>1000–1250</code> rows. Which one wins?</p>
+      <div class="ev">1000 kg is the single most common SWL in the corpus, so this boundary is hit constantly. The two rows differ by 15–20 GSM.</div>
+    </div></div>
+    <div class="q"><div class="qn">C5</div><div>
+      <p class="qtext">Where the chart gives a range — <code>145–150 GSM</code>, <code>155–160</code>, <code>230–240</code> — what makes you take the top rather than the bottom?</p>
+      <div class="ev">On the 85×85×85 bag the belt chart said 30–35 GPM and you took 35, the top of the band. Is that habitual, or was there a reason on that order?</div>
+    </div></div>
+    <div class="q block"><div class="qn">C6</div><div>
+      <p class="qtext">If the customer <b>states a GSM</b> and it is below the chart minimum for their SWL and safety factor — what do you do?<span class="flag">blocking</span></p>
+      <div class="ev">This decides whether the software may ever go below the chart. It is the safety question in the whole system.</div>
+    </div></div>
+    <div class="q"><div class="qn">C7</div><div>
+      <p class="qtext">The remark column writes lamination as <code>70+20 LAMINATED</code> — base fabric plus coating. Is the GSM column always the <b>total</b> (90), never the base?</p>
+      <div class="ev"><code>70+20 LAMINATED</code> appears on 184 rows, and the GSM column reads 90 alongside it. Confirming, because if it is ever the base figure the weight is out by 20–30%.</div>
+    </div></div>
+    <div class="q"><div class="qn">C8</div><div>
+      <p class="qtext">What does <code>175+30 UNLAMINATED</code> mean? And is <code>15+90+15</code> both-side lamination?</p>
+      <div class="ev">12 rows say a lamination figure and then "UNLAMINATED". 9 rows use the three-part form. Both look deliberate rather than typed wrong.</div>
+    </div></div>
+    <div class="q"><div class="qn">C9</div><div>
+      <p class="qtext">Which components take a different GSM from the body as a matter of course, and what governs each — top panel, spouts, baffle, bottom?</p>
+      <div class="ev">Observed: top panel 80–120 laminated, spouts almost always 90 (<code>70+20</code>), baffle 130 both-side laminated, circular bottom heavier than body per the chart. Looks like a fixed policy rather than a per-order choice.</div>
+    </div></div>
+  </div>
+
+  <h3>D · Lifting loops and webbing</h3>
+  <p class="sub">Because loop length is a third of the bag's weight and is not derivable from the size</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">D1</div><div>
+      <p class="qtext">Confirm loop cut = <b>2 × free height + LL + SL</b>, quantity 4. And are LL and SL given by the customer, or chosen by you?<span class="flag">blocking</span></p>
+      <div class="ev">The formula reproduces exactly on 197 of 226 sheets. Observed ranges are wide: free height 22–122 cm, LL 30–140, SL 30–96 — so if the customer does not state them, something else decides.</div>
+    </div></div>
+    <div class="q"><div class="qn">D2</div><div>
+      <p class="qtext">A 50 mm belt appears at 28, 30, 32, 35, 40, 42, 45 and 50 g/m. What picks the gramage once the width is fixed?</p>
+      <div class="ev">Eight gramages at one width, 184 sheets. The belt chart bands by SWL and safety factor but does not explain this much spread.</div>
+    </div></div>
+    <div class="q"><div class="qn">D3</div><div>
+      <p class="qtext">Does the belt gramage in the BOM ever differ from the needle-loom GPM spec on the same sheet?</p>
+      <div class="ev">On the 85×85×85 sheet, input cell "Loop Belt GPM" reads 28 while the component table and the loom requirement both use 35. One of those is stale — I would like to know which is authoritative.</div>
+    </div></div>
+    <div class="q"><div class="qn">D4</div><div>
+      <p class="qtext">When do you fit a <b>loop protector</b>, <b>extra loop</b>, <b>stevedore loop</b>, or <b>full running loop</b>?</p>
+      <div class="ev">Loop protector on 31 sheets, stevedore 34, extra loop 16, full loop 4. Too rare to infer a rule, common enough to need one.</div>
+    </div></div>
+    <div class="q"><div class="qn">D5</div><div>
+      <p class="qtext">What does the belt strength requirement depend on, and where is it specified?</p>
+      <div class="ev">One needle-loom block reads <code>STRENGHT 1680 KGF</code>; an instruction line reads <code>BELT 50 CM ATTECHED BY 6 PASS JUKKI MINIMUM 2000 KGF STRENGTH</code>. Two different numbers, unclear which governs.</div>
+    </div></div>
+  </div>
+
+  <h3>E · Which components go in</h3>
+  <p class="sub">Because half the fifteen rows are conditional and the sheet does not say why</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">E1</div><div>
+      <p class="qtext">Please confirm the canonical component list and tell me which of these 127 raw labels are genuinely the same thing.<span class="flag">blocking</span></p>
+      <div class="ev">Candidates to merge — <b>discharge spout:</b> <code>D/S · D SPOUT · DS SPOUT · DISCHARGE SPOUT · BOTTOM SPOUT · D/ SPOUT</code>. <b>Filling spout:</b> <code>FILLING SPOUT · FS SPOUT · F/S · TOP SPOUT · TOP / FS · TOP/SKT</code>. <b>Ties:</b> <code>FS TIE · DS TIE · TIE · FS/DS TIE · F/S & D/S TIE · TIE/DS · SUPPORTING TIE · TUCKING TIE · SKIRT TIE</code>. <b>Iris:</b> <code>TIE/IRIS ROPE · IRISH TIE · TIE/IRIS · BRAIDED ROPE</code>.</div>
+    </div></div>
+    <div class="q"><div class="qn">E2</div><div>
+      <p class="qtext">What are <b>FELT</b>, <b>GLUE</b>, <b>TABBING TAPE</b>, <b>BELLY BEND</b>, <b>TOP BEND</b>, <b>DS FLAP</b> and <b>DS PATCH</b>, and when does each get fitted?</p>
+      <div class="ev">Felt 25 sheets, glue 14, tabbing 22, belly bend 21, top bend 16, DS flap 20. None appear in any rule table we have.</div>
+    </div></div>
+    <div class="q block"><div class="qn">E3</div><div>
+      <p class="qtext">DDP — what unit is the cut length in, and how many pieces per bag?<span class="flag">blocking</span></p>
+      <div class="ev">Reconciling weight against 4.5 g/m gives an implied quantity of <b>100</b> on 48 of 52 sheets. Either the length is in metres while the column says cm, or the row records 100 bags at once. Until this is settled every DDP weight in the training data is wrong by 100×.</div>
+    </div></div>
+    <div class="q"><div class="qn">E4</div><div>
+      <p class="qtext">What is the difference between <b>DDP</b>, <b>filler cord</b>, <b>triple dust proof</b> and "all seam double dust proof"? Are they alternatives or do they stack?</p>
+      <div class="ev">14 instruction lines say <code>ALL SEAM DOUBLE DUST PROOF</code>; 7 say <code>TOP PERIMETER DOUBLE DUST PROOF AND REST ALL SEAM SINGLE</code>. The component rows do not obviously change with them.</div>
+    </div></div>
+    <div class="q"><div class="qn">E5</div><div>
+      <p class="qtext">When the customer does not mention a liner, doc pocket or printing — is the answer always no, or do some customers get them by default?</p>
+      <div class="ev">Header field blank or "NA": liner 78.5%, doc pocket 44.6%, printing 43.0%. But of the sheets that <i>list</i> a doc pocket row, 55.6% actually fit one — so it is not a simple default.</div>
+    </div></div>
+    <div class="q"><div class="qn">E6</div><div>
+      <p class="qtext">Top construction — what decides between <b>open top</b>, <b>top panel</b>, <b>skirt/duffle</b>, <b>top flap</b> and <b>spout</b> when the customer has not said?</p>
+      <div class="ev">Top panel appears on 189 sheets, skirt on 51, duffle on 25. Our example query said "open top" explicitly, so it is fine — but most of the corpus is not that clear.</div>
+    </div></div>
+    <div class="q"><div class="qn">E7</div><div>
+      <p class="qtext">Liner: what governs micron, whether it is loose / tabbed / glued / hemmed, and its cut size?</p>
+      <div class="ev">Observed 50–100 micron; instruction lines mention <code>LOOSELY INSERTED BOTTOM SEALED</code>, <code>FULL GUESTED</code>, tabbing and glueing. Liner cut sizes such as <code>200×360 CM</code> do not follow obviously from the bag size.</div>
+    </div></div>
+  </div>
+
+  <h3>F · Stitching, yarn and production instructions</h3>
+  <p class="sub">Because these lines are part of the BOM and the model will have to write them</p>
+  <div class="qs">
+    <div class="q"><div class="qn">F1</div><div>
+      <p class="qtext">Is the sewing-yarn weight a formula, or do you pick a round number from experience?</p>
+      <div class="ev">Yarn weight divided by bag height has a median of 0.467 g/cm — close to the 0.45 rule of thumb — but the tenth-to-ninetieth percentile spans 0.33 to 0.72. The values used are round: 55 g on 45 sheets, 60 g on 62, 65 g on 35. That looks chosen, not calculated.</div>
+    </div></div>
+    <div class="q"><div class="qn">F2</div><div>
+      <p class="qtext">What decides the stitch specification — <b>HR+DR</b>, <b>overlock + chain</b>, <b>double chain</b>, <b>single fold</b>, <b>butterfly</b>?</p>
+      <div class="ev">All appear as instruction lines, up to 16 times each. Is it construction, customer, or product?</div>
+    </div></div>
+    <div class="q"><div class="qn">F3</div><div>
+      <p class="qtext">Yarn denier appears as 2200, 3000, 3200 and 3600, sometimes two in one bag (<code>SAFTY IN WHITE 2200 DNR AND OVER LOCK WITH 3600 DNR BLUE</code>). What selects them, and what does the colour convention mean?</p>
+      <div class="ev">6 sheets use that exact two-yarn line. Blue and white recur throughout — I assume white is safety stitch and blue overlock, but that is a guess.</div>
+    </div></div>
+    <div class="q"><div class="qn">F4</div><div>
+      <p class="qtext">Fold type — <b>J-fold</b>, <b>out-fold</b>, <b>box J-fold</b>, <b>top hemming</b> — is this determined by construction, or is it a customer preference?</p>
+      <div class="ev"><code>U+2 PANEL BAG WITH J FOLD BOX STITCHING AND TOP OUT FOLD</code> on 12 sheets; <code>CIRCULAR BAG WITH TOP AND BOTTOM J-FOLD</code> on 6. It looks construction-linked but not exclusively.</div>
+    </div></div>
+    <div class="q"><div class="qn">F5</div><div>
+      <p class="qtext">Should the generated BOM produce the <b>INSTRACTION</b> lines, the <b>TAPE PLANT / LOOM / NIDDLE LOOM</b> specs and the <b>MIXING</b> recipe — or does the plant fill those in later?</p>
+      <div class="ev">They are present on most sheets but not all, and the mixing recipe is legible on only a handful. If they are part of the deliverable, we need the rules; if they are added downstream, we can leave them out and the scope shrinks usefully.</div>
+    </div></div>
+    <div class="q"><div class="qn">F6</div><div>
+      <p class="qtext">What drives the raw-material blend? Observed <code>PP 88.5 / CC 10 / UV 1.5</code> and <code>PP 80 / CC 8 / UV 1.5 / RP 12.5</code>.</p>
+      <div class="ev">Is RP (recycled) allowed only for domestic orders? Does UV always sit at 1.5%? Does CaCO₃ change with GSM?</div>
+    </div></div>
+  </div>
+
+  <h3>G · Target weight, tolerance, and impossible orders</h3>
+  <p class="sub">The behaviour you said you want the system to have</p>
+  <div class="qs">
+    <div class="q block"><div class="qn">G1</div><div>
+      <p class="qtext">Is <b>±2%</b> the standard tolerance on bag weight? Does it change by customer or by whether the order is export?<span class="flag">blocking</span></p>
+      <div class="ev"><code>BAG WT +/-2 %</code> appears verbatim on 7 sheets, and 78% of all 350 measurable sheets land inside 2%. If ±2% is the rule, it becomes the solver's stopping condition.</div>
+    </div></div>
+    <div class="q block"><div class="qn">G2</div><div>
+      <p class="qtext">When the customer's required weight cannot be met safely — as in this very enquiry, 720 g against a 140 GSM floor that forces 836 g — what do you actually do?<span class="flag">blocking</span></p>
+      <div class="ev">Options I can see: quote the safe weight and tell them; ask them to reduce SWL; ask them to accept 6:1 → 5:1; change construction; refuse. The 85×85×85 order ended up written as 0.88 kg. What was said to the customer?</div>
+    </div></div>
+    <div class="q block"><div class="qn">G3</div><div>
+      <p class="qtext">When the total comes out over or under target, which knob do you turn first — body GSM, loop gramage, lamination, spout size, yarn?<span class="flag">blocking</span></p>
+      <div class="ev">This is literally the algorithm. If GSM is the first lever and loop gramage the second, the solver adjusts them in that order and will reproduce your reasoning rather than inventing its own.</div>
+    </div></div>
+    <div class="q"><div class="qn">G4</div><div>
+      <p class="qtext">Is the "BAG WT." on the sheet the customer's requirement, or the weight you quoted back to them?</p>
+      <div class="ev">The header uses three different labels — <code>BAG WT.</code>, <code>REQ. WT.</code>, <code>REW. WT.</code>. If they mean different things, the training data must keep them apart.</div>
+    </div></div>
+    <div class="q"><div class="qn">G5</div><div>
+      <p class="qtext">Roughly what share of enquiries arrive with something wrong or missing, and what are the three mistakes you correct most often?</p>
+      <div class="ev">You have said the engineer spots impossible specs by experience. Naming the top three lets us build them as explicit checks and test the system against them.</div>
+    </div></div>
+    <div class="q"><div class="qn">G6</div><div>
+      <p class="qtext">If SWL or safety factor is missing entirely, what do you assume?</p>
+      <div class="ev">Only 3 of 395 sheets lack SWL, so it is rare here — but the system will meet it, and guessing silently is the failure mode we most want to avoid.</div>
+    </div></div>
+  </div>
+
+  <h3>H · Practical, for building the system</h3>
+  <div class="qs">
+    <div class="q"><div class="qn">H1</div><div>
+      <p class="qtext">Which sheets should the model learn from, and which are drafts, samples or superseded?</p>
+      <div class="ev"><code>DOMESTIC ENQUIRY.xlsx</code> holds 81 sheets and appears three times in different folders; <code>EXPORT ENQUIRY.xlsx</code> exists in three copies. Training on duplicates teaches the model those bags are three times more likely than they are.</div>
+    </div></div>
+    <div class="q"><div class="qn">H2</div><div>
+      <p class="qtext">Which named customers are the "house style" reference — the orders that best represent how a bag should be built?</p>
+      <div class="ev">Useful for weighting the training set and for choosing the twenty regression cases the system must never get wrong.</div>
+    </div></div>
+    <div class="q"><div class="qn">H3</div><div>
+      <p class="qtext">Are there any recent BOMs the engineer would now build differently? Any rule that changed in the last year or two?</p>
+      <div class="ev">The corpus spans 2023 to 2026. If a standard changed, old sheets are actively misleading and should be down-weighted or excluded.</div>
+    </div></div>
+    <div class="q"><div class="qn">H4</div><div>
+      <p class="qtext">How does the enquiry actually arrive — WhatsApp, email, a scanned technical data sheet, a phone call written up afterwards? Could we keep the raw text of the next twenty as they come in?</p>
+      <div class="ev">The corpus holds the <i>outputs</i>, but the model's input at run time is the raw enquiry, and we have almost no real examples of those. Twenty genuine ones would be worth more than a thousand synthesised.</div>
+    </div></div>
+    <div class="q"><div class="qn">H5</div><div>
+      <p class="qtext">When the system produces a BOM, what would the engineer want to see in order to trust it in ten seconds?</p>
+      <div class="ev">Which lines differ from the nearest historical bag? Which numbers came from a chart, which from judgement? Getting this right decides whether it gets used.</div>
+    </div></div>
+    <div class="q"><div class="qn">H6</div><div>
+      <p class="qtext">Is <code>FIBC PRODUCTION DEC-2025.xlsx</code> recoverable? It is an <code>.xls</code> file with an <code>.xlsx</code> name and nothing can open it.</p>
+      <div class="ev">Also, the file you gave me as <code>90X90X90 CM.xlsx</code> contains an 85×85×85 bag. If filenames are unreliable, we must never use them to label training data.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════════════════════════════════════════ -->
+<section>
+  <h2><span class="num">06</span> How to use this</h2>
+  <div class="col">
+    <p>The twelve <span class="flag">blocking</span> questions — A1, A2, B1, B2, B6, C1, C2, C3, C6, D1, E1, E3, G1, G2, G3 — are worth a
+    single sitting with the engineer, in that order. They are not independent: B1 and B2 together fix
+    the geometry, C1 through C6 fix material selection, and G1 through G3 define the solver.</p>
+
+    <p>The rest can be answered on paper at his own pace. Where he says "it depends", that is the
+    most valuable answer in the document — it names a field we are not currently capturing, and every
+    such field is one the model will otherwise have to guess.</p>
+
+    <p>Two things worth asking him to do while he answers:</p>
+    <ul>
+      <li><strong>Walk one enquiry out loud.</strong> Take a recent order, and have him narrate every decision from reading the message to signing the sheet — including the ones he makes without noticing. That transcript is worth more than any single answer here.</li>
+      <li><strong>Keep the next twenty raw enquiries.</strong> Screenshots, forwarded emails, WhatsApp text, scans — untouched. We have 395 finished BOMs and almost no examples of what the model will actually be given as input.</li>
+    </ul>
+
+    <p>When the answers come back, the immediate effect is concrete: the geometry rules become
+    hard-coded tables, the GSM decision becomes a solver against the target weight with the chart as a
+    floor, and the model's job narrows to the specific judgements the engineer has just described.
+    That is a much smaller and much more learnable target than "generate a BOM".</p>
+  </div>
+
+  <div class="col foot">
+    <p><b>Basis.</b> 107 workbooks and 681 sheets under <code>All_Things</code>; 395 sheets carrying a
+    component table were parsed with a label-anchored extractor and every rule above was tested
+    against them. Agreement percentages are exact-match counts, not fits. Domain terminology was
+    cross-checked against published FIBC practice — construction families and shape retention
+    <a href="https://blog.nationalbulkbag.com/fibc-bulk-bag-construction/types-of-jumbo-bag-construction-upanel-circular-4panel">(National Bulk Bag)</a>,
+    baffle/Q-bag equivalence <a href="https://www.southernpackaginglp.com/blog/baffled-formstable-q-bag-why-you-should-be-using-this-type-of-fibc">(Southern Packaging)</a>,
+    safety factors and ISO 21898 <a href="https://codefine.com/blog/products-and-materials/fibc-safety-factors-what-they-mean-and-why-they-matter/">(Codefine)</a>
+    <a href="https://smartpackgroup.com/iso-21898-as-3668-bulk-bag-safety/">(Smart Pack)</a>,
+    Type A/B/C/D static protection <a href="https://www.nationalbulkbag.com/types-of-fibc-bulk-bags-a-b-c-d-explained/">(National Bulk Bag)</a>,
+    and the manufacturing sequence <a href="https://www.bulkcorp-int.com/blog/fibc/the-steps-involved-in-fibc-bags-manufacturing-process/">(Bulkcorp)</a>
+    <a href="https://codefine.com/blog/manufacturing-process-of-fibc-bags/">(Codefine)</a>.
+    Costing is excluded throughout, per instruction.</p>
+  </div>
+</section>
+
+</div>

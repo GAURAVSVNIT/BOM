@@ -1,0 +1,33 @@
+{
+ "renderer_replay": {
+  "n": 455,
+  "median_pct": 10.162,
+  "within_2pct": 19.6,
+  "within_5pct": 29.2,
+  "within_10pct": 49.7,
+  "component_geometry": {
+   "BODY PANEL.width": 76.5,
+   "BODY PANEL.cut": 73.9,
+   "BOTTOM PANEL.width": 57.6,
+   "BOTTOM PANEL.cut": 57.6,
+   "BAFFLE.width": 80.0,
+   "BAFFLE.cut": 62.9,
+   "FILLING SPOUT.width": 85.2,
+   "FILLING SPOUT.cut": 91.7,
+   "DISCHARGE SPOUT.width": 56.0,
+   "DISCHARGE SPOUT.cut": 94.5,
+   "IRIS TIE.cut": 29.4,
+   "CORNER LOOP.cut": 57.2,
+   "SIDE PANEL.width": 84.5,
+   "SIDE PANEL.cut": 96.9,
+   "LINER.width": 44.9,
+   "LINER.cut": 7.7,
+   "SKIRT.width": 27.0,
+   "SKIRT.cut": 33.3,
+   "DDP.cut": 0.0
+  }
+ },
+ "leakage_clean": true,
+ "schema_issues": {},
+ "firewall_clean": true
+}
